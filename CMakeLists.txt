@@ -56,6 +56,9 @@ message(STATUS "All required files and libraries found")
 # Set entvironmental variables
 configure_file(env.sh.in env.sh)
 
+# Branch
+add_subdirectory(src)
+
 
 
 
