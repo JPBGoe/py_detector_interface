@@ -1,0 +1,53 @@
+/*
+ * File:   PhotonData.cc
+ * Author: jburchert
+ *
+ * Created on 9 August 2017
+ */
+
+#include <PhotonData.hh>
+#include <PhotonEntry.hh>
+#include <stdexcept>
+
+namespace DSIM {
+
+    PhotonData::PhotonData() : XCSIT::XPhotonData(){
+    }
+
+    PhotonData::~PhotonData(){
+    }
+
+	boost::shared_ptr<XCSIT::XPhotonEntry> PhotonData::getEntry(size_t entry){
+		if(entry < 0 || entry >= photonNum){
+			throw std::invalid_argument("value does not fit to number of elements in this instance");
+		}
+
+		return photonVec[entry];
+	}
+
+    boost::shared_ptr<XCSIT::XPhotonEntry> PhotonData::addEntry(){
+
+		// Create the new instance
+		// smart pointer will deal with the Destructor call if necessary
+		boost::shared_ptr<PhotonEntry> ne(new PhotonEntry);
+
+		// Add it to the vector at the end of the of the ArrayList
+		photonVec.push_back(ne);
+
+		photonNum++;
+		
+		// Return the created instance
+		return ne;
+	}
+
+    size_t PhotonData::size(){
+		return photonNum;
+	}
+
+    void PhotonData::clear(){
+		photonVec.clear();
+		photonVec.resize(0);
+		photonNum = 0;
+	}
+
+}

@@ -1,1 +1,2 @@
+/gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build/src/CMakeFiles/InteractionEntry_ext.dir
 /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build/src/CMakeFiles/PhotonEntry_ext.dir

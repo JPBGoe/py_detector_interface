@@ -8,10 +8,8 @@
 
 ../include/PhotonEntry.hh
 XPhotonEntry.hh
--
+../include/XPhotonEntry.hh
 vector
--
-iostream
 -
 
 ../src/../../karaboFramework/karabo/devices/xcsit/include/XPhotonEntry.hh

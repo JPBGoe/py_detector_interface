@@ -1,4 +1,3 @@
 #!/bin/sh
 
-#TODO needs to be changes
-export PYTHONPATH=$PYTHONPATH
+export PYTHONPATH=/gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build/src/:$PYTHONPATH

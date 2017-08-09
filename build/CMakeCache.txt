@@ -192,6 +192,9 @@ CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 //Single output directory for building all executables.
 EXECUTABLE_OUTPUT_PATH:PATH=
 
+//Dependencies for the target
+InteractionEntry_ext_LIB_DEPENDS:STATIC=general;/usr/lib64/libboost_python-mt.so;
+
 //Single output directory for building all libraries.
 LIBRARY_OUTPUT_PATH:PATH=
 
@@ -208,7 +211,7 @@ PYTHON_LIBRARY_DEBUG:FILEPATH=PYTHON_LIBRARY_DEBUG-NOTFOUND
 PhotonEntry_ext_LIB_DEPENDS:STATIC=general;/usr/lib64/libboost_python-mt.so;
 
 //Path xcsit parent folder: -DXCSIT_FOLDER=<path> if <path>/xcsit
-XCSIT_FOLDER:BOOL=../../karaboFramework/karabo/devices/
+XCSIT_FOLDER:BOOL=../../karaboFramework/karabo/devices
 
 //Value Computed by CMake
 py_detector_interface_BINARY_DIR:STATIC=/gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build

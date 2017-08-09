@@ -4,5 +4,5 @@
 # compile CXX with /usr/bin/c++
 CXX_FLAGS =  -pedantic -Wall -std=c++11 -fPIC -I/usr/include/python2.7 -I/gpfs/exfel/data/user/burcherj/Development/py_detector_interface/include -I/gpfs/exfel/data/user/burcherj/Development/py_detector_interface/src/../../karaboFramework/karabo/devices/xcsit/include   
 
-CXX_DEFINES = -DPhotonEntry_ext_EXPORTS
+CXX_DEFINES = -DInteractionEntry_ext_EXPORTS
 
