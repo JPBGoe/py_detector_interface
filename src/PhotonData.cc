@@ -5,13 +5,13 @@
  * Created on 9 August 2017
  */
 
-#include <PhotonData.hh>
-#include <PhotonEntry.hh>
+#include "PhotonData.hh"
+#include "PhotonEntry.hh"
 #include <stdexcept>
 
 namespace DSIM {
 
-    PhotonData::PhotonData() : XCSIT::XPhotonData(){
+    PhotonData::PhotonData():XPhotonData(){
     }
 
     PhotonData::~PhotonData(){
@@ -29,7 +29,7 @@ namespace DSIM {
 
 		// Create the new instance
 		// smart pointer will deal with the Destructor call if necessary
-		boost::shared_ptr<PhotonEntry> ne(new PhotonEntry);
+		boost::shared_ptr<XCSIT::XPhotonEntry> ne(new PhotonEntry());
 
 		// Add it to the vector at the end of the of the ArrayList
 		photonVec.push_back(ne);
@@ -40,7 +40,7 @@ namespace DSIM {
 		return ne;
 	}
 
-    size_t PhotonData::size(){
+    size_t PhotonData::size() const {
 		return photonNum;
 	}
 

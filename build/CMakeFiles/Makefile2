@@ -59,12 +59,16 @@ CMAKE_BINARY_DIR = /gpfs/exfel/data/user/burcherj/Development/py_detector_interf
 # Directory level rules for directory src
 
 # Convenience name for "all" pass in the directory.
+src/all: src/CMakeFiles/InteractionData_ext.dir/all
 src/all: src/CMakeFiles/InteractionEntry_ext.dir/all
+src/all: src/CMakeFiles/PhotonData_ext.dir/all
 src/all: src/CMakeFiles/PhotonEntry_ext.dir/all
 .PHONY : src/all
 
 # Convenience name for "clean" pass in the directory.
+src/clean: src/CMakeFiles/InteractionData_ext.dir/clean
 src/clean: src/CMakeFiles/InteractionEntry_ext.dir/clean
+src/clean: src/CMakeFiles/PhotonData_ext.dir/clean
 src/clean: src/CMakeFiles/PhotonEntry_ext.dir/clean
 .PHONY : src/clean
 
@@ -73,13 +77,48 @@ src/preinstall:
 .PHONY : src/preinstall
 
 #=============================================================================
+# Target rules for target src/CMakeFiles/InteractionData_ext.dir
+
+# All Build rule for target.
+src/CMakeFiles/InteractionData_ext.dir/all:
+	$(MAKE) -f src/CMakeFiles/InteractionData_ext.dir/build.make src/CMakeFiles/InteractionData_ext.dir/depend
+	$(MAKE) -f src/CMakeFiles/InteractionData_ext.dir/build.make src/CMakeFiles/InteractionData_ext.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build/CMakeFiles  1 2 3
+	@echo "Built target InteractionData_ext"
+.PHONY : src/CMakeFiles/InteractionData_ext.dir/all
+
+# Include target in all.
+all: src/CMakeFiles/InteractionData_ext.dir/all
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+src/CMakeFiles/InteractionData_ext.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build/CMakeFiles 3
+	$(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/InteractionData_ext.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build/CMakeFiles 0
+.PHONY : src/CMakeFiles/InteractionData_ext.dir/rule
+
+# Convenience name for target.
+InteractionData_ext: src/CMakeFiles/InteractionData_ext.dir/rule
+.PHONY : InteractionData_ext
+
+# clean rule for target.
+src/CMakeFiles/InteractionData_ext.dir/clean:
+	$(MAKE) -f src/CMakeFiles/InteractionData_ext.dir/build.make src/CMakeFiles/InteractionData_ext.dir/clean
+.PHONY : src/CMakeFiles/InteractionData_ext.dir/clean
+
+# clean rule for target.
+clean: src/CMakeFiles/InteractionData_ext.dir/clean
+.PHONY : clean
+
+#=============================================================================
 # Target rules for target src/CMakeFiles/InteractionEntry_ext.dir
 
 # All Build rule for target.
 src/CMakeFiles/InteractionEntry_ext.dir/all:
 	$(MAKE) -f src/CMakeFiles/InteractionEntry_ext.dir/build.make src/CMakeFiles/InteractionEntry_ext.dir/depend
 	$(MAKE) -f src/CMakeFiles/InteractionEntry_ext.dir/build.make src/CMakeFiles/InteractionEntry_ext.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build/CMakeFiles  1 2
+	$(CMAKE_COMMAND) -E cmake_progress_report /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build/CMakeFiles  4 5
 	@echo "Built target InteractionEntry_ext"
 .PHONY : src/CMakeFiles/InteractionEntry_ext.dir/all
 
@@ -108,13 +147,48 @@ clean: src/CMakeFiles/InteractionEntry_ext.dir/clean
 .PHONY : clean
 
 #=============================================================================
+# Target rules for target src/CMakeFiles/PhotonData_ext.dir
+
+# All Build rule for target.
+src/CMakeFiles/PhotonData_ext.dir/all:
+	$(MAKE) -f src/CMakeFiles/PhotonData_ext.dir/build.make src/CMakeFiles/PhotonData_ext.dir/depend
+	$(MAKE) -f src/CMakeFiles/PhotonData_ext.dir/build.make src/CMakeFiles/PhotonData_ext.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build/CMakeFiles  6 7 8
+	@echo "Built target PhotonData_ext"
+.PHONY : src/CMakeFiles/PhotonData_ext.dir/all
+
+# Include target in all.
+all: src/CMakeFiles/PhotonData_ext.dir/all
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+src/CMakeFiles/PhotonData_ext.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build/CMakeFiles 3
+	$(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/PhotonData_ext.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build/CMakeFiles 0
+.PHONY : src/CMakeFiles/PhotonData_ext.dir/rule
+
+# Convenience name for target.
+PhotonData_ext: src/CMakeFiles/PhotonData_ext.dir/rule
+.PHONY : PhotonData_ext
+
+# clean rule for target.
+src/CMakeFiles/PhotonData_ext.dir/clean:
+	$(MAKE) -f src/CMakeFiles/PhotonData_ext.dir/build.make src/CMakeFiles/PhotonData_ext.dir/clean
+.PHONY : src/CMakeFiles/PhotonData_ext.dir/clean
+
+# clean rule for target.
+clean: src/CMakeFiles/PhotonData_ext.dir/clean
+.PHONY : clean
+
+#=============================================================================
 # Target rules for target src/CMakeFiles/PhotonEntry_ext.dir
 
 # All Build rule for target.
 src/CMakeFiles/PhotonEntry_ext.dir/all:
 	$(MAKE) -f src/CMakeFiles/PhotonEntry_ext.dir/build.make src/CMakeFiles/PhotonEntry_ext.dir/depend
 	$(MAKE) -f src/CMakeFiles/PhotonEntry_ext.dir/build.make src/CMakeFiles/PhotonEntry_ext.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build/CMakeFiles  3 4
+	$(CMAKE_COMMAND) -E cmake_progress_report /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build/CMakeFiles  9 10
 	@echo "Built target PhotonEntry_ext"
 .PHONY : src/CMakeFiles/PhotonEntry_ext.dir/all
 

@@ -1,0 +1,1 @@
+/usr/bin/c++  -fPIC  -pedantic -Wall -std=c++11   -shared -Wl,-soname,PhotonData_ext.so -o PhotonData_ext.so CMakeFiles/PhotonData_ext.dir/PhotonData.o CMakeFiles/PhotonData_ext.dir/PhotonEntry.o CMakeFiles/PhotonData_ext.dir/PhotonData_ext.o -lboost_python-mt 

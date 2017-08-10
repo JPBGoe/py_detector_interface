@@ -24,26 +24,26 @@ namespace DSIM {
     	InteractionEntry();
     	~InteractionEntry();
     
-	// Implementation of the functions declared in XInteractionEntry.hh	
-	double getPositionX();
-	double getPositionY();
-	double getPositionZ();
-	double getEnergy();
-	double getTime();
+		// Implementation of the functions declared in XInteractionEntry.hh	
+		double getPositionX();
+		double getPositionY();
+		double getPositionZ();
+		double getEnergy();
+		double getTime();
 
-	// Implementaiton of the methods declared in XInteractionEntry.hh
-	void setPositionX(double value);
-	void setPositionY(double value);
-	void setPositionZ(double value);
-	void setEnergy(double value);
-	void setTime(double value);
-	void set(double energy, double time, double posX, double posY, double posZ);
+		// Implementaiton of the methods declared in XInteractionEntry.hh
+		void setPositionX(double value);
+		void setPositionY(double value);
+		void setPositionZ(double value);
+		void setEnergy(double value);
+		void setTime(double value);
+		void set(double energy, double time, double posX, double posY, double posZ);
 
     private:
-	// Varaibles to store the state of a photon
-   	std::vector<double> Pos;
-   	double E;
-	double T;
+		// Varaibles to store the state of a photon
+   		std::vector<double> Pos;
+   		double E;
+		double T;
     };
 }
 

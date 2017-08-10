@@ -102,6 +102,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named InteractionData_ext
+
+# Build rule for target.
+InteractionData_ext: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 InteractionData_ext
+.PHONY : InteractionData_ext
+
+# fast build rule for target.
+InteractionData_ext/fast:
+	$(MAKE) -f src/CMakeFiles/InteractionData_ext.dir/build.make src/CMakeFiles/InteractionData_ext.dir/build
+.PHONY : InteractionData_ext/fast
+
+#=============================================================================
 # Target rules for targets named InteractionEntry_ext
 
 # Build rule for target.
@@ -113,6 +126,19 @@ InteractionEntry_ext: cmake_check_build_system
 InteractionEntry_ext/fast:
 	$(MAKE) -f src/CMakeFiles/InteractionEntry_ext.dir/build.make src/CMakeFiles/InteractionEntry_ext.dir/build
 .PHONY : InteractionEntry_ext/fast
+
+#=============================================================================
+# Target rules for targets named PhotonData_ext
+
+# Build rule for target.
+PhotonData_ext: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 PhotonData_ext
+.PHONY : PhotonData_ext
+
+# fast build rule for target.
+PhotonData_ext/fast:
+	$(MAKE) -f src/CMakeFiles/PhotonData_ext.dir/build.make src/CMakeFiles/PhotonData_ext.dir/build
+.PHONY : PhotonData_ext/fast
 
 #=============================================================================
 # Target rules for targets named PhotonEntry_ext
@@ -135,7 +161,9 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... InteractionData_ext"
 	@echo "... InteractionEntry_ext"
+	@echo "... PhotonData_ext"
 	@echo "... PhotonEntry_ext"
 .PHONY : help
 

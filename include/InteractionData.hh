@@ -10,8 +10,8 @@
 #ifndef INTERACTIONDATA_HH
 #define INTERACTIONDATA_HH
 
-#include <XInteractionData.hh>
-#include <XInteractionEntry.hh>
+#include "XInteractionData.hh"
+#include "XInteractionEntry.hh"
 #include <vector>
 
 namespace DSIM {
@@ -23,15 +23,15 @@ namespace DSIM {
     	~InteractionData();
     
 		// Implementation of the functions declared in XInteractionData.hh	
-		boost::shared_ptr<XInteractionEntry> getEntry(size_t entry);
-        boost::shared_ptr<XInteractionEntry> addEntry();
-        size_t size();
+		boost::shared_ptr<XCSIT::XInteractionEntry> getEntry(size_t entry);
+        boost::shared_ptr<XCSIT::XInteractionEntry> addEntry();
+        size_t size() const;
         void clear();
         
 
     private:
 		// Variables to store the InteractionEntry instances
-   		std::vector<XInteractionEntry> iaVec;
+   		std::vector<boost::shared_ptr<XCSIT::XInteractionEntry>> iaVec;
    		size_t iaNum;
     };
 }

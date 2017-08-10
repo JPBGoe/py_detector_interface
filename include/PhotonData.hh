@@ -11,7 +11,7 @@
 #define PHOTONDATA_HH
 
 #include "XPhotonData.hh"
-#include "PhotonEntry.hh"
+#include "XPhotonEntry.hh"
 #include <vector>
 
 namespace DSIM {
@@ -23,15 +23,15 @@ namespace DSIM {
     	~PhotonData();
     
 		// Implementation of the functions declared in XPhotonData.hh	
-		boost::shared_ptr<XPhotonEntry> getEntry(size_t entry);
-        boost::shared_ptr<XPhotonEntry> addEntry();
-        size_t size();
+		boost::shared_ptr<XCSIT::XPhotonEntry> getEntry(size_t entry);
+        boost::shared_ptr<XCSIT::XPhotonEntry> addEntry();
+        size_t size() const;
         void clear();
         
 
     private:
 		// Variables to store the PhotonEntry instances
-   		std::vector<boost::shared_ptr<PhotonEntry>> photonVec;
+   		std::vector<boost::shared_ptr<XCSIT::XPhotonEntry>> photonVec;
    		size_t photonNum;
     };
 }

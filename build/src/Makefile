@@ -102,6 +102,20 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+src/CMakeFiles/InteractionData_ext.dir/rule:
+	cd /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/InteractionData_ext.dir/rule
+.PHONY : src/CMakeFiles/InteractionData_ext.dir/rule
+
+# Convenience name for target.
+InteractionData_ext: src/CMakeFiles/InteractionData_ext.dir/rule
+.PHONY : InteractionData_ext
+
+# fast build rule for target.
+InteractionData_ext/fast:
+	cd /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build && $(MAKE) -f src/CMakeFiles/InteractionData_ext.dir/build.make src/CMakeFiles/InteractionData_ext.dir/build
+.PHONY : InteractionData_ext/fast
+
+# Convenience name for target.
 src/CMakeFiles/InteractionEntry_ext.dir/rule:
 	cd /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/InteractionEntry_ext.dir/rule
 .PHONY : src/CMakeFiles/InteractionEntry_ext.dir/rule
@@ -114,6 +128,20 @@ InteractionEntry_ext: src/CMakeFiles/InteractionEntry_ext.dir/rule
 InteractionEntry_ext/fast:
 	cd /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build && $(MAKE) -f src/CMakeFiles/InteractionEntry_ext.dir/build.make src/CMakeFiles/InteractionEntry_ext.dir/build
 .PHONY : InteractionEntry_ext/fast
+
+# Convenience name for target.
+src/CMakeFiles/PhotonData_ext.dir/rule:
+	cd /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/PhotonData_ext.dir/rule
+.PHONY : src/CMakeFiles/PhotonData_ext.dir/rule
+
+# Convenience name for target.
+PhotonData_ext: src/CMakeFiles/PhotonData_ext.dir/rule
+.PHONY : PhotonData_ext
+
+# fast build rule for target.
+PhotonData_ext/fast:
+	cd /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build && $(MAKE) -f src/CMakeFiles/PhotonData_ext.dir/build.make src/CMakeFiles/PhotonData_ext.dir/build
+.PHONY : PhotonData_ext/fast
 
 # Convenience name for target.
 src/CMakeFiles/PhotonEntry_ext.dir/rule:
@@ -130,17 +158,50 @@ PhotonEntry_ext/fast:
 .PHONY : PhotonEntry_ext/fast
 
 # target to build an object file
+InteractionData.o:
+	cd /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build && $(MAKE) -f src/CMakeFiles/InteractionData_ext.dir/build.make src/CMakeFiles/InteractionData_ext.dir/InteractionData.o
+.PHONY : InteractionData.o
+
+# target to preprocess a source file
+InteractionData.i:
+	cd /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build && $(MAKE) -f src/CMakeFiles/InteractionData_ext.dir/build.make src/CMakeFiles/InteractionData_ext.dir/InteractionData.i
+.PHONY : InteractionData.i
+
+# target to generate assembly for a file
+InteractionData.s:
+	cd /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build && $(MAKE) -f src/CMakeFiles/InteractionData_ext.dir/build.make src/CMakeFiles/InteractionData_ext.dir/InteractionData.s
+.PHONY : InteractionData.s
+
+# target to build an object file
+InteractionData_ext.o:
+	cd /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build && $(MAKE) -f src/CMakeFiles/InteractionData_ext.dir/build.make src/CMakeFiles/InteractionData_ext.dir/InteractionData_ext.o
+.PHONY : InteractionData_ext.o
+
+# target to preprocess a source file
+InteractionData_ext.i:
+	cd /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build && $(MAKE) -f src/CMakeFiles/InteractionData_ext.dir/build.make src/CMakeFiles/InteractionData_ext.dir/InteractionData_ext.i
+.PHONY : InteractionData_ext.i
+
+# target to generate assembly for a file
+InteractionData_ext.s:
+	cd /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build && $(MAKE) -f src/CMakeFiles/InteractionData_ext.dir/build.make src/CMakeFiles/InteractionData_ext.dir/InteractionData_ext.s
+.PHONY : InteractionData_ext.s
+
+# target to build an object file
 InteractionEntry.o:
+	cd /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build && $(MAKE) -f src/CMakeFiles/InteractionData_ext.dir/build.make src/CMakeFiles/InteractionData_ext.dir/InteractionEntry.o
 	cd /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build && $(MAKE) -f src/CMakeFiles/InteractionEntry_ext.dir/build.make src/CMakeFiles/InteractionEntry_ext.dir/InteractionEntry.o
 .PHONY : InteractionEntry.o
 
 # target to preprocess a source file
 InteractionEntry.i:
+	cd /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build && $(MAKE) -f src/CMakeFiles/InteractionData_ext.dir/build.make src/CMakeFiles/InteractionData_ext.dir/InteractionEntry.i
 	cd /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build && $(MAKE) -f src/CMakeFiles/InteractionEntry_ext.dir/build.make src/CMakeFiles/InteractionEntry_ext.dir/InteractionEntry.i
 .PHONY : InteractionEntry.i
 
 # target to generate assembly for a file
 InteractionEntry.s:
+	cd /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build && $(MAKE) -f src/CMakeFiles/InteractionData_ext.dir/build.make src/CMakeFiles/InteractionData_ext.dir/InteractionEntry.s
 	cd /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build && $(MAKE) -f src/CMakeFiles/InteractionEntry_ext.dir/build.make src/CMakeFiles/InteractionEntry_ext.dir/InteractionEntry.s
 .PHONY : InteractionEntry.s
 
@@ -160,17 +221,50 @@ InteractionEntry_ext.s:
 .PHONY : InteractionEntry_ext.s
 
 # target to build an object file
+PhotonData.o:
+	cd /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build && $(MAKE) -f src/CMakeFiles/PhotonData_ext.dir/build.make src/CMakeFiles/PhotonData_ext.dir/PhotonData.o
+.PHONY : PhotonData.o
+
+# target to preprocess a source file
+PhotonData.i:
+	cd /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build && $(MAKE) -f src/CMakeFiles/PhotonData_ext.dir/build.make src/CMakeFiles/PhotonData_ext.dir/PhotonData.i
+.PHONY : PhotonData.i
+
+# target to generate assembly for a file
+PhotonData.s:
+	cd /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build && $(MAKE) -f src/CMakeFiles/PhotonData_ext.dir/build.make src/CMakeFiles/PhotonData_ext.dir/PhotonData.s
+.PHONY : PhotonData.s
+
+# target to build an object file
+PhotonData_ext.o:
+	cd /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build && $(MAKE) -f src/CMakeFiles/PhotonData_ext.dir/build.make src/CMakeFiles/PhotonData_ext.dir/PhotonData_ext.o
+.PHONY : PhotonData_ext.o
+
+# target to preprocess a source file
+PhotonData_ext.i:
+	cd /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build && $(MAKE) -f src/CMakeFiles/PhotonData_ext.dir/build.make src/CMakeFiles/PhotonData_ext.dir/PhotonData_ext.i
+.PHONY : PhotonData_ext.i
+
+# target to generate assembly for a file
+PhotonData_ext.s:
+	cd /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build && $(MAKE) -f src/CMakeFiles/PhotonData_ext.dir/build.make src/CMakeFiles/PhotonData_ext.dir/PhotonData_ext.s
+.PHONY : PhotonData_ext.s
+
+# target to build an object file
 PhotonEntry.o:
+	cd /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build && $(MAKE) -f src/CMakeFiles/PhotonData_ext.dir/build.make src/CMakeFiles/PhotonData_ext.dir/PhotonEntry.o
 	cd /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build && $(MAKE) -f src/CMakeFiles/PhotonEntry_ext.dir/build.make src/CMakeFiles/PhotonEntry_ext.dir/PhotonEntry.o
 .PHONY : PhotonEntry.o
 
 # target to preprocess a source file
 PhotonEntry.i:
+	cd /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build && $(MAKE) -f src/CMakeFiles/PhotonData_ext.dir/build.make src/CMakeFiles/PhotonData_ext.dir/PhotonEntry.i
 	cd /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build && $(MAKE) -f src/CMakeFiles/PhotonEntry_ext.dir/build.make src/CMakeFiles/PhotonEntry_ext.dir/PhotonEntry.i
 .PHONY : PhotonEntry.i
 
 # target to generate assembly for a file
 PhotonEntry.s:
+	cd /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build && $(MAKE) -f src/CMakeFiles/PhotonData_ext.dir/build.make src/CMakeFiles/PhotonData_ext.dir/PhotonEntry.s
 	cd /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build && $(MAKE) -f src/CMakeFiles/PhotonEntry_ext.dir/build.make src/CMakeFiles/PhotonEntry_ext.dir/PhotonEntry.s
 .PHONY : PhotonEntry.s
 
@@ -195,16 +289,30 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... InteractionData_ext"
 	@echo "... InteractionEntry_ext"
+	@echo "... PhotonData_ext"
 	@echo "... PhotonEntry_ext"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... InteractionData.o"
+	@echo "... InteractionData.i"
+	@echo "... InteractionData.s"
+	@echo "... InteractionData_ext.o"
+	@echo "... InteractionData_ext.i"
+	@echo "... InteractionData_ext.s"
 	@echo "... InteractionEntry.o"
 	@echo "... InteractionEntry.i"
 	@echo "... InteractionEntry.s"
 	@echo "... InteractionEntry_ext.o"
 	@echo "... InteractionEntry_ext.i"
 	@echo "... InteractionEntry_ext.s"
+	@echo "... PhotonData.o"
+	@echo "... PhotonData.i"
+	@echo "... PhotonData.s"
+	@echo "... PhotonData_ext.o"
+	@echo "... PhotonData_ext.i"
+	@echo "... PhotonData_ext.s"
 	@echo "... PhotonEntry.o"
 	@echo "... PhotonEntry.i"
 	@echo "... PhotonEntry.s"

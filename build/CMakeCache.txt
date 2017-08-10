@@ -193,6 +193,9 @@ CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 EXECUTABLE_OUTPUT_PATH:PATH=
 
 //Dependencies for the target
+InteractionData_ext_LIB_DEPENDS:STATIC=general;/usr/lib64/libboost_python-mt.so;
+
+//Dependencies for the target
 InteractionEntry_ext_LIB_DEPENDS:STATIC=general;/usr/lib64/libboost_python-mt.so;
 
 //Single output directory for building all libraries.
@@ -206,6 +209,9 @@ PYTHON_LIBRARY:FILEPATH=/usr/lib64/libpython2.7.so
 
 //Path to a library.
 PYTHON_LIBRARY_DEBUG:FILEPATH=PYTHON_LIBRARY_DEBUG-NOTFOUND
+
+//Dependencies for the target
+PhotonData_ext_LIB_DEPENDS:STATIC=general;/usr/lib64/libboost_python-mt.so;
 
 //Dependencies for the target
 PhotonEntry_ext_LIB_DEPENDS:STATIC=general;/usr/lib64/libboost_python-mt.so;

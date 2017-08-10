@@ -26,18 +26,25 @@ set_target_properties(PhotonEntry_ext PROPERTIES PREFIX "")
 
 # InteractionEntry
 
-add_library(InteractionEntry_ext SHARED InteractionEntry.cc InteractionEntry_ext.cc ${XCSIT_INCLUDE}/XInteractionEntry.hh
-	${CMAKE_SOURCE_DIR}/include/InteractionEntry.hh)
+add_library(InteractionEntry_ext SHARED InteractionEntry.cc InteractionEntry_ext.cc ${XCSIT_INCLUDE}/XInteractionEntry.hh ${CMAKE_SOURCE_DIR}/include/InteractionEntry.hh)
 target_link_libraries(InteractionEntry_ext ${Boost_LIBRARIES})
 set_target_properties(InteractionEntry_ext PROPERTIES PREFIX "")
 
 # PhotonData
 
-#add_library(PhotonData_ext SHARED PhotonData.cc PhotonData_ext.cc ${XCSIT_INCLUDE}/XPhotonData.hh ${XCSIT_INCLUDE}/XPhotonEntry.hh  ${CMAKE_SOURCE_DIR}/include/PhotonEntry.hh ${CMAKE_SOURCE_DIR}/include/PhotonData.hh)
-#target_link_libraries(PhotonData_ext ${Boost_LIBRARIES})
-#set_target_properties(PhotonData_ext PROPERTIES PREFIX "")
+add_library(PhotonData_ext SHARED ${CMAKE_SOURCE_DIR}/include/PhotonData.hh PhotonData.cc ${XCSIT_INCLUDE}/XPhotonData.hh ${XCSIT_INCLUDE}/XPhotonEntry.hh ${CMAKE_SOURCE_DIR}/include/PhotonEntry.hh PhotonEntry.cc PhotonData_ext.cc )
+target_link_libraries(PhotonData_ext ${Boost_LIBRARIES})
+set_target_properties(PhotonData_ext PROPERTIES PREFIX "")
 
+# InteractionData
 
+add_library(InteractionData_ext SHARED
+${CMAKE_SOURCE_DIR}/include/InteractionData.hh InteractionData.cc
+${XCSIT_INCLUDE}/XInteractionData.hh ${XCSIT_INCLUDE}/XInteractionEntry.hh
+${CMAKE_SOURCE_DIR}/include/InteractionEntry.hh InteractionEntry.cc
+InteractionData_ext.cc)
+target_link_libraries(InteractionData_ext ${Boost_LIBRARIES})
+set_target_properties(InteractionData_ext PROPERTIES PREFIX "")
 
 
 
