@@ -20,15 +20,15 @@ XInteractionEntry.hh
 vector
 -
 
-../src/../../karaboFramework/karabo/devices/xcsit/include/XInteractionData.hh
+/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/devices/xcsit/include/XInteractionData.hh
 cstddef
 -
 XInteractionEntry.hh
-../src/../../karaboFramework/karabo/devices/xcsit/include/XInteractionEntry.hh
+/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/devices/xcsit/include/XInteractionEntry.hh
 boost/shared_ptr.hpp
 -
 
-../src/../../karaboFramework/karabo/devices/xcsit/include/XInteractionEntry.hh
+/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/devices/xcsit/include/XInteractionEntry.hh
 string
 -
 

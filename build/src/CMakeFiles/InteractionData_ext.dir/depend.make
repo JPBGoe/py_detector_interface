@@ -3,17 +3,17 @@
 
 src/CMakeFiles/InteractionData_ext.dir/InteractionData.o: ../include/InteractionData.hh
 src/CMakeFiles/InteractionData_ext.dir/InteractionData.o: ../include/InteractionEntry.hh
-src/CMakeFiles/InteractionData_ext.dir/InteractionData.o: ../src/../../karaboFramework/karabo/devices/xcsit/include/XInteractionData.hh
-src/CMakeFiles/InteractionData_ext.dir/InteractionData.o: ../src/../../karaboFramework/karabo/devices/xcsit/include/XInteractionEntry.hh
+src/CMakeFiles/InteractionData_ext.dir/InteractionData.o: /gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/devices/xcsit/include/XInteractionData.hh
+src/CMakeFiles/InteractionData_ext.dir/InteractionData.o: /gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/devices/xcsit/include/XInteractionEntry.hh
 src/CMakeFiles/InteractionData_ext.dir/InteractionData.o: ../src/InteractionData.cc
 
 src/CMakeFiles/InteractionData_ext.dir/InteractionData_ext.o: ../include/InteractionData.hh
 src/CMakeFiles/InteractionData_ext.dir/InteractionData_ext.o: ../include/InteractionEntry.hh
-src/CMakeFiles/InteractionData_ext.dir/InteractionData_ext.o: ../src/../../karaboFramework/karabo/devices/xcsit/include/XInteractionData.hh
-src/CMakeFiles/InteractionData_ext.dir/InteractionData_ext.o: ../src/../../karaboFramework/karabo/devices/xcsit/include/XInteractionEntry.hh
+src/CMakeFiles/InteractionData_ext.dir/InteractionData_ext.o: /gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/devices/xcsit/include/XInteractionData.hh
+src/CMakeFiles/InteractionData_ext.dir/InteractionData_ext.o: /gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/devices/xcsit/include/XInteractionEntry.hh
 src/CMakeFiles/InteractionData_ext.dir/InteractionData_ext.o: ../src/InteractionData_ext.cc
 
 src/CMakeFiles/InteractionData_ext.dir/InteractionEntry.o: ../include/InteractionEntry.hh
-src/CMakeFiles/InteractionData_ext.dir/InteractionEntry.o: ../src/../../karaboFramework/karabo/devices/xcsit/include/XInteractionEntry.hh
+src/CMakeFiles/InteractionData_ext.dir/InteractionEntry.o: /gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/devices/xcsit/include/XInteractionEntry.hh
 src/CMakeFiles/InteractionData_ext.dir/InteractionEntry.o: ../src/InteractionEntry.cc
 

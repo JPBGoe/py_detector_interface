@@ -20,15 +20,15 @@ XPhotonEntry.hh
 vector
 -
 
-../src/../../karaboFramework/karabo/devices/xcsit/include/XPhotonData.hh
+/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/devices/xcsit/include/XPhotonData.hh
 cstddef
 -
 XPhotonEntry.hh
-../src/../../karaboFramework/karabo/devices/xcsit/include/XPhotonEntry.hh
+/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/devices/xcsit/include/XPhotonEntry.hh
 boost/shared_ptr.hpp
 -
 
-../src/../../karaboFramework/karabo/devices/xcsit/include/XPhotonEntry.hh
+/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/devices/xcsit/include/XPhotonEntry.hh
 
 /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/src/PhotonData.cc
 PhotonData.hh

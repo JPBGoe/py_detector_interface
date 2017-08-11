@@ -75,7 +75,9 @@ target_include_directories(ParticleSim_ext PUBLIC
 	${GEANT4_FOLDER}/source/event/include
 	${GEANT4_FOLDER}/source/externals/clhep/include
 	${GEANT4_FOLDER}/source/geometry/management/include
-	${GEANT4_FOLDER}/source/geometry/solids/include
+	${GEANT4_FOLDER}/source/geometry/solids/CSG/include
+	${GEANT4_FOLDER}/source/geometry/solids/specific/include
+	${GEANT4_FOLDER}/source/geometry/solids/Boolean/include
 	${GEANT4_FOLDER}/source/geometry/division/include
 	${GEANT4_FOLDER}/source/geometry/biasing/include
 	${GEANT4_FOLDER}/source/geometry/navigation/include
@@ -84,6 +86,26 @@ target_include_directories(ParticleSim_ext PUBLIC
 	${GEANT4_FOLDER}/source/particles/management/include
 	${GEANT4_FOLDER}/source/materials/include
 	${GEANT4_FOLDER}/source/tracking/include
+	${GEANT4_FOLDER}/source/processes/biasing/include
+	${GEANT4_FOLDER}/source/processes/cuts/include
+	${GEANT4_FOLDER}/source/processes/electromagnetic/include
+	${GEANT4_FOLDER}/source/processes/hardronic/include
+	${GEANT4_FOLDER}/source/processes/management/include
+	${GEANT4_FOLDER}/source/processes/parameterisation/include
+	${GEANT4_FOLDER}/source/processes/scoring/include
+	${GEANT4_FOLDER}/source/processes/decay/include
+	${GEANT4_FOLDER}/source/processes/optical/include
+	${GEANT4_FOLDER}/source/processes/phonon/include
+	${GEANT4_FOLDER}/source/processes/transportation/include
+	${GEANT4_FOLDER}/source/intercoms/include					#
+	${GEANT4_FOLDER}/source/digits_hits/detector/include					
+	${GEANT4_FOLDER}/source/digits_hits/digits/include					
+	${GEANT4_FOLDER}/source/digits_hits/hits/include					
+	${GEANT4_FOLDER}/source/digits_hits/scorer/include					
+	${GEANT4_FOLDER}/source/digits_hits/utils/include					
+	${GEANT4_FOLDER}/source/graphics_reps/include					
+	${GEANT4_FOLDER}/source/persistency/gdml/include
+	${XERCES}					
 )
 target_link_libraries(ParticleSim_ext ${Boost_LIBRARIES})
 set_target_properties(ParticleSim_ext PROPERTIES PREFIX "")

@@ -12,7 +12,7 @@ XInteractionEntry.hh
 vector
 -
 
-../src/../../karaboFramework/karabo/devices/xcsit/include/XInteractionEntry.hh
+/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/devices/xcsit/include/XInteractionEntry.hh
 string
 -
 

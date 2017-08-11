@@ -128,6 +128,19 @@ InteractionEntry_ext/fast:
 .PHONY : InteractionEntry_ext/fast
 
 #=============================================================================
+# Target rules for targets named ParticleSim_ext
+
+# Build rule for target.
+ParticleSim_ext: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ParticleSim_ext
+.PHONY : ParticleSim_ext
+
+# fast build rule for target.
+ParticleSim_ext/fast:
+	$(MAKE) -f src/CMakeFiles/ParticleSim_ext.dir/build.make src/CMakeFiles/ParticleSim_ext.dir/build
+.PHONY : ParticleSim_ext/fast
+
+#=============================================================================
 # Target rules for targets named PhotonData_ext
 
 # Build rule for target.
@@ -163,6 +176,7 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... InteractionData_ext"
 	@echo "... InteractionEntry_ext"
+	@echo "... ParticleSim_ext"
 	@echo "... PhotonData_ext"
 	@echo "... PhotonEntry_ext"
 .PHONY : help

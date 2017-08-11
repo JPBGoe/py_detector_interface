@@ -3,17 +3,17 @@
 
 src/CMakeFiles/PhotonData_ext.dir/PhotonData.o: ../include/PhotonData.hh
 src/CMakeFiles/PhotonData_ext.dir/PhotonData.o: ../include/PhotonEntry.hh
-src/CMakeFiles/PhotonData_ext.dir/PhotonData.o: ../src/../../karaboFramework/karabo/devices/xcsit/include/XPhotonData.hh
-src/CMakeFiles/PhotonData_ext.dir/PhotonData.o: ../src/../../karaboFramework/karabo/devices/xcsit/include/XPhotonEntry.hh
+src/CMakeFiles/PhotonData_ext.dir/PhotonData.o: /gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/devices/xcsit/include/XPhotonData.hh
+src/CMakeFiles/PhotonData_ext.dir/PhotonData.o: /gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/devices/xcsit/include/XPhotonEntry.hh
 src/CMakeFiles/PhotonData_ext.dir/PhotonData.o: ../src/PhotonData.cc
 
 src/CMakeFiles/PhotonData_ext.dir/PhotonData_ext.o: ../include/PhotonData.hh
 src/CMakeFiles/PhotonData_ext.dir/PhotonData_ext.o: ../include/PhotonEntry.hh
-src/CMakeFiles/PhotonData_ext.dir/PhotonData_ext.o: ../src/../../karaboFramework/karabo/devices/xcsit/include/XPhotonData.hh
-src/CMakeFiles/PhotonData_ext.dir/PhotonData_ext.o: ../src/../../karaboFramework/karabo/devices/xcsit/include/XPhotonEntry.hh
+src/CMakeFiles/PhotonData_ext.dir/PhotonData_ext.o: /gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/devices/xcsit/include/XPhotonData.hh
+src/CMakeFiles/PhotonData_ext.dir/PhotonData_ext.o: /gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/devices/xcsit/include/XPhotonEntry.hh
 src/CMakeFiles/PhotonData_ext.dir/PhotonData_ext.o: ../src/PhotonData_ext.cc
 
 src/CMakeFiles/PhotonData_ext.dir/PhotonEntry.o: ../include/PhotonEntry.hh
-src/CMakeFiles/PhotonData_ext.dir/PhotonEntry.o: ../src/../../karaboFramework/karabo/devices/xcsit/include/XPhotonEntry.hh
+src/CMakeFiles/PhotonData_ext.dir/PhotonEntry.o: /gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/devices/xcsit/include/XPhotonEntry.hh
 src/CMakeFiles/PhotonData_ext.dir/PhotonEntry.o: ../src/PhotonEntry.cc
 

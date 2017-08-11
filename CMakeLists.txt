@@ -40,6 +40,7 @@ if(NOT GEANT4_FOLDER)
     " <path> is either absolut or relative from your build folder")
 endif()
 
+option(XERCES "XERCES path")
 
 # Define path to include files and source files
 set(XCSIT_INCLUDE ${XCSIT_FOLDER}/include)

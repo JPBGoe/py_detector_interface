@@ -12,7 +12,7 @@ XPhotonEntry.hh
 vector
 -
 
-../src/../../karaboFramework/karabo/devices/xcsit/include/XPhotonEntry.hh
+/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/devices/xcsit/include/XPhotonEntry.hh
 
 /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/src/PhotonEntry.cc
 PhotonEntry.hh

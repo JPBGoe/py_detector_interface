@@ -36,35 +36,35 @@ namespace DSIM{
 		// XCSIT::XPrimaryGeneratorAction* ParticleSim::GetSimPrimaryGeneratorAction(){return simPrimaryGeneratorAction;}
 		// XCSIT::XEventAction* ParticleSim::GetEventAction(){return simEventAction;}
     
-	void ParticleSim::initialization(string detectorname){
+	void ParticleSim::initialization(std::string detectorname){
     
     	// 1st: Set the Geometry
     	setDetector(detectorname);
     
     	// 2nd: Set the physics list
-    	SetPhysicsList(new XCSIT::XPhysicsList);
+    	simulator.SetPhysicsList(new XCSIT::XPhysicsList);
 
     	// 3rd: PrimaryGenerator, idx.e. fill the initial input container
-    	SetPrimaryGeneratorAction(new XCSIT::XPrimaryGeneratorAction);
+    	simulator.SetPrimaryGeneratorAction(new XCSIT::XPrimaryGeneratorAction);
 
     	// 4th: Event Action allows the user to modify G4 behavior before and after and event
     	// In case of X-CSIT, the interaction data is stored.
-    	SetEventAction(new XCSIT::XEventAction);
+    	simulator.SetEventAction(new XCSIT::XEventAction);
 	}
 
-	void ParticleSim::setDetector(string detectorname){
-    	if(construction == "pnCCD"){
-	        SetDetectorConstruction(new XCSIT::PNCCDDetectorConstruction);
-   		}else if(construction == "LPD"){
-        	SetDetectorConstruction(new XCSIT::LPDDetectorConstruction);
-    	}else if(construction == "AGIPD"){
-        	SetDetectorConstruction(new XCSIT::AGIPDDetectorConstruction);
-    	}else if(construction == "AGIPDSPB"){
-        	SetDetectorConstruction(new XCSIT::AGIPDSPBDetectorConstruction);
-    	}else if(construction == "CAD"){
+	void ParticleSim::setDetector(std::string detectorname){
+    	if(detectorname == "pnCCD"){
+	        simulator.SetDetectorConstruction(new XCSIT::PNCCDDetectorConstruction);
+   		}else if(detectorname == "LPD"){
+        	simulator.SetDetectorConstruction(new XCSIT::LPDDetectorConstruction);
+    	}else if(detectorname == "AGIPD"){
+        	simulator.SetDetectorConstruction(new XCSIT::AGIPDDetectorConstruction);
+    	}else if(detectorname == "AGIPDSPB"){
+        	simulator.SetDetectorConstruction(new XCSIT::AGIPDSPBDetectorConstruction);
+    	}else if(detectorname == "CAD"){
 			XCSIT::CadDetectorConstruction* detector = new XCSIT::CadDetectorConstruction();
         	detector->ConstructFromGdml("cadFile");
-        	SetDetectorConstruction(detector);
+        	simulator.SetDetectorConstruction(detector);
 			delete detector;
     	}else{
 			throw std::invalid_argument("The specified detector is of unknown type. Please check again");

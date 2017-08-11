@@ -192,6 +192,14 @@ CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 //Single output directory for building all executables.
 EXECUTABLE_OUTPUT_PATH:PATH=
 
+//Path geant4 source parent folder: -DGEANT4_FOLDER=<path> if
+//\n <path>/source <path> is either absolut or relative from your
+// build folder to 
+//\n the parentfolder of source. In source there should be subfolders
+// such as 
+//\n run/src and include/src containing the source code of geant4
+GEANT4_FOLDER:BOOL=/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01
+
 //Dependencies for the target
 InteractionData_ext_LIB_DEPENDS:STATIC=general;/usr/lib64/libboost_python-mt.so;
 
@@ -211,13 +219,20 @@ PYTHON_LIBRARY:FILEPATH=/usr/lib64/libpython2.7.so
 PYTHON_LIBRARY_DEBUG:FILEPATH=PYTHON_LIBRARY_DEBUG-NOTFOUND
 
 //Dependencies for the target
+ParticleSim_ext_LIB_DEPENDS:STATIC=general;/usr/lib64/libboost_python-mt.so;
+
+//Dependencies for the target
 PhotonData_ext_LIB_DEPENDS:STATIC=general;/usr/lib64/libboost_python-mt.so;
 
 //Dependencies for the target
 PhotonEntry_ext_LIB_DEPENDS:STATIC=general;/usr/lib64/libboost_python-mt.so;
 
 //Path xcsit parent folder: -DXCSIT_FOLDER=<path> if <path>/xcsit
-XCSIT_FOLDER:BOOL=../../karaboFramework/karabo/devices
+//\n     <path> is either absolut or relative from your build folder
+XCSIT_FOLDER:BOOL=/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/devices/xcsit
+
+//XERCES path
+XERCES:BOOL=/gpfs/exfel/data/user/burcherj/Development/xerces-c-3.1.4/src
 
 //Value Computed by CMake
 py_detector_interface_BINARY_DIR:STATIC=/gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build
