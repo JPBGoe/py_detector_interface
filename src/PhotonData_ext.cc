@@ -1,8 +1,7 @@
 /*
- * File:   PhotonData_ext.cc
- * Author: jburchert
- *
- * Created on 9 August 2017
+ * File:   	PhotonData_ext.cc
+ * Author: 	jburchert
+ * Date:	10 August 2017
  */
 
 #include "PhotonData.hh"

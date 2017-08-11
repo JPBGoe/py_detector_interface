@@ -4,8 +4,7 @@
  *
  * File:	InteractionData.hh
  * Author:	jburchert
- *
- * Created on 9 August 2017
+ * Date:	9 August 2017
  */
 #ifndef INTERACTIONDATA_HH
 #define INTERACTIONDATA_HH

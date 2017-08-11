@@ -2,10 +2,9 @@
  * Implementation of the methods and functions declared in DSIM::PhotonEntry.hh and
  * XCSIT::XPhotonEntry.hh
  *
- * File:   PhotonEntry.cc
- * Author: jburchert
- *
- * Created on 9 August 2017
+ * File:   	PhotonEntry.cc
+ * Author: 	jburchert
+ * Date:	9 August 2017
  */
 
 #include "PhotonEntry.hh"

@@ -1,5 +1,6 @@
 FILE(REMOVE_RECURSE
   "CMakeFiles/ParticleSim_ext.dir/ParticleSim.o"
+  "CMakeFiles/ParticleSim_ext.dir/ParticleSim_ext.o"
   "CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/devices/xcsit/src/XGeant4ParticleSim.o"
   "ParticleSim_ext.pdb"
   "ParticleSim_ext.so"

@@ -7,8 +7,7 @@
  *
  * File:	InteractionEntry.hh
  * Author:	jburchert
- *
- * Created on 9 August 2017
+ * Data:	9 August 2017
  */
 #ifndef INTERACTIONENTRY_HH
 #define INTERACTIONENTRY_HH

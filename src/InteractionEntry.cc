@@ -2,10 +2,9 @@
  * Implementation of the methods and functions declared in DSIM::InteractionEntry.hh and
  * XCSIT::XInteractionEntry.hh
  *
- * File:   InteractionEntry.cc
- * Author: jburchert
- *
- * Created on 9 August 2017
+ * File:   	InteractionEntry.cc
+ * Author: 	jburchert
+ * Date:	9 August 2017
  */
 
 #include "InteractionEntry.hh"

@@ -8,8 +8,7 @@
  *
  * File:	PhotonEntry.hh
  * Author:	jburchert
- *
- * Created on 9 August 2017
+ * Date:	9 August 2017
  */
 #ifndef PHOTONENTRY_HH
 #define PHOTONENTRY_HH

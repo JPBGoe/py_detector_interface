@@ -29,7 +29,17 @@ XEventAction.hh
 ../include/XEventAction.hh
 XParticleSim.hh
 ../include/XParticleSim.hh
+XPhotonData.hh
+../include/XPhotonData.hh
+XInteractionData.hh
+../include/XInteractionData.hh
 string
+-
+
+../include/PhotonEntry.hh
+XPhotonEntry.hh
+../include/XPhotonEntry.hh
+vector
 -
 
 /gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/digits_hits/detector/include/G4CollectionNameVector.hh
@@ -3119,7 +3129,19 @@ iostream
 /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/src/ParticleSim.cc
 ParticleSim.hh
 /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/src/ParticleSim.hh
+XGeant4ParticleSim.hh
+/gpfs/exfel/data/user/burcherj/Development/py_detector_interface/src/XGeant4ParticleSim.hh
 stdexcept
+-
+
+/gpfs/exfel/data/user/burcherj/Development/py_detector_interface/src/ParticleSim_ext.cc
+ParticleSim.hh
+/gpfs/exfel/data/user/burcherj/Development/py_detector_interface/src/ParticleSim.hh
+PhotonEntry.hh
+/gpfs/exfel/data/user/burcherj/Development/py_detector_interface/src/PhotonEntry.hh
+boost/python.hpp
+-
+boost/shared_ptr.hpp
 -
 
 /gpfs/exfel/data/user/burcherj/Development/xerces-c-3.1.4/src/xercesc/dom/DOM.hpp

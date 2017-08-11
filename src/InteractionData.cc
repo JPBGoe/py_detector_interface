@@ -1,8 +1,7 @@
 /*
- * File:   InteractionData.cc
- * Author: jburchert
- *
- * Created on 10 August 2017
+ * File:   	InteractionData.cc
+ * Author: 	jburchert
+ * Date:	10 August 2017
  */
 
 #include "InteractionData.hh"

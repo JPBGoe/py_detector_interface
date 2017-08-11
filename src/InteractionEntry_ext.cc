@@ -1,10 +1,9 @@
 /*
  * After compilation c++ classes are accessable from python.
  * 
- * File:   InteractionEntry_ext.cc
- * Author: jburchert
- *
- * Created on 9 August 2017
+ * File:   	InteractionEntry_ext.cc
+ * Author: 	jburchert
+ * Date:	9 August 2017
  */
 
 #include "InteractionEntry.hh"

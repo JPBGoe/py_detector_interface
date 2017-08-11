@@ -102,6 +102,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named ChargeMatrix_ext
+
+# Build rule for target.
+ChargeMatrix_ext: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ChargeMatrix_ext
+.PHONY : ChargeMatrix_ext
+
+# fast build rule for target.
+ChargeMatrix_ext/fast:
+	$(MAKE) -f src/CMakeFiles/ChargeMatrix_ext.dir/build.make src/CMakeFiles/ChargeMatrix_ext.dir/build
+.PHONY : ChargeMatrix_ext/fast
+
+#=============================================================================
 # Target rules for targets named InteractionData_ext
 
 # Build rule for target.
@@ -174,6 +187,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... ChargeMatrix_ext"
 	@echo "... InteractionData_ext"
 	@echo "... InteractionEntry_ext"
 	@echo "... ParticleSim_ext"

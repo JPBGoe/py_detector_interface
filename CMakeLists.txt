@@ -2,6 +2,8 @@ project(py_detector_interface)
 
 cmake_minimum_required(VERSION 2.4)
 
+
+
 # Disallow in-source build
 if ("${CMAKE_SOURCE_DIR}"  STREQUAL "${CMAKE_BINARY_DIR}")
   message(FATAL_ERROR "SIMEX requires an out of source Build. "
@@ -14,12 +16,18 @@ if(NOT UNIX)
     message(FATAL_ERROR "This cmake file supports only Unix operation systems")
 endif()
 
-# Determine the folder where the source code of xcsit is located
+# Specify diverse option
+
 option(XCSIT_FOLDER "Path xcsit parent folder: -DXCSIT_FOLDER=<path> if <path>/xcsit
      <path> is either absolut or relative from your build folder")
-#if(NOT XCSIT_FOLDER)
-#   find_path(XCSIT_FOLDER xcsit/include)
-#endif()
+option(GEANT4_FOLDER "Path geant4 source parent folder: -DGEANT4_FOLDER=<path> if
+ <path>/source <path> is either absolut or relative from your build folder to 
+ the parentfolder of source. In source there should be subfolders such as 
+ run/src and include/src containing the source code of geant4")
+option(XERCES "XERCES path")
+option(CIMG "CImg path")
+
+# Determine the folder where the source code of xcsit is located
 if(NOT XCSIT_FOLDER)
    message(FATAL_ERROR "Path to xcsit source folders could not be found. "
       "Please use -DXCSIT_FOLDER=<path> if <path>/xcsit"
@@ -27,10 +35,6 @@ if(NOT XCSIT_FOLDER)
 endif()
 
 # Determine the folder where the source code of geant4 is located
-option(GEANT4_FOLDER "Path geant4 source parent folder: -DGEANT4_FOLDER=<path> if
- <path>/source <path> is either absolut or relative from your build folder to 
- the parentfolder of source. In source there should be subfolders such as 
- run/src and include/src containing the source code of geant4")
 #if(NOT GEANT4_FOLDER)
 #   find_path(GEANT4_FOLDER geant4/include)
 #endif()
@@ -40,7 +44,6 @@ if(NOT GEANT4_FOLDER)
     " <path> is either absolut or relative from your build folder")
 endif()
 
-option(XERCES "XERCES path")
 
 # Define path to include files and source files
 set(XCSIT_INCLUDE ${XCSIT_FOLDER}/include)

@@ -26,6 +26,9 @@
 #include "XEventAction.hh"
 #include "XParticleSim.hh"
 
+#include "XPhotonData.hh"
+#include "XInteractionData.hh"
+
 #include <string>
 
 namespace DSIM{
@@ -39,10 +42,12 @@ namespace DSIM{
 			// only by removing all the karabo dependencies, methods and
 			// functions
 			void initialization(std::string detectorname);
-			void setDetector(std::string detectorname);
+
+			void runSimulation(boost::shared_ptr<XCSIT::XPhotonData> input, boost::shared_ptr<XCSIT::XInteractionData> output);
 
 		private:
-			XCSIT::XGeant4ParticleSim simulator;
+			void setDetector(std::string detectorname);
+			XGeant4ParticleSim* simulate;
     };
 }
 

@@ -61,7 +61,7 @@ set_target_properties(InteractionData_ext PROPERTIES PREFIX "")
 # ParticleSim
 
 add_library(ParticleSim_ext SHARED 
-	${CMAKE_SOURCE_DIR}/include/ParticleSim.hh ParticleSim.cc 
+	${CMAKE_SOURCE_DIR}/include/ParticleSim.hh ParticleSim.cc ParticleSim_ext.cc
 	${XCSIT_INCLUDE}/XGeant4ParticleSim.hh
 	${XCSIT_SRC}/XGeant4ParticleSim.cc
 )
@@ -109,3 +109,16 @@ target_include_directories(ParticleSim_ext PUBLIC
 )
 target_link_libraries(ParticleSim_ext ${Boost_LIBRARIES})
 set_target_properties(ParticleSim_ext PROPERTIES PREFIX "")
+
+# ChargeMatrix
+
+add_library(ChargeMatrix_ext SHARED
+	${XCSIT_INCLUDE}/XChargeMatrix.hh
+	${XCSIT_SRC}/XChargeMatrix.cc
+	ChargeMatrix_ext.cc
+)
+target_include_directories(ChargeMatrix_ext PUBLIC 
+	${CIMG}/include
+)
+target_link_libraries(ChargeMatrix_ext ${Boost_LIBRARIES})
+set_target_properties(ChargeMatrix_ext PROPERTIES PREFIX "")

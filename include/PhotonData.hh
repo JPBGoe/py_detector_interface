@@ -4,8 +4,7 @@
  *
  * File:	PhotonData.hh
  * Author:	jburchert
- *
- * Created on 9 August 2017
+ * Date:	9 August 2017
  */
 #ifndef PHOTONDATA_HH
 #define PHOTONDATA_HH

@@ -1,8 +1,7 @@
 /*
- * File:   PhotonEntry_ext.cc
- * Author: jburchert
- *
- * Created on 9 August 2017
+ * File:   	PhotonEntry_ext.cc
+ * Author: 	jburchert
+ * Date:	9 August 2017
  */
 
 #include "PhotonEntry.hh"

@@ -102,6 +102,20 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+src/CMakeFiles/ChargeMatrix_ext.dir/rule:
+	cd /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/ChargeMatrix_ext.dir/rule
+.PHONY : src/CMakeFiles/ChargeMatrix_ext.dir/rule
+
+# Convenience name for target.
+ChargeMatrix_ext: src/CMakeFiles/ChargeMatrix_ext.dir/rule
+.PHONY : ChargeMatrix_ext
+
+# fast build rule for target.
+ChargeMatrix_ext/fast:
+	cd /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build && $(MAKE) -f src/CMakeFiles/ChargeMatrix_ext.dir/build.make src/CMakeFiles/ChargeMatrix_ext.dir/build
+.PHONY : ChargeMatrix_ext/fast
+
+# Convenience name for target.
 src/CMakeFiles/InteractionData_ext.dir/rule:
 	cd /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/InteractionData_ext.dir/rule
 .PHONY : src/CMakeFiles/InteractionData_ext.dir/rule
@@ -170,6 +184,21 @@ PhotonEntry_ext: src/CMakeFiles/PhotonEntry_ext.dir/rule
 PhotonEntry_ext/fast:
 	cd /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build && $(MAKE) -f src/CMakeFiles/PhotonEntry_ext.dir/build.make src/CMakeFiles/PhotonEntry_ext.dir/build
 .PHONY : PhotonEntry_ext/fast
+
+# target to build an object file
+ChargeMatrix_ext.o:
+	cd /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build && $(MAKE) -f src/CMakeFiles/ChargeMatrix_ext.dir/build.make src/CMakeFiles/ChargeMatrix_ext.dir/ChargeMatrix_ext.o
+.PHONY : ChargeMatrix_ext.o
+
+# target to preprocess a source file
+ChargeMatrix_ext.i:
+	cd /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build && $(MAKE) -f src/CMakeFiles/ChargeMatrix_ext.dir/build.make src/CMakeFiles/ChargeMatrix_ext.dir/ChargeMatrix_ext.i
+.PHONY : ChargeMatrix_ext.i
+
+# target to generate assembly for a file
+ChargeMatrix_ext.s:
+	cd /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build && $(MAKE) -f src/CMakeFiles/ChargeMatrix_ext.dir/build.make src/CMakeFiles/ChargeMatrix_ext.dir/ChargeMatrix_ext.s
+.PHONY : ChargeMatrix_ext.s
 
 # target to build an object file
 InteractionData.o:
@@ -250,6 +279,21 @@ ParticleSim.s:
 .PHONY : ParticleSim.s
 
 # target to build an object file
+ParticleSim_ext.o:
+	cd /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build && $(MAKE) -f src/CMakeFiles/ParticleSim_ext.dir/build.make src/CMakeFiles/ParticleSim_ext.dir/ParticleSim_ext.o
+.PHONY : ParticleSim_ext.o
+
+# target to preprocess a source file
+ParticleSim_ext.i:
+	cd /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build && $(MAKE) -f src/CMakeFiles/ParticleSim_ext.dir/build.make src/CMakeFiles/ParticleSim_ext.dir/ParticleSim_ext.i
+.PHONY : ParticleSim_ext.i
+
+# target to generate assembly for a file
+ParticleSim_ext.s:
+	cd /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build && $(MAKE) -f src/CMakeFiles/ParticleSim_ext.dir/build.make src/CMakeFiles/ParticleSim_ext.dir/ParticleSim_ext.s
+.PHONY : ParticleSim_ext.s
+
+# target to build an object file
 PhotonData.o:
 	cd /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build && $(MAKE) -f src/CMakeFiles/PhotonData_ext.dir/build.make src/CMakeFiles/PhotonData_ext.dir/PhotonData.o
 .PHONY : PhotonData.o
@@ -313,6 +357,21 @@ PhotonEntry_ext.s:
 .PHONY : PhotonEntry_ext.s
 
 # target to build an object file
+gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/devices/xcsit/src/XChargeMatrix.o:
+	cd /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build && $(MAKE) -f src/CMakeFiles/ChargeMatrix_ext.dir/build.make src/CMakeFiles/ChargeMatrix_ext.dir/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/devices/xcsit/src/XChargeMatrix.o
+.PHONY : gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/devices/xcsit/src/XChargeMatrix.o
+
+# target to preprocess a source file
+gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/devices/xcsit/src/XChargeMatrix.i:
+	cd /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build && $(MAKE) -f src/CMakeFiles/ChargeMatrix_ext.dir/build.make src/CMakeFiles/ChargeMatrix_ext.dir/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/devices/xcsit/src/XChargeMatrix.i
+.PHONY : gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/devices/xcsit/src/XChargeMatrix.i
+
+# target to generate assembly for a file
+gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/devices/xcsit/src/XChargeMatrix.s:
+	cd /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build && $(MAKE) -f src/CMakeFiles/ChargeMatrix_ext.dir/build.make src/CMakeFiles/ChargeMatrix_ext.dir/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/devices/xcsit/src/XChargeMatrix.s
+.PHONY : gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/devices/xcsit/src/XChargeMatrix.s
+
+# target to build an object file
 gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/devices/xcsit/src/XGeant4ParticleSim.o:
 	cd /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build && $(MAKE) -f src/CMakeFiles/ParticleSim_ext.dir/build.make src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/devices/xcsit/src/XGeant4ParticleSim.o
 .PHONY : gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/devices/xcsit/src/XGeant4ParticleSim.o
@@ -333,6 +392,7 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... ChargeMatrix_ext"
 	@echo "... InteractionData_ext"
 	@echo "... InteractionEntry_ext"
 	@echo "... ParticleSim_ext"
@@ -340,6 +400,9 @@ help:
 	@echo "... PhotonEntry_ext"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... ChargeMatrix_ext.o"
+	@echo "... ChargeMatrix_ext.i"
+	@echo "... ChargeMatrix_ext.s"
 	@echo "... InteractionData.o"
 	@echo "... InteractionData.i"
 	@echo "... InteractionData.s"
@@ -355,6 +418,9 @@ help:
 	@echo "... ParticleSim.o"
 	@echo "... ParticleSim.i"
 	@echo "... ParticleSim.s"
+	@echo "... ParticleSim_ext.o"
+	@echo "... ParticleSim_ext.i"
+	@echo "... ParticleSim_ext.s"
 	@echo "... PhotonData.o"
 	@echo "... PhotonData.i"
 	@echo "... PhotonData.s"
@@ -367,6 +433,9 @@ help:
 	@echo "... PhotonEntry_ext.o"
 	@echo "... PhotonEntry_ext.i"
 	@echo "... PhotonEntry_ext.s"
+	@echo "... gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/devices/xcsit/src/XChargeMatrix.o"
+	@echo "... gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/devices/xcsit/src/XChargeMatrix.i"
+	@echo "... gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/devices/xcsit/src/XChargeMatrix.s"
 	@echo "... gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/devices/xcsit/src/XGeant4ParticleSim.o"
 	@echo "... gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/devices/xcsit/src/XGeant4ParticleSim.i"
 	@echo "... gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/devices/xcsit/src/XGeant4ParticleSim.s"
