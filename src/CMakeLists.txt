@@ -7,7 +7,10 @@ find_package(Boost COMPONENTS python REQUIRED)
 include_directories(${Boost_INCLUDE_DIR})
 
 # Include the header file directories
-include_directories(${CMAKE_SOURCE_DIR}/include ${XCSIT_INCLUDE})
+include_directories(
+	${CMAKE_SOURCE_DIR}/include 
+	${XCSIT_INCLUDE} ${XCSIT_SRC}
+)
 
 # Compiler flags
 if(UNIX)
@@ -20,13 +23,21 @@ endif()
 
 # PhotonEntry
 
-add_library(PhotonEntry_ext SHARED PhotonEntry.cc PhotonEntry_ext.cc ${XCSIT_INCLUDE}/XPhotonEntry.hh ${CMAKE_SOURCE_DIR}/include/PhotonEntry.hh)
+add_library(PhotonEntry_ext SHARED 
+	PhotonEntry.cc PhotonEntry_ext.cc 
+	${XCSIT_INCLUDE}/XPhotonEntry.hh 
+	${CMAKE_SOURCE_DIR}/include/PhotonEntry.hh
+)
 target_link_libraries(PhotonEntry_ext ${Boost_LIBRARIES})
 set_target_properties(PhotonEntry_ext PROPERTIES PREFIX "")
 
 # InteractionEntry
 
-add_library(InteractionEntry_ext SHARED InteractionEntry.cc InteractionEntry_ext.cc ${XCSIT_INCLUDE}/XInteractionEntry.hh ${CMAKE_SOURCE_DIR}/include/InteractionEntry.hh)
+add_library(InteractionEntry_ext SHARED 
+	InteractionEntry.cc InteractionEntry_ext.cc 
+	${XCSIT_INCLUDE}/XInteractionEntry.hh 
+	${CMAKE_SOURCE_DIR}/include/InteractionEntry.hh
+)
 target_link_libraries(InteractionEntry_ext ${Boost_LIBRARIES})
 set_target_properties(InteractionEntry_ext PROPERTIES PREFIX "")
 
@@ -39,12 +50,40 @@ set_target_properties(PhotonData_ext PROPERTIES PREFIX "")
 # InteractionData
 
 add_library(InteractionData_ext SHARED
-${CMAKE_SOURCE_DIR}/include/InteractionData.hh InteractionData.cc
-${XCSIT_INCLUDE}/XInteractionData.hh ${XCSIT_INCLUDE}/XInteractionEntry.hh
-${CMAKE_SOURCE_DIR}/include/InteractionEntry.hh InteractionEntry.cc
-InteractionData_ext.cc)
+	${CMAKE_SOURCE_DIR}/include/InteractionData.hh InteractionData.cc
+	${XCSIT_INCLUDE}/XInteractionData.hh ${XCSIT_INCLUDE}/XInteractionEntry.hh
+	${CMAKE_SOURCE_DIR}/include/InteractionEntry.hh InteractionEntry.cc
+	InteractionData_ext.cc
+)
 target_link_libraries(InteractionData_ext ${Boost_LIBRARIES})
 set_target_properties(InteractionData_ext PROPERTIES PREFIX "")
 
+# ParticleSim
 
-
+add_library(ParticleSim_ext SHARED 
+	${CMAKE_SOURCE_DIR}/include/ParticleSim.hh ParticleSim.cc 
+	${XCSIT_INCLUDE}/XGeant4ParticleSim.hh
+	${XCSIT_SRC}/XGeant4ParticleSim.cc
+)
+target_include_directories(ParticleSim_ext PUBLIC 
+	${GEANT4_FOLDER}/source/run/include
+	${GEANT4_FOLDER}/source/global/management/include
+	${GEANT4_FOLDER}/source/global/HEPRandom/include
+	${GEANT4_FOLDER}/source/global/HEPGeometry/include
+	${GEANT4_FOLDER}/source/global/HEPNumerics/include
+	${GEANT4_FOLDER}/source/track/include
+	${GEANT4_FOLDER}/source/event/include
+	${GEANT4_FOLDER}/source/externals/clhep/include
+	${GEANT4_FOLDER}/source/geometry/management/include
+	${GEANT4_FOLDER}/source/geometry/solids/include
+	${GEANT4_FOLDER}/source/geometry/division/include
+	${GEANT4_FOLDER}/source/geometry/biasing/include
+	${GEANT4_FOLDER}/source/geometry/navigation/include
+	${GEANT4_FOLDER}/source/geometry/volumes/include
+	${GEANT4_FOLDER}/source/particles/magneticfield/include
+	${GEANT4_FOLDER}/source/particles/management/include
+	${GEANT4_FOLDER}/source/materials/include
+	${GEANT4_FOLDER}/source/tracking/include
+)
+target_link_libraries(ParticleSim_ext ${Boost_LIBRARIES})
+set_target_properties(ParticleSim_ext PROPERTIES PREFIX "")

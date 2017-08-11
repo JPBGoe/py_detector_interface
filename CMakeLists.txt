@@ -15,20 +15,35 @@ if(NOT UNIX)
 endif()
 
 # Determine the folder where the source code of xcsit is located
-option(XCSIT_FOLDER "Path xcsit parent folder: -DXCSIT_FOLDER=<path> if <path>/xcsit"
-    " <path> is either absolut or relative from your build folder")
-if(NOT XCSIT_FOLDER)
-   find_path(XCSIT_FOLDER xcsit/include)
-endif()
+option(XCSIT_FOLDER "Path xcsit parent folder: -DXCSIT_FOLDER=<path> if <path>/xcsit
+     <path> is either absolut or relative from your build folder")
+#if(NOT XCSIT_FOLDER)
+#   find_path(XCSIT_FOLDER xcsit/include)
+#endif()
 if(NOT XCSIT_FOLDER)
    message(FATAL_ERROR "Path to xcsit source folders could not be found. "
       "Please use -DXCSIT_FOLDER=<path> if <path>/xcsit"
     " <path> is either absolut or relative from your build folder")
 endif()
 
+# Determine the folder where the source code of geant4 is located
+option(GEANT4_FOLDER "Path geant4 source parent folder: -DGEANT4_FOLDER=<path> if
+ <path>/source <path> is either absolut or relative from your build folder to 
+ the parentfolder of source. In source there should be subfolders such as 
+ run/src and include/src containing the source code of geant4")
+#if(NOT GEANT4_FOLDER)
+#   find_path(GEANT4_FOLDER geant4/include)
+#endif()
+if(NOT GEANT4_FOLDER)
+   message(FATAL_ERROR "Path to geant4 source folders could not be found. "
+      "Please use -DGEANT_FOLDER=<path> if <path>/geant4"
+    " <path> is either absolut or relative from your build folder")
+endif()
+
+
 # Define path to include files and source files
-set(XCSIT_INCLUDE ${XCSIT_FOLDER}/xcsit/include)
-set(XCSIT_SRC ${XCSIT_FOLDER}/xcsit/src)
+set(XCSIT_INCLUDE ${XCSIT_FOLDER}/include)
+set(XCSIT_SRC ${XCSIT_FOLDER}/src)
 
 # Specify the source elements needed from xcsit
 list(APPEND IN_LIST "XPhotonEntry.hh" "XPhotonData.hh" "XInteractionEntry.hh" 
