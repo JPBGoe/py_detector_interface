@@ -14,7 +14,7 @@ include_directories(
 
 # Compiler flags
 if(UNIX)
-    SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -pedantic -Wall -std=c++11")
+    SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 endif()
 
 # =============================================================================
@@ -64,6 +64,7 @@ add_library(ParticleSim_ext SHARED
 	${CMAKE_SOURCE_DIR}/include/ParticleSim.hh ParticleSim.cc ParticleSim_ext.cc
 	${XCSIT_INCLUDE}/XGeant4ParticleSim.hh
 	${XCSIT_SRC}/XGeant4ParticleSim.cc
+	${XCSIT_INCLUDE}/XPerfectSingleCharge.hh
 )
 target_include_directories(ParticleSim_ext PUBLIC 
 	${GEANT4_FOLDER}/source/run/include
@@ -122,3 +123,57 @@ target_include_directories(ChargeMatrix_ext PUBLIC
 )
 target_link_libraries(ChargeMatrix_ext ${Boost_LIBRARIES})
 set_target_properties(ChargeMatrix_ext PROPERTIES PREFIX "")
+
+# ChargeSimulation
+
+add_library(ChargeSim_ext SHARED
+	${CMAKE_SOURCE_DIR}/include/ChargeSim.hh ChargeSim.cc ChargeSim_ext.cc
+	${XCSIT_INCLUDE}/XPlasmaPointChargeSim.hh
+	${XCSIT_SRC}/XPlasmaPointChargeSim.cc
+)
+target_include_directories(ChargeSim_ext PUBLIC
+	${GEANT4_FOLDER}/source/run/include
+	${GEANT4_FOLDER}/source/global/management/include
+	${GEANT4_FOLDER}/source/global/HEPRandom/include
+	${GEANT4_FOLDER}/source/global/HEPGeometry/include
+	${GEANT4_FOLDER}/source/global/HEPNumerics/include
+	${GEANT4_FOLDER}/source/track/include
+	${GEANT4_FOLDER}/source/event/include
+	${GEANT4_FOLDER}/source/externals/clhep/include
+	${GEANT4_FOLDER}/source/geometry/management/include
+	${GEANT4_FOLDER}/source/geometry/solids/CSG/include
+	${GEANT4_FOLDER}/source/geometry/solids/specific/include
+	${GEANT4_FOLDER}/source/geometry/solids/Boolean/include
+	${GEANT4_FOLDER}/source/geometry/division/include
+	${GEANT4_FOLDER}/source/geometry/biasing/include
+	${GEANT4_FOLDER}/source/geometry/navigation/include
+	${GEANT4_FOLDER}/source/geometry/volumes/include
+	${GEANT4_FOLDER}/source/particles/magneticfield/include
+	${GEANT4_FOLDER}/source/particles/management/include
+	${GEANT4_FOLDER}/source/materials/include
+	${GEANT4_FOLDER}/source/tracking/include
+	${GEANT4_FOLDER}/source/processes/biasing/include
+	${GEANT4_FOLDER}/source/processes/cuts/include
+	${GEANT4_FOLDER}/source/processes/electromagnetic/include
+	${GEANT4_FOLDER}/source/processes/hardronic/include
+	${GEANT4_FOLDER}/source/processes/management/include
+	${GEANT4_FOLDER}/source/processes/parameterisation/include
+	${GEANT4_FOLDER}/source/processes/scoring/include
+	${GEANT4_FOLDER}/source/processes/decay/include
+	${GEANT4_FOLDER}/source/processes/optical/include
+	${GEANT4_FOLDER}/source/processes/phonon/include
+	${GEANT4_FOLDER}/source/processes/transportation/include
+	${GEANT4_FOLDER}/source/intercoms/include					#
+	${GEANT4_FOLDER}/source/digits_hits/detector/include					
+	${GEANT4_FOLDER}/source/digits_hits/digits/include					
+	${GEANT4_FOLDER}/source/digits_hits/hits/include					
+	${GEANT4_FOLDER}/source/digits_hits/scorer/include					
+	${GEANT4_FOLDER}/source/digits_hits/utils/include					
+	${GEANT4_FOLDER}/source/graphics_reps/include					
+	${GEANT4_FOLDER}/source/persistency/gdml/include
+	${XERCES}
+	${CIMG}/include					
+)
+target_link_libraries(ChargeSim_ext ${Boost_LIBRARIES})
+set_target_properties(ChargeSim_ext PROPERTIES PREFIX "")
+

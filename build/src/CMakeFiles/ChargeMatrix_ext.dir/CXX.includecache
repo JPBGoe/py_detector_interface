@@ -13339,12 +13339,12 @@ stdarg.h
 /gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/extern/include/tiffvers.h
 
 /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/src/ChargeMatrix_ext.cc
-XChargeMatrix.hh
-/gpfs/exfel/data/user/burcherj/Development/py_detector_interface/src/XChargeMatrix.hh
 boost/python.hpp
 -
 boost/shared_ptr.hpp
 -
+XChargeMatrix.hh
+/gpfs/exfel/data/user/burcherj/Development/py_detector_interface/src/XChargeMatrix.hh
 
 /usr/include/python2.7/Python.h
 patchlevel.h

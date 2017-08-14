@@ -1,1 +1,1 @@
-/usr/bin/c++  -fPIC  -pedantic -Wall -std=c++11   -shared -Wl,-soname,InteractionEntry_ext.so -o InteractionEntry_ext.so CMakeFiles/InteractionEntry_ext.dir/InteractionEntry.o CMakeFiles/InteractionEntry_ext.dir/InteractionEntry_ext.o -lboost_python-mt 
+/usr/bin/c++  -fPIC  -std=c++11   -shared -Wl,-soname,InteractionEntry_ext.so -o InteractionEntry_ext.so CMakeFiles/InteractionEntry_ext.dir/InteractionEntry.o CMakeFiles/InteractionEntry_ext.dir/InteractionEntry_ext.o -lboost_python-mt 

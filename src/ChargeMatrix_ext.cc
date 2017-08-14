@@ -4,9 +4,9 @@
  * Date:	11 August 2017
  */
 
-#include "XChargeMatrix.hh"
 #include <boost/python.hpp>
 #include <boost/shared_ptr.hpp>
+#include "XChargeMatrix.hh"
 
 using namespace XCSIT;
 

@@ -115,6 +115,19 @@ ChargeMatrix_ext/fast:
 .PHONY : ChargeMatrix_ext/fast
 
 #=============================================================================
+# Target rules for targets named ChargeSim_ext
+
+# Build rule for target.
+ChargeSim_ext: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ChargeSim_ext
+.PHONY : ChargeSim_ext
+
+# fast build rule for target.
+ChargeSim_ext/fast:
+	$(MAKE) -f src/CMakeFiles/ChargeSim_ext.dir/build.make src/CMakeFiles/ChargeSim_ext.dir/build
+.PHONY : ChargeSim_ext/fast
+
+#=============================================================================
 # Target rules for targets named InteractionData_ext
 
 # Build rule for target.
@@ -188,6 +201,7 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... ChargeMatrix_ext"
+	@echo "... ChargeSim_ext"
 	@echo "... InteractionData_ext"
 	@echo "... InteractionEntry_ext"
 	@echo "... ParticleSim_ext"

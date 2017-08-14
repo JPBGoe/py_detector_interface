@@ -116,6 +116,20 @@ ChargeMatrix_ext/fast:
 .PHONY : ChargeMatrix_ext/fast
 
 # Convenience name for target.
+src/CMakeFiles/ChargeSim_ext.dir/rule:
+	cd /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/ChargeSim_ext.dir/rule
+.PHONY : src/CMakeFiles/ChargeSim_ext.dir/rule
+
+# Convenience name for target.
+ChargeSim_ext: src/CMakeFiles/ChargeSim_ext.dir/rule
+.PHONY : ChargeSim_ext
+
+# fast build rule for target.
+ChargeSim_ext/fast:
+	cd /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build && $(MAKE) -f src/CMakeFiles/ChargeSim_ext.dir/build.make src/CMakeFiles/ChargeSim_ext.dir/build
+.PHONY : ChargeSim_ext/fast
+
+# Convenience name for target.
 src/CMakeFiles/InteractionData_ext.dir/rule:
 	cd /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/InteractionData_ext.dir/rule
 .PHONY : src/CMakeFiles/InteractionData_ext.dir/rule
@@ -199,6 +213,36 @@ ChargeMatrix_ext.i:
 ChargeMatrix_ext.s:
 	cd /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build && $(MAKE) -f src/CMakeFiles/ChargeMatrix_ext.dir/build.make src/CMakeFiles/ChargeMatrix_ext.dir/ChargeMatrix_ext.s
 .PHONY : ChargeMatrix_ext.s
+
+# target to build an object file
+ChargeSim.o:
+	cd /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build && $(MAKE) -f src/CMakeFiles/ChargeSim_ext.dir/build.make src/CMakeFiles/ChargeSim_ext.dir/ChargeSim.o
+.PHONY : ChargeSim.o
+
+# target to preprocess a source file
+ChargeSim.i:
+	cd /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build && $(MAKE) -f src/CMakeFiles/ChargeSim_ext.dir/build.make src/CMakeFiles/ChargeSim_ext.dir/ChargeSim.i
+.PHONY : ChargeSim.i
+
+# target to generate assembly for a file
+ChargeSim.s:
+	cd /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build && $(MAKE) -f src/CMakeFiles/ChargeSim_ext.dir/build.make src/CMakeFiles/ChargeSim_ext.dir/ChargeSim.s
+.PHONY : ChargeSim.s
+
+# target to build an object file
+ChargeSim_ext.o:
+	cd /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build && $(MAKE) -f src/CMakeFiles/ChargeSim_ext.dir/build.make src/CMakeFiles/ChargeSim_ext.dir/ChargeSim_ext.o
+.PHONY : ChargeSim_ext.o
+
+# target to preprocess a source file
+ChargeSim_ext.i:
+	cd /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build && $(MAKE) -f src/CMakeFiles/ChargeSim_ext.dir/build.make src/CMakeFiles/ChargeSim_ext.dir/ChargeSim_ext.i
+.PHONY : ChargeSim_ext.i
+
+# target to generate assembly for a file
+ChargeSim_ext.s:
+	cd /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build && $(MAKE) -f src/CMakeFiles/ChargeSim_ext.dir/build.make src/CMakeFiles/ChargeSim_ext.dir/ChargeSim_ext.s
+.PHONY : ChargeSim_ext.s
 
 # target to build an object file
 InteractionData.o:
@@ -386,6 +430,21 @@ gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/devices/xcsit/s
 	cd /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build && $(MAKE) -f src/CMakeFiles/ParticleSim_ext.dir/build.make src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/devices/xcsit/src/XGeant4ParticleSim.s
 .PHONY : gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/devices/xcsit/src/XGeant4ParticleSim.s
 
+# target to build an object file
+gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/devices/xcsit/src/XPlasmaPointChargeSim.o:
+	cd /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build && $(MAKE) -f src/CMakeFiles/ChargeSim_ext.dir/build.make src/CMakeFiles/ChargeSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/devices/xcsit/src/XPlasmaPointChargeSim.o
+.PHONY : gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/devices/xcsit/src/XPlasmaPointChargeSim.o
+
+# target to preprocess a source file
+gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/devices/xcsit/src/XPlasmaPointChargeSim.i:
+	cd /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build && $(MAKE) -f src/CMakeFiles/ChargeSim_ext.dir/build.make src/CMakeFiles/ChargeSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/devices/xcsit/src/XPlasmaPointChargeSim.i
+.PHONY : gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/devices/xcsit/src/XPlasmaPointChargeSim.i
+
+# target to generate assembly for a file
+gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/devices/xcsit/src/XPlasmaPointChargeSim.s:
+	cd /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build && $(MAKE) -f src/CMakeFiles/ChargeSim_ext.dir/build.make src/CMakeFiles/ChargeSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/devices/xcsit/src/XPlasmaPointChargeSim.s
+.PHONY : gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/devices/xcsit/src/XPlasmaPointChargeSim.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -393,6 +452,7 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... ChargeMatrix_ext"
+	@echo "... ChargeSim_ext"
 	@echo "... InteractionData_ext"
 	@echo "... InteractionEntry_ext"
 	@echo "... ParticleSim_ext"
@@ -403,6 +463,12 @@ help:
 	@echo "... ChargeMatrix_ext.o"
 	@echo "... ChargeMatrix_ext.i"
 	@echo "... ChargeMatrix_ext.s"
+	@echo "... ChargeSim.o"
+	@echo "... ChargeSim.i"
+	@echo "... ChargeSim.s"
+	@echo "... ChargeSim_ext.o"
+	@echo "... ChargeSim_ext.i"
+	@echo "... ChargeSim_ext.s"
 	@echo "... InteractionData.o"
 	@echo "... InteractionData.i"
 	@echo "... InteractionData.s"
@@ -439,6 +505,9 @@ help:
 	@echo "... gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/devices/xcsit/src/XGeant4ParticleSim.o"
 	@echo "... gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/devices/xcsit/src/XGeant4ParticleSim.i"
 	@echo "... gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/devices/xcsit/src/XGeant4ParticleSim.s"
+	@echo "... gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/devices/xcsit/src/XPlasmaPointChargeSim.o"
+	@echo "... gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/devices/xcsit/src/XPlasmaPointChargeSim.i"
+	@echo "... gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/devices/xcsit/src/XPlasmaPointChargeSim.s"
 .PHONY : help
 
 

@@ -1,0 +1,266 @@
+/gpfs/exfel/data/user/burcherj/Development/py_detector_interface/src/ChargeSim.cc: In member function ‘void DSIM::ChargeSim::selectModule(boost::shared_ptr<XCSIT::XChargeData>, std::string)’:
+/gpfs/exfel/data/user/burcherj/Development/py_detector_interface/src/ChargeSim.cc:73:3: error: ‘setModule’ is not a member of ‘XCSIT::XPlasmaPointChargeSim’
+   XCSIT::XPlasmaPointChargeSim::setModule(moduledef);
+   ^
+In file included from /gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/extern/include/boost/shared_ptr.hpp:17:0,
+                 from /gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/devices/xcsit/include/XInteractionData.hh:15,
+                 from /gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/devices/xcsit/include/XChargeSim.hh:11,
+                 from /gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/devices/xcsit/include/XPlasmaPointChargeSim.hh:11,
+                 from /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/include/ChargeSim.hh:13,
+                 from /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/src/ChargeSim.cc:7:
+/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/extern/include/boost/smart_ptr/shared_ptr.hpp: In instantiation of ‘boost::shared_ptr<T>& boost::shared_ptr<T>::operator=(boost::shared_ptr<Y>&&) [with Y = XCSIT::XPointFanoSingleCharge; T = XCSIT::XPointSpreadSingleCharge]’:
+/gpfs/exfel/data/user/burcherj/Development/py_detector_interface/src/ChargeSim.cc:109:8:   required from here
+/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/extern/include/boost/smart_ptr/shared_ptr.hpp:641:9: error: no matching function for call to ‘boost::shared_ptr<XCSIT::XPointSpreadSingleCharge>::shared_ptr(boost::shared_ptr<XCSIT::XPointFanoSingleCharge>)’
+         this_type( static_cast< shared_ptr<Y> && >( r ) ).swap( *this );
+         ^
+/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/extern/include/boost/smart_ptr/shared_ptr.hpp:641:9: note: candidates are:
+/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/extern/include/boost/smart_ptr/shared_ptr.hpp:617:5: note: template<class Y> boost::shared_ptr<T>::shared_ptr(boost::shared_ptr<Y>&&, typename boost::detail::sp_enable_if_convertible<Y, T>::type)
+     shared_ptr( shared_ptr<Y> && r, typename boost::detail::sp_enable_if_convertible<Y,T>::type = boost::detail::sp_empty() )
+     ^
+/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/extern/include/boost/smart_ptr/shared_ptr.hpp:617:5: note:   template argument deduction/substitution failed:
+/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/extern/include/boost/smart_ptr/shared_ptr.hpp: In substitution of ‘template<class Y> boost::shared_ptr<T>::shared_ptr(boost::shared_ptr<Y>&&, typename boost::detail::sp_enable_if_convertible<Y, T>::type) [with Y = XCSIT::XPointFanoSingleCharge]’:
+/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/extern/include/boost/smart_ptr/shared_ptr.hpp:641:9:   required from ‘boost::shared_ptr<T>& boost::shared_ptr<T>::operator=(boost::shared_ptr<Y>&&) [with Y = XCSIT::XPointFanoSingleCharge; T = XCSIT::XPointSpreadSingleCharge]’
+/gpfs/exfel/data/user/burcherj/Development/py_detector_interface/src/ChargeSim.cc:109:8:   required from here
+/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/extern/include/boost/smart_ptr/shared_ptr.hpp:617:5: error: no type named ‘type’ in ‘struct boost::detail::sp_enable_if_convertible<XCSIT::XPointFanoSingleCharge, XCSIT::XPointSpreadSingleCharge>’
+/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/extern/include/boost/smart_ptr/shared_ptr.hpp: In instantiation of ‘boost::shared_ptr<T>& boost::shared_ptr<T>::operator=(boost::shared_ptr<Y>&&) [with Y = XCSIT::XPointFanoSingleCharge; T = XCSIT::XPointSpreadSingleCharge]’:
+/gpfs/exfel/data/user/burcherj/Development/py_detector_interface/src/ChargeSim.cc:109:8:   required from here
+/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/extern/include/boost/smart_ptr/shared_ptr.hpp:608:5: note: boost::shared_ptr<T>::shared_ptr(boost::shared_ptr<T>&&) [with T = XCSIT::XPointSpreadSingleCharge]
+     shared_ptr( shared_ptr && r ) BOOST_NOEXCEPT : px( r.px ), pn()
+     ^
+/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/extern/include/boost/smart_ptr/shared_ptr.hpp:608:5: note:   no known conversion for argument 1 from ‘boost::shared_ptr<XCSIT::XPointFanoSingleCharge>’ to ‘boost::shared_ptr<XCSIT::XPointSpreadSingleCharge>&&’
+/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/extern/include/boost/smart_ptr/shared_ptr.hpp:512:5: note: template<class Y, class D> boost::shared_ptr<T>::shared_ptr(boost::movelib::unique_ptr<Y, D>)
+     shared_ptr( boost::movelib::unique_ptr< Y, D > r ): px( r.get() ), pn()
+     ^
+/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/extern/include/boost/smart_ptr/shared_ptr.hpp:512:5: note:   template argument deduction/substitution failed:
+/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/extern/include/boost/smart_ptr/shared_ptr.hpp:641:9: note:   ‘boost::shared_ptr<XCSIT::XPointFanoSingleCharge>’ is not derived from ‘boost::movelib::unique_ptr<Y, D>’
+         this_type( static_cast< shared_ptr<Y> && >( r ) ).swap( *this );
+         ^
+/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/extern/include/boost/smart_ptr/shared_ptr.hpp:499:5: note: template<class Y, class D> boost::shared_ptr<T>::shared_ptr(std::unique_ptr<_Up, _Ep>&&)
+     shared_ptr( std::unique_ptr< Y, D > && r ): px( r.get() ), pn()
+     ^
+/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/extern/include/boost/smart_ptr/shared_ptr.hpp:499:5: note:   template argument deduction/substitution failed:
+/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/extern/include/boost/smart_ptr/shared_ptr.hpp:641:9: note:   ‘boost::shared_ptr<XCSIT::XPointFanoSingleCharge>’ is not derived from ‘std::unique_ptr<_Tp, _Dp>’
+         this_type( static_cast< shared_ptr<Y> && >( r ) ).swap( *this );
+         ^
+/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/extern/include/boost/smart_ptr/shared_ptr.hpp:467:5: note: template<class Y> boost::shared_ptr<T>::shared_ptr(std::auto_ptr<_Up>&&)
+     shared_ptr( std::auto_ptr<Y> && r ): px(r.get()), pn()
+     ^
+/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/extern/include/boost/smart_ptr/shared_ptr.hpp:467:5: note:   template argument deduction/substitution failed:
+/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/extern/include/boost/smart_ptr/shared_ptr.hpp:641:9: note:   ‘boost::shared_ptr<XCSIT::XPointFanoSingleCharge>’ is not derived from ‘std::auto_ptr<Y>’
+         this_type( static_cast< shared_ptr<Y> && >( r ) ).swap( *this );
+         ^
+/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/extern/include/boost/smart_ptr/shared_ptr.hpp:454:14: note: template<class Y> boost::shared_ptr<T>::shared_ptr(std::auto_ptr<_Up>&)
+     explicit shared_ptr( std::auto_ptr<Y> & r ): px(r.get()), pn()
+              ^
+/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/extern/include/boost/smart_ptr/shared_ptr.hpp:454:14: note:   template argument deduction/substitution failed:
+/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/extern/include/boost/smart_ptr/shared_ptr.hpp:641:9: note:   ‘boost::shared_ptr<XCSIT::XPointFanoSingleCharge>’ is not derived from ‘std::auto_ptr<Y>’
+         this_type( static_cast< shared_ptr<Y> && >( r ) ).swap( *this );
+         ^
+/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/extern/include/boost/smart_ptr/shared_ptr.hpp:447:5: note: template<class Y> boost::shared_ptr<T>::shared_ptr(const boost::shared_ptr<Y>&, boost::shared_ptr<T>::element_type*)
+     shared_ptr( shared_ptr<Y> const & r, element_type * p ) BOOST_NOEXCEPT : px( p ), pn( r.pn )
+     ^
+/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/extern/include/boost/smart_ptr/shared_ptr.hpp:447:5: note:   template argument deduction/substitution failed:
+/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/extern/include/boost/smart_ptr/shared_ptr.hpp:641:9: note:   candidate expects 2 arguments, 1 provided
+         this_type( static_cast< shared_ptr<Y> && >( r ) ).swap( *this );
+         ^
+/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/extern/include/boost/smart_ptr/shared_ptr.hpp:433:5: note: template<class Y> boost::shared_ptr<T>::shared_ptr(const boost::shared_ptr<Y>&, typename boost::detail::sp_enable_if_convertible<Y, T>::type)
+     shared_ptr( shared_ptr<Y> const & r, typename boost::detail::sp_enable_if_convertible<Y,T>::type = boost::detail::sp_empty() )
+     ^
+/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/extern/include/boost/smart_ptr/shared_ptr.hpp:433:5: note:   template argument deduction/substitution failed:
+/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/extern/include/boost/smart_ptr/shared_ptr.hpp: In substitution of ‘template<class Y> boost::shared_ptr<T>::shared_ptr(const boost::shared_ptr<Y>&, typename boost::detail::sp_enable_if_convertible<Y, T>::type) [with Y = XCSIT::XPointFanoSingleCharge]’:
+/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/extern/include/boost/smart_ptr/shared_ptr.hpp:641:9:   required from ‘boost::shared_ptr<T>& boost::shared_ptr<T>::operator=(boost::shared_ptr<Y>&&) [with Y = XCSIT::XPointFanoSingleCharge; T = XCSIT::XPointSpreadSingleCharge]’
+/gpfs/exfel/data/user/burcherj/Development/py_detector_interface/src/ChargeSim.cc:109:8:   required from here
+/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/extern/include/boost/smart_ptr/shared_ptr.hpp:433:5: error: no type named ‘type’ in ‘struct boost::detail::sp_enable_if_convertible<XCSIT::XPointFanoSingleCharge, XCSIT::XPointSpreadSingleCharge>’
+/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/extern/include/boost/smart_ptr/shared_ptr.hpp: In instantiation of ‘boost::shared_ptr<T>& boost::shared_ptr<T>::operator=(boost::shared_ptr<Y>&&) [with Y = XCSIT::XPointFanoSingleCharge; T = XCSIT::XPointSpreadSingleCharge]’:
+/gpfs/exfel/data/user/burcherj/Development/py_detector_interface/src/ChargeSim.cc:109:8:   required from here
+/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/extern/include/boost/smart_ptr/shared_ptr.hpp:421:5: note: template<class Y> boost::shared_ptr<T>::shared_ptr(const boost::weak_ptr<Y>&, boost::detail::sp_nothrow_tag)
+     shared_ptr( weak_ptr<Y> const & r, boost::detail::sp_nothrow_tag )
+     ^
+/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/extern/include/boost/smart_ptr/shared_ptr.hpp:421:5: note:   template argument deduction/substitution failed:
+/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/extern/include/boost/smart_ptr/shared_ptr.hpp:641:9: note:   ‘boost::shared_ptr<XCSIT::XPointFanoSingleCharge>’ is not derived from ‘const boost::weak_ptr<Y>’
+         this_type( static_cast< shared_ptr<Y> && >( r ) ).swap( *this );
+         ^
+/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/extern/include/boost/smart_ptr/shared_ptr.hpp:412:14: note: template<class Y> boost::shared_ptr<T>::shared_ptr(const boost::weak_ptr<Y>&)
+     explicit shared_ptr( weak_ptr<Y> const & r ): pn( r.pn ) // may throw
+              ^
+/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/extern/include/boost/smart_ptr/shared_ptr.hpp:412:14: note:   template argument deduction/substitution failed:
+/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/extern/include/boost/smart_ptr/shared_ptr.hpp:641:9: note:   ‘boost::shared_ptr<XCSIT::XPointFanoSingleCharge>’ is not derived from ‘const boost::weak_ptr<Y>’
+         this_type( static_cast< shared_ptr<Y> && >( r ) ).swap( *this );
+         ^
+/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/extern/include/boost/smart_ptr/shared_ptr.hpp:405:5: note: boost::shared_ptr<T>::shared_ptr(const boost::shared_ptr<T>&) [with T = XCSIT::XPointSpreadSingleCharge]
+     shared_ptr( shared_ptr const & r ) BOOST_NOEXCEPT : px( r.px ), pn( r.pn )
+     ^
+/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/extern/include/boost/smart_ptr/shared_ptr.hpp:405:5: note:   no known conversion for argument 1 from ‘boost::shared_ptr<XCSIT::XPointFanoSingleCharge>’ to ‘const boost::shared_ptr<XCSIT::XPointSpreadSingleCharge>&’
+/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/extern/include/boost/smart_ptr/shared_ptr.hpp:393:32: note: template<class D, class A> boost::shared_ptr<T>::shared_ptr(boost::detail::sp_nullptr_t, D, A)
+     template<class D, class A> shared_ptr( boost::detail::sp_nullptr_t p, D d, A a ): px( p ), pn( p, d, a )
+                                ^
+/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/extern/include/boost/smart_ptr/shared_ptr.hpp:393:32: note:   template argument deduction/substitution failed:
+/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/extern/include/boost/smart_ptr/shared_ptr.hpp:641:9: note:   cannot convert ‘r’ (type ‘boost::shared_ptr<XCSIT::XPointFanoSingleCharge>’) to type ‘boost::detail::sp_nullptr_t {aka std::nullptr_t}’
+         this_type( static_cast< shared_ptr<Y> && >( r ) ).swap( *this );
+         ^
+/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/extern/include/boost/smart_ptr/shared_ptr.hpp:386:41: note: template<class Y, class D, class A> boost::shared_ptr<T>::shared_ptr(Y*, D, A)
+     template<class Y, class D, class A> shared_ptr( Y * p, D d, A a ): px( p ), pn( p, d, a )
+                                         ^
+/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/extern/include/boost/smart_ptr/shared_ptr.hpp:386:41: note:   template argument deduction/substitution failed:
+/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/extern/include/boost/smart_ptr/shared_ptr.hpp:641:9: note:   mismatched types ‘Y*’ and ‘boost::shared_ptr<XCSIT::XPointFanoSingleCharge>’
+         this_type( static_cast< shared_ptr<Y> && >( r ) ).swap( *this );
+         ^
+/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/extern/include/boost/smart_ptr/shared_ptr.hpp:378:23: note: template<class D> boost::shared_ptr<T>::shared_ptr(boost::detail::sp_nullptr_t, D)
+     template<class D> shared_ptr( boost::detail::sp_nullptr_t p, D d ): px( p ), pn( p, d )
+                       ^
+/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/extern/include/boost/smart_ptr/shared_ptr.hpp:378:23: note:   template argument deduction/substitution failed:
+/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/extern/include/boost/smart_ptr/shared_ptr.hpp:641:9: note:   cannot convert ‘r’ (type ‘boost::shared_ptr<XCSIT::XPointFanoSingleCharge>’) to type ‘boost::detail::sp_nullptr_t {aka std::nullptr_t}’
+         this_type( static_cast< shared_ptr<Y> && >( r ) ).swap( *this );
+         ^
+/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/extern/include/boost/smart_ptr/shared_ptr.hpp:371:32: note: template<class Y, class D> boost::shared_ptr<T>::shared_ptr(Y*, D)
+     template<class Y, class D> shared_ptr( Y * p, D d ): px( p ), pn( p, d )
+                                ^
+/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/extern/include/boost/smart_ptr/shared_ptr.hpp:371:32: note:   template argument deduction/substitution failed:
+/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/extern/include/boost/smart_ptr/shared_ptr.hpp:641:9: note:   mismatched types ‘Y*’ and ‘boost::shared_ptr<XCSIT::XPointFanoSingleCharge>’
+         this_type( static_cast< shared_ptr<Y> && >( r ) ).swap( *this );
+         ^
+/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/extern/include/boost/smart_ptr/shared_ptr.hpp:360:14: note: template<class Y> boost::shared_ptr<T>::shared_ptr(Y*)
+     explicit shared_ptr( Y * p ): px( p ), pn() // Y must be complete
+              ^
+/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/extern/include/boost/smart_ptr/shared_ptr.hpp:360:14: note:   template argument deduction/substitution failed:
+/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/extern/include/boost/smart_ptr/shared_ptr.hpp:641:9: note:   mismatched types ‘Y*’ and ‘boost::shared_ptr<XCSIT::XPointFanoSingleCharge>’
+         this_type( static_cast< shared_ptr<Y> && >( r ) ).swap( *this );
+         ^
+/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/extern/include/boost/smart_ptr/shared_ptr.hpp:353:5: note: boost::shared_ptr<T>::shared_ptr(boost::detail::sp_nullptr_t) [with T = XCSIT::XPointSpreadSingleCharge; boost::detail::sp_nullptr_t = std::nullptr_t]
+     shared_ptr( boost::detail::sp_nullptr_t ) BOOST_NOEXCEPT : px( 0 ), pn() // never throws
+     ^
+/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/extern/include/boost/smart_ptr/shared_ptr.hpp:353:5: note:   no known conversion for argument 1 from ‘boost::shared_ptr<XCSIT::XPointFanoSingleCharge>’ to ‘boost::detail::sp_nullptr_t {aka std::nullptr_t}’
+/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/extern/include/boost/smart_ptr/shared_ptr.hpp:347:5: note: boost::shared_ptr<T>::shared_ptr() [with T = XCSIT::XPointSpreadSingleCharge]
+     shared_ptr() BOOST_NOEXCEPT : px( 0 ), pn() // never throws in 1.30+
+     ^
+/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/extern/include/boost/smart_ptr/shared_ptr.hpp:347:5: note:   candidate expects 0 arguments, 1 provided
+/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/extern/include/boost/smart_ptr/shared_ptr.hpp: In instantiation of ‘boost::shared_ptr<T>& boost::shared_ptr<T>::operator=(boost::shared_ptr<Y>&&) [with Y = XCSIT::XPerfectSingleCharge; T = XCSIT::XPointSpreadSingleCharge]’:
+/gpfs/exfel/data/user/burcherj/Development/py_detector_interface/src/ChargeSim.cc:114:8:   required from here
+/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/extern/include/boost/smart_ptr/shared_ptr.hpp:641:9: error: no matching function for call to ‘boost::shared_ptr<XCSIT::XPointSpreadSingleCharge>::shared_ptr(boost::shared_ptr<XCSIT::XPerfectSingleCharge>)’
+         this_type( static_cast< shared_ptr<Y> && >( r ) ).swap( *this );
+         ^
+/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/extern/include/boost/smart_ptr/shared_ptr.hpp:641:9: note: candidates are:
+/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/extern/include/boost/smart_ptr/shared_ptr.hpp:617:5: note: template<class Y> boost::shared_ptr<T>::shared_ptr(boost::shared_ptr<Y>&&, typename boost::detail::sp_enable_if_convertible<Y, T>::type)
+     shared_ptr( shared_ptr<Y> && r, typename boost::detail::sp_enable_if_convertible<Y,T>::type = boost::detail::sp_empty() )
+     ^
+/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/extern/include/boost/smart_ptr/shared_ptr.hpp:617:5: note:   template argument deduction/substitution failed:
+/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/extern/include/boost/smart_ptr/shared_ptr.hpp: In substitution of ‘template<class Y> boost::shared_ptr<T>::shared_ptr(boost::shared_ptr<Y>&&, typename boost::detail::sp_enable_if_convertible<Y, T>::type) [with Y = XCSIT::XPerfectSingleCharge]’:
+/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/extern/include/boost/smart_ptr/shared_ptr.hpp:641:9:   required from ‘boost::shared_ptr<T>& boost::shared_ptr<T>::operator=(boost::shared_ptr<Y>&&) [with Y = XCSIT::XPerfectSingleCharge; T = XCSIT::XPointSpreadSingleCharge]’
+/gpfs/exfel/data/user/burcherj/Development/py_detector_interface/src/ChargeSim.cc:114:8:   required from here
+/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/extern/include/boost/smart_ptr/shared_ptr.hpp:617:5: error: no type named ‘type’ in ‘struct boost::detail::sp_enable_if_convertible<XCSIT::XPerfectSingleCharge, XCSIT::XPointSpreadSingleCharge>’
+/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/extern/include/boost/smart_ptr/shared_ptr.hpp: In instantiation of ‘boost::shared_ptr<T>& boost::shared_ptr<T>::operator=(boost::shared_ptr<Y>&&) [with Y = XCSIT::XPerfectSingleCharge; T = XCSIT::XPointSpreadSingleCharge]’:
+/gpfs/exfel/data/user/burcherj/Development/py_detector_interface/src/ChargeSim.cc:114:8:   required from here
+/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/extern/include/boost/smart_ptr/shared_ptr.hpp:608:5: note: boost::shared_ptr<T>::shared_ptr(boost::shared_ptr<T>&&) [with T = XCSIT::XPointSpreadSingleCharge]
+     shared_ptr( shared_ptr && r ) BOOST_NOEXCEPT : px( r.px ), pn()
+     ^
+/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/extern/include/boost/smart_ptr/shared_ptr.hpp:608:5: note:   no known conversion for argument 1 from ‘boost::shared_ptr<XCSIT::XPerfectSingleCharge>’ to ‘boost::shared_ptr<XCSIT::XPointSpreadSingleCharge>&&’
+/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/extern/include/boost/smart_ptr/shared_ptr.hpp:512:5: note: template<class Y, class D> boost::shared_ptr<T>::shared_ptr(boost::movelib::unique_ptr<Y, D>)
+     shared_ptr( boost::movelib::unique_ptr< Y, D > r ): px( r.get() ), pn()
+     ^
+/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/extern/include/boost/smart_ptr/shared_ptr.hpp:512:5: note:   template argument deduction/substitution failed:
+/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/extern/include/boost/smart_ptr/shared_ptr.hpp:641:9: note:   ‘boost::shared_ptr<XCSIT::XPerfectSingleCharge>’ is not derived from ‘boost::movelib::unique_ptr<Y, D>’
+         this_type( static_cast< shared_ptr<Y> && >( r ) ).swap( *this );
+         ^
+/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/extern/include/boost/smart_ptr/shared_ptr.hpp:499:5: note: template<class Y, class D> boost::shared_ptr<T>::shared_ptr(std::unique_ptr<_Up, _Ep>&&)
+     shared_ptr( std::unique_ptr< Y, D > && r ): px( r.get() ), pn()
+     ^
+/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/extern/include/boost/smart_ptr/shared_ptr.hpp:499:5: note:   template argument deduction/substitution failed:
+/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/extern/include/boost/smart_ptr/shared_ptr.hpp:641:9: note:   ‘boost::shared_ptr<XCSIT::XPerfectSingleCharge>’ is not derived from ‘std::unique_ptr<_Tp, _Dp>’
+         this_type( static_cast< shared_ptr<Y> && >( r ) ).swap( *this );
+         ^
+/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/extern/include/boost/smart_ptr/shared_ptr.hpp:467:5: note: template<class Y> boost::shared_ptr<T>::shared_ptr(std::auto_ptr<_Up>&&)
+     shared_ptr( std::auto_ptr<Y> && r ): px(r.get()), pn()
+     ^
+/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/extern/include/boost/smart_ptr/shared_ptr.hpp:467:5: note:   template argument deduction/substitution failed:
+/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/extern/include/boost/smart_ptr/shared_ptr.hpp:641:9: note:   ‘boost::shared_ptr<XCSIT::XPerfectSingleCharge>’ is not derived from ‘std::auto_ptr<Y>’
+         this_type( static_cast< shared_ptr<Y> && >( r ) ).swap( *this );
+         ^
+/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/extern/include/boost/smart_ptr/shared_ptr.hpp:454:14: note: template<class Y> boost::shared_ptr<T>::shared_ptr(std::auto_ptr<_Up>&)
+     explicit shared_ptr( std::auto_ptr<Y> & r ): px(r.get()), pn()
+              ^
+/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/extern/include/boost/smart_ptr/shared_ptr.hpp:454:14: note:   template argument deduction/substitution failed:
+/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/extern/include/boost/smart_ptr/shared_ptr.hpp:641:9: note:   ‘boost::shared_ptr<XCSIT::XPerfectSingleCharge>’ is not derived from ‘std::auto_ptr<Y>’
+         this_type( static_cast< shared_ptr<Y> && >( r ) ).swap( *this );
+         ^
+/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/extern/include/boost/smart_ptr/shared_ptr.hpp:447:5: note: template<class Y> boost::shared_ptr<T>::shared_ptr(const boost::shared_ptr<Y>&, boost::shared_ptr<T>::element_type*)
+     shared_ptr( shared_ptr<Y> const & r, element_type * p ) BOOST_NOEXCEPT : px( p ), pn( r.pn )
+     ^
+/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/extern/include/boost/smart_ptr/shared_ptr.hpp:447:5: note:   template argument deduction/substitution failed:
+/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/extern/include/boost/smart_ptr/shared_ptr.hpp:641:9: note:   candidate expects 2 arguments, 1 provided
+         this_type( static_cast< shared_ptr<Y> && >( r ) ).swap( *this );
+         ^
+/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/extern/include/boost/smart_ptr/shared_ptr.hpp:433:5: note: template<class Y> boost::shared_ptr<T>::shared_ptr(const boost::shared_ptr<Y>&, typename boost::detail::sp_enable_if_convertible<Y, T>::type)
+     shared_ptr( shared_ptr<Y> const & r, typename boost::detail::sp_enable_if_convertible<Y,T>::type = boost::detail::sp_empty() )
+     ^
+/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/extern/include/boost/smart_ptr/shared_ptr.hpp:433:5: note:   template argument deduction/substitution failed:
+/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/extern/include/boost/smart_ptr/shared_ptr.hpp: In substitution of ‘template<class Y> boost::shared_ptr<T>::shared_ptr(const boost::shared_ptr<Y>&, typename boost::detail::sp_enable_if_convertible<Y, T>::type) [with Y = XCSIT::XPerfectSingleCharge]’:
+/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/extern/include/boost/smart_ptr/shared_ptr.hpp:641:9:   required from ‘boost::shared_ptr<T>& boost::shared_ptr<T>::operator=(boost::shared_ptr<Y>&&) [with Y = XCSIT::XPerfectSingleCharge; T = XCSIT::XPointSpreadSingleCharge]’
+/gpfs/exfel/data/user/burcherj/Development/py_detector_interface/src/ChargeSim.cc:114:8:   required from here
+/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/extern/include/boost/smart_ptr/shared_ptr.hpp:433:5: error: no type named ‘type’ in ‘struct boost::detail::sp_enable_if_convertible<XCSIT::XPerfectSingleCharge, XCSIT::XPointSpreadSingleCharge>’
+/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/extern/include/boost/smart_ptr/shared_ptr.hpp: In instantiation of ‘boost::shared_ptr<T>& boost::shared_ptr<T>::operator=(boost::shared_ptr<Y>&&) [with Y = XCSIT::XPerfectSingleCharge; T = XCSIT::XPointSpreadSingleCharge]’:
+/gpfs/exfel/data/user/burcherj/Development/py_detector_interface/src/ChargeSim.cc:114:8:   required from here
+/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/extern/include/boost/smart_ptr/shared_ptr.hpp:421:5: note: template<class Y> boost::shared_ptr<T>::shared_ptr(const boost::weak_ptr<Y>&, boost::detail::sp_nothrow_tag)
+     shared_ptr( weak_ptr<Y> const & r, boost::detail::sp_nothrow_tag )
+     ^
+/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/extern/include/boost/smart_ptr/shared_ptr.hpp:421:5: note:   template argument deduction/substitution failed:
+/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/extern/include/boost/smart_ptr/shared_ptr.hpp:641:9: note:   ‘boost::shared_ptr<XCSIT::XPerfectSingleCharge>’ is not derived from ‘const boost::weak_ptr<Y>’
+         this_type( static_cast< shared_ptr<Y> && >( r ) ).swap( *this );
+         ^
+/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/extern/include/boost/smart_ptr/shared_ptr.hpp:412:14: note: template<class Y> boost::shared_ptr<T>::shared_ptr(const boost::weak_ptr<Y>&)
+     explicit shared_ptr( weak_ptr<Y> const & r ): pn( r.pn ) // may throw
+              ^
+/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/extern/include/boost/smart_ptr/shared_ptr.hpp:412:14: note:   template argument deduction/substitution failed:
+/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/extern/include/boost/smart_ptr/shared_ptr.hpp:641:9: note:   ‘boost::shared_ptr<XCSIT::XPerfectSingleCharge>’ is not derived from ‘const boost::weak_ptr<Y>’
+         this_type( static_cast< shared_ptr<Y> && >( r ) ).swap( *this );
+         ^
+/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/extern/include/boost/smart_ptr/shared_ptr.hpp:405:5: note: boost::shared_ptr<T>::shared_ptr(const boost::shared_ptr<T>&) [with T = XCSIT::XPointSpreadSingleCharge]
+     shared_ptr( shared_ptr const & r ) BOOST_NOEXCEPT : px( r.px ), pn( r.pn )
+     ^
+/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/extern/include/boost/smart_ptr/shared_ptr.hpp:405:5: note:   no known conversion for argument 1 from ‘boost::shared_ptr<XCSIT::XPerfectSingleCharge>’ to ‘const boost::shared_ptr<XCSIT::XPointSpreadSingleCharge>&’
+/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/extern/include/boost/smart_ptr/shared_ptr.hpp:393:32: note: template<class D, class A> boost::shared_ptr<T>::shared_ptr(boost::detail::sp_nullptr_t, D, A)
+     template<class D, class A> shared_ptr( boost::detail::sp_nullptr_t p, D d, A a ): px( p ), pn( p, d, a )
+                                ^
+/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/extern/include/boost/smart_ptr/shared_ptr.hpp:393:32: note:   template argument deduction/substitution failed:
+/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/extern/include/boost/smart_ptr/shared_ptr.hpp:641:9: note:   cannot convert ‘r’ (type ‘boost::shared_ptr<XCSIT::XPerfectSingleCharge>’) to type ‘boost::detail::sp_nullptr_t {aka std::nullptr_t}’
+         this_type( static_cast< shared_ptr<Y> && >( r ) ).swap( *this );
+         ^
+/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/extern/include/boost/smart_ptr/shared_ptr.hpp:386:41: note: template<class Y, class D, class A> boost::shared_ptr<T>::shared_ptr(Y*, D, A)
+     template<class Y, class D, class A> shared_ptr( Y * p, D d, A a ): px( p ), pn( p, d, a )
+                                         ^
+/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/extern/include/boost/smart_ptr/shared_ptr.hpp:386:41: note:   template argument deduction/substitution failed:
+/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/extern/include/boost/smart_ptr/shared_ptr.hpp:641:9: note:   mismatched types ‘Y*’ and ‘boost::shared_ptr<XCSIT::XPerfectSingleCharge>’
+         this_type( static_cast< shared_ptr<Y> && >( r ) ).swap( *this );
+         ^
+/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/extern/include/boost/smart_ptr/shared_ptr.hpp:378:23: note: template<class D> boost::shared_ptr<T>::shared_ptr(boost::detail::sp_nullptr_t, D)
+     template<class D> shared_ptr( boost::detail::sp_nullptr_t p, D d ): px( p ), pn( p, d )
+                       ^
+/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/extern/include/boost/smart_ptr/shared_ptr.hpp:378:23: note:   template argument deduction/substitution failed:
+/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/extern/include/boost/smart_ptr/shared_ptr.hpp:641:9: note:   cannot convert ‘r’ (type ‘boost::shared_ptr<XCSIT::XPerfectSingleCharge>’) to type ‘boost::detail::sp_nullptr_t {aka std::nullptr_t}’
+         this_type( static_cast< shared_ptr<Y> && >( r ) ).swap( *this );
+         ^
+/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/extern/include/boost/smart_ptr/shared_ptr.hpp:371:32: note: template<class Y, class D> boost::shared_ptr<T>::shared_ptr(Y*, D)
+     template<class Y, class D> shared_ptr( Y * p, D d ): px( p ), pn( p, d )
+                                ^
+/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/extern/include/boost/smart_ptr/shared_ptr.hpp:371:32: note:   template argument deduction/substitution failed:
+/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/extern/include/boost/smart_ptr/shared_ptr.hpp:641:9: note:   mismatched types ‘Y*’ and ‘boost::shared_ptr<XCSIT::XPerfectSingleCharge>’
+         this_type( static_cast< shared_ptr<Y> && >( r ) ).swap( *this );
+         ^
+/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/extern/include/boost/smart_ptr/shared_ptr.hpp:360:14: note: template<class Y> boost::shared_ptr<T>::shared_ptr(Y*)
+     explicit shared_ptr( Y * p ): px( p ), pn() // Y must be complete
+              ^
+/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/extern/include/boost/smart_ptr/shared_ptr.hpp:360:14: note:   template argument deduction/substitution failed:
+/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/extern/include/boost/smart_ptr/shared_ptr.hpp:641:9: note:   mismatched types ‘Y*’ and ‘boost::shared_ptr<XCSIT::XPerfectSingleCharge>’
+         this_type( static_cast< shared_ptr<Y> && >( r ) ).swap( *this );
+         ^
+/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/extern/include/boost/smart_ptr/shared_ptr.hpp:353:5: note: boost::shared_ptr<T>::shared_ptr(boost::detail::sp_nullptr_t) [with T = XCSIT::XPointSpreadSingleCharge; boost::detail::sp_nullptr_t = std::nullptr_t]
+     shared_ptr( boost::detail::sp_nullptr_t ) BOOST_NOEXCEPT : px( 0 ), pn() // never throws
+     ^
+/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/extern/include/boost/smart_ptr/shared_ptr.hpp:353:5: note:   no known conversion for argument 1 from ‘boost::shared_ptr<XCSIT::XPerfectSingleCharge>’ to ‘boost::detail::sp_nullptr_t {aka std::nullptr_t}’
+/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/extern/include/boost/smart_ptr/shared_ptr.hpp:347:5: note: boost::shared_ptr<T>::shared_ptr() [with T = XCSIT::XPointSpreadSingleCharge]
+     shared_ptr() BOOST_NOEXCEPT : px( 0 ), pn() // never throws in 1.30+
+     ^
+/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/extern/include/boost/smart_ptr/shared_ptr.hpp:347:5: note:   candidate expects 0 arguments, 1 provided
+make[2]: *** [src/CMakeFiles/ChargeSim_ext.dir/ChargeSim.o] Error 1
+make[1]: *** [src/CMakeFiles/ChargeSim_ext.dir/all] Error 2
+make: *** [all] Error 2
+make: *** No rule to make target `install'.  Stop.
