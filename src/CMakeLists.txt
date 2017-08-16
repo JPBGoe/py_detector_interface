@@ -15,12 +15,12 @@ include_directories(
 # Compiler flags
 if(UNIX)
     SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
+#-Wl,--unresolved-symbols=report-all -Wl,--warn-unresolved-symbols ")
 endif()
 
 # =============================================================================
 # 	   Compile the different c++ classes to shared objects
 # =============================================================================
-
 # PhotonEntry
 
 add_library(PhotonEntry_ext SHARED 
@@ -28,7 +28,7 @@ add_library(PhotonEntry_ext SHARED
 	${XCSIT_INCLUDE}/XPhotonEntry.hh 
 	${CMAKE_SOURCE_DIR}/include/PhotonEntry.hh
 )
-target_link_libraries(PhotonEntry_ext ${Boost_LIBRARIES})
+target_link_libraries(PhotonEntry_ext ${PYTHON_LIBRARIES} ${Boost_LIBRARIES})
 set_target_properties(PhotonEntry_ext PROPERTIES PREFIX "")
 
 # InteractionEntry
@@ -38,13 +38,18 @@ add_library(InteractionEntry_ext SHARED
 	${XCSIT_INCLUDE}/XInteractionEntry.hh 
 	${CMAKE_SOURCE_DIR}/include/InteractionEntry.hh
 )
-target_link_libraries(InteractionEntry_ext ${Boost_LIBRARIES})
+target_link_libraries(InteractionEntry_ext ${PYTHON_LIBRARIES} ${Boost_LIBRARIES})
 set_target_properties(InteractionEntry_ext PROPERTIES PREFIX "")
 
 # PhotonData
 
-add_library(PhotonData_ext SHARED ${CMAKE_SOURCE_DIR}/include/PhotonData.hh PhotonData.cc ${XCSIT_INCLUDE}/XPhotonData.hh ${XCSIT_INCLUDE}/XPhotonEntry.hh ${CMAKE_SOURCE_DIR}/include/PhotonEntry.hh PhotonEntry.cc PhotonData_ext.cc )
-target_link_libraries(PhotonData_ext ${Boost_LIBRARIES})
+add_library(PhotonData_ext SHARED 
+	${CMAKE_SOURCE_DIR}/include/PhotonData.hh PhotonData.cc PhotonData_ext.cc
+	${XCSIT_INCLUDE}/XPhotonData.hh 
+	${XCSIT_INCLUDE}/XPhotonEntry.hh 
+	${CMAKE_SOURCE_DIR}/include/PhotonEntry.hh PhotonEntry.cc 
+)
+target_link_libraries(PhotonData_ext ${PYTHON_LIBRARIES} ${Boost_LIBRARIES})
 set_target_properties(PhotonData_ext PROPERTIES PREFIX "")
 
 # InteractionData
@@ -55,7 +60,7 @@ add_library(InteractionData_ext SHARED
 	${CMAKE_SOURCE_DIR}/include/InteractionEntry.hh InteractionEntry.cc
 	InteractionData_ext.cc
 )
-target_link_libraries(InteractionData_ext ${Boost_LIBRARIES})
+target_link_libraries(InteractionData_ext ${PYTHON_LIBRARIES} ${Boost_LIBRARIES})
 set_target_properties(InteractionData_ext PROPERTIES PREFIX "")
 
 # ParticleSim
@@ -111,17 +116,31 @@ target_include_directories(ParticleSim_ext PUBLIC
 target_link_libraries(ParticleSim_ext ${Boost_LIBRARIES})
 set_target_properties(ParticleSim_ext PROPERTIES PREFIX "")
 
+# ChargeEntry
+
+add_library(ChargeEntry_ext SHARED
+	${CMAKE_SOURCE_DIR}/include/ChargeEntry.hh ChargeEntry.cc ChargeEntry_ext.cc
+	${XCSIT_INCLUDE}/XChargeEntry.hh
+)
+target_link_libraries(ChargeEntry_ext ${PYTHON_LIBRARIES} ${Boost_LIBRARIES})
+set_target_properties(ChargeEntry_ext PROPERTIES PREFIX "")
+
+
 # ChargeMatrix
 
 add_library(ChargeMatrix_ext SHARED
-	${XCSIT_INCLUDE}/XChargeMatrix.hh
-	${XCSIT_SRC}/XChargeMatrix.cc
+	${CMAKE_SOURCE_DIR}/include/ChargeMatrix.hh ChargeMatrix.cc
 	ChargeMatrix_ext.cc
+	${CMAKE_SOURCE_DIR}/include/ChargeEntry.hh ChargeEntry.cc ChargeEntry_ext.cc
+	${XCSIT_INCLUDE}/XChargeEntry.hh
+	${XCSIT_INCLUDE}/XChargeData.hh
+	${XCSIT_INCLUDE}/XChargeEntry.hh
 )
-target_include_directories(ChargeMatrix_ext PUBLIC 
-	${CIMG}/include
+target_include_directories(ChargeMatrix_ext PUBLIC
+	${CMAKE_SOURCE_DIR}/include
+	${XCSIT_INCLUDE}
 )
-target_link_libraries(ChargeMatrix_ext ${Boost_LIBRARIES})
+target_link_libraries(ChargeMatrix_ext ${PYTHON_LIBRARIES} ${Boost_LIBRARIES})
 set_target_properties(ChargeMatrix_ext PROPERTIES PREFIX "")
 
 # ChargeSimulation
@@ -174,6 +193,7 @@ target_include_directories(ChargeSim_ext PUBLIC
 	${XERCES}
 	${CIMG}/include					
 )
-target_link_libraries(ChargeSim_ext ${Boost_LIBRARIES})
+target_link_libraries(ChargeSim_ext ${PYTHON_LIBRARIES} ${Boost_LIBRARIES})
 set_target_properties(ChargeSim_ext PROPERTIES PREFIX "")
+
 

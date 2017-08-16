@@ -1,6 +1,8 @@
 FILE(REMOVE_RECURSE
-  "CMakeFiles/ChargeMatrix_ext.dir/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/devices/xcsit/src/XChargeMatrix.o"
+  "CMakeFiles/ChargeMatrix_ext.dir/ChargeMatrix.o"
   "CMakeFiles/ChargeMatrix_ext.dir/ChargeMatrix_ext.o"
+  "CMakeFiles/ChargeMatrix_ext.dir/ChargeEntry.o"
+  "CMakeFiles/ChargeMatrix_ext.dir/ChargeEntry_ext.o"
   "ChargeMatrix_ext.pdb"
   "ChargeMatrix_ext.so"
 )

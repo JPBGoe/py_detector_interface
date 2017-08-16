@@ -12,7 +12,7 @@
 using namespace DSIM;
 
 BOOST_PYTHON_MODULE(ChargeSim_ext){
-    boost::python::class_<ChargeSim,boost::python::bases<XCSIT::XPlasmaPointChargeSim>>("ChargeSim")
+    boost::python::class_<ChargeSim,boost::python::bases<XCSIT::XPlasmaPointChargeSim> >("ChargeSim")
 		.def("setInput",&ChargeSim::setInput)
 		.def("setComponents",&ChargeSim::setComponents)
 		.def("runSimulation",&ChargeSim::runSimulation)

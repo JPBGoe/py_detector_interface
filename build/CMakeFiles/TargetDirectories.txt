@@ -1,3 +1,4 @@
+/gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build/src/CMakeFiles/ChargeEntry_ext.dir
 /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build/src/CMakeFiles/ChargeMatrix_ext.dir
 /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build/src/CMakeFiles/ChargeSim_ext.dir
 /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build/src/CMakeFiles/InteractionData_ext.dir

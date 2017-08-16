@@ -5,18 +5,29 @@
  */
 
 #include "InteractionData.hh"
-#include "InteractionEntry.hh"
 #include <stdexcept>
 
 namespace DSIM {
 
     InteractionData::InteractionData(){
+		// clear init
+		clear();
     }
 
     InteractionData::~InteractionData(){
     }
 
 	boost::shared_ptr<XCSIT::XInteractionEntry> InteractionData::getEntry(size_t entry){
+		return getPyEntry(entry);
+	}
+
+    boost::shared_ptr<XCSIT::XInteractionEntry> InteractionData::addEntry(){
+		return addPyEntry();
+	}
+
+
+
+	boost::shared_ptr<InteractionEntry> InteractionData::getPyEntry(size_t entry){
 		if(entry < 0 || entry >= iaNum){
 			throw std::invalid_argument("value does not fit to number of elements in this instance");
 		}
@@ -24,11 +35,11 @@ namespace DSIM {
 		return iaVec[entry];
 	}
 
-    boost::shared_ptr<XCSIT::XInteractionEntry> InteractionData::addEntry(){
 
+    boost::shared_ptr<InteractionEntry> InteractionData::addPyEntry(){
 		// Create the new instance
 		// smart pointer will deal with the Destructor call if necessary
-		boost::shared_ptr<XCSIT::XInteractionEntry> ne(new InteractionEntry());
+		boost::shared_ptr<InteractionEntry> ne(new InteractionEntry());
 
 		// Add it to the vector at the end of the of the ArrayList
 		iaVec.push_back(ne);

@@ -1,7 +1,7 @@
 FILE(REMOVE_RECURSE
   "CMakeFiles/PhotonData_ext.dir/PhotonData.o"
-  "CMakeFiles/PhotonData_ext.dir/PhotonEntry.o"
   "CMakeFiles/PhotonData_ext.dir/PhotonData_ext.o"
+  "CMakeFiles/PhotonData_ext.dir/PhotonEntry.o"
   "PhotonData_ext.pdb"
   "PhotonData_ext.so"
 )

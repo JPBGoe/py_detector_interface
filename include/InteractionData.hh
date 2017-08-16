@@ -11,6 +11,7 @@
 
 #include "XInteractionData.hh"
 #include "XInteractionEntry.hh"
+#include "InteractionEntry.hh"
 #include <vector>
 
 namespace DSIM {
@@ -20,7 +21,11 @@ namespace DSIM {
     public:
     	InteractionData();
     	~InteractionData();
-    
+	
+		boost::shared_ptr<InteractionEntry> getPyEntry(size_t entry);
+		boost::shared_ptr<InteractionEntry> addPyEntry();
+    	
+
 		// Implementation of the functions declared in XInteractionData.hh	
 		boost::shared_ptr<XCSIT::XInteractionEntry> getEntry(size_t entry);
         boost::shared_ptr<XCSIT::XInteractionEntry> addEntry();
@@ -29,8 +34,9 @@ namespace DSIM {
         
 
     private:
+
 		// Variables to store the InteractionEntry instances
-   		std::vector<boost::shared_ptr<XCSIT::XInteractionEntry>> iaVec;
+   		std::vector<boost::shared_ptr<InteractionEntry> > iaVec;
    		size_t iaNum;
     };
 }

@@ -52,28 +52,28 @@ include src/CMakeFiles/ChargeMatrix_ext.dir/progress.make
 # Include the compile flags for this target's objects.
 include src/CMakeFiles/ChargeMatrix_ext.dir/flags.make
 
-src/CMakeFiles/ChargeMatrix_ext.dir/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/devices/xcsit/src/XChargeMatrix.o: src/CMakeFiles/ChargeMatrix_ext.dir/flags.make
-src/CMakeFiles/ChargeMatrix_ext.dir/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/devices/xcsit/src/XChargeMatrix.o: /gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/devices/xcsit/src/XChargeMatrix.cc
+src/CMakeFiles/ChargeMatrix_ext.dir/ChargeMatrix.o: src/CMakeFiles/ChargeMatrix_ext.dir/flags.make
+src/CMakeFiles/ChargeMatrix_ext.dir/ChargeMatrix.o: ../src/ChargeMatrix.cc
 	$(CMAKE_COMMAND) -E cmake_progress_report /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build/CMakeFiles $(CMAKE_PROGRESS_1)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/CMakeFiles/ChargeMatrix_ext.dir/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/devices/xcsit/src/XChargeMatrix.o"
-	cd /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/ChargeMatrix_ext.dir/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/devices/xcsit/src/XChargeMatrix.o -c /gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/devices/xcsit/src/XChargeMatrix.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/CMakeFiles/ChargeMatrix_ext.dir/ChargeMatrix.o"
+	cd /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/ChargeMatrix_ext.dir/ChargeMatrix.o -c /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/src/ChargeMatrix.cc
 
-src/CMakeFiles/ChargeMatrix_ext.dir/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/devices/xcsit/src/XChargeMatrix.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ChargeMatrix_ext.dir/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/devices/xcsit/src/XChargeMatrix.i"
-	cd /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/devices/xcsit/src/XChargeMatrix.cc > CMakeFiles/ChargeMatrix_ext.dir/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/devices/xcsit/src/XChargeMatrix.i
+src/CMakeFiles/ChargeMatrix_ext.dir/ChargeMatrix.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ChargeMatrix_ext.dir/ChargeMatrix.i"
+	cd /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/src/ChargeMatrix.cc > CMakeFiles/ChargeMatrix_ext.dir/ChargeMatrix.i
 
-src/CMakeFiles/ChargeMatrix_ext.dir/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/devices/xcsit/src/XChargeMatrix.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ChargeMatrix_ext.dir/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/devices/xcsit/src/XChargeMatrix.s"
-	cd /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/devices/xcsit/src/XChargeMatrix.cc -o CMakeFiles/ChargeMatrix_ext.dir/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/devices/xcsit/src/XChargeMatrix.s
+src/CMakeFiles/ChargeMatrix_ext.dir/ChargeMatrix.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ChargeMatrix_ext.dir/ChargeMatrix.s"
+	cd /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/src/ChargeMatrix.cc -o CMakeFiles/ChargeMatrix_ext.dir/ChargeMatrix.s
 
-src/CMakeFiles/ChargeMatrix_ext.dir/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/devices/xcsit/src/XChargeMatrix.o.requires:
-.PHONY : src/CMakeFiles/ChargeMatrix_ext.dir/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/devices/xcsit/src/XChargeMatrix.o.requires
+src/CMakeFiles/ChargeMatrix_ext.dir/ChargeMatrix.o.requires:
+.PHONY : src/CMakeFiles/ChargeMatrix_ext.dir/ChargeMatrix.o.requires
 
-src/CMakeFiles/ChargeMatrix_ext.dir/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/devices/xcsit/src/XChargeMatrix.o.provides: src/CMakeFiles/ChargeMatrix_ext.dir/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/devices/xcsit/src/XChargeMatrix.o.requires
-	$(MAKE) -f src/CMakeFiles/ChargeMatrix_ext.dir/build.make src/CMakeFiles/ChargeMatrix_ext.dir/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/devices/xcsit/src/XChargeMatrix.o.provides.build
-.PHONY : src/CMakeFiles/ChargeMatrix_ext.dir/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/devices/xcsit/src/XChargeMatrix.o.provides
+src/CMakeFiles/ChargeMatrix_ext.dir/ChargeMatrix.o.provides: src/CMakeFiles/ChargeMatrix_ext.dir/ChargeMatrix.o.requires
+	$(MAKE) -f src/CMakeFiles/ChargeMatrix_ext.dir/build.make src/CMakeFiles/ChargeMatrix_ext.dir/ChargeMatrix.o.provides.build
+.PHONY : src/CMakeFiles/ChargeMatrix_ext.dir/ChargeMatrix.o.provides
 
-src/CMakeFiles/ChargeMatrix_ext.dir/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/devices/xcsit/src/XChargeMatrix.o.provides.build: src/CMakeFiles/ChargeMatrix_ext.dir/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/devices/xcsit/src/XChargeMatrix.o
+src/CMakeFiles/ChargeMatrix_ext.dir/ChargeMatrix.o.provides.build: src/CMakeFiles/ChargeMatrix_ext.dir/ChargeMatrix.o
 
 src/CMakeFiles/ChargeMatrix_ext.dir/ChargeMatrix_ext.o: src/CMakeFiles/ChargeMatrix_ext.dir/flags.make
 src/CMakeFiles/ChargeMatrix_ext.dir/ChargeMatrix_ext.o: ../src/ChargeMatrix_ext.cc
@@ -98,17 +98,68 @@ src/CMakeFiles/ChargeMatrix_ext.dir/ChargeMatrix_ext.o.provides: src/CMakeFiles/
 
 src/CMakeFiles/ChargeMatrix_ext.dir/ChargeMatrix_ext.o.provides.build: src/CMakeFiles/ChargeMatrix_ext.dir/ChargeMatrix_ext.o
 
+src/CMakeFiles/ChargeMatrix_ext.dir/ChargeEntry.o: src/CMakeFiles/ChargeMatrix_ext.dir/flags.make
+src/CMakeFiles/ChargeMatrix_ext.dir/ChargeEntry.o: ../src/ChargeEntry.cc
+	$(CMAKE_COMMAND) -E cmake_progress_report /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build/CMakeFiles $(CMAKE_PROGRESS_3)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/CMakeFiles/ChargeMatrix_ext.dir/ChargeEntry.o"
+	cd /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/ChargeMatrix_ext.dir/ChargeEntry.o -c /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/src/ChargeEntry.cc
+
+src/CMakeFiles/ChargeMatrix_ext.dir/ChargeEntry.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ChargeMatrix_ext.dir/ChargeEntry.i"
+	cd /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/src/ChargeEntry.cc > CMakeFiles/ChargeMatrix_ext.dir/ChargeEntry.i
+
+src/CMakeFiles/ChargeMatrix_ext.dir/ChargeEntry.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ChargeMatrix_ext.dir/ChargeEntry.s"
+	cd /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/src/ChargeEntry.cc -o CMakeFiles/ChargeMatrix_ext.dir/ChargeEntry.s
+
+src/CMakeFiles/ChargeMatrix_ext.dir/ChargeEntry.o.requires:
+.PHONY : src/CMakeFiles/ChargeMatrix_ext.dir/ChargeEntry.o.requires
+
+src/CMakeFiles/ChargeMatrix_ext.dir/ChargeEntry.o.provides: src/CMakeFiles/ChargeMatrix_ext.dir/ChargeEntry.o.requires
+	$(MAKE) -f src/CMakeFiles/ChargeMatrix_ext.dir/build.make src/CMakeFiles/ChargeMatrix_ext.dir/ChargeEntry.o.provides.build
+.PHONY : src/CMakeFiles/ChargeMatrix_ext.dir/ChargeEntry.o.provides
+
+src/CMakeFiles/ChargeMatrix_ext.dir/ChargeEntry.o.provides.build: src/CMakeFiles/ChargeMatrix_ext.dir/ChargeEntry.o
+
+src/CMakeFiles/ChargeMatrix_ext.dir/ChargeEntry_ext.o: src/CMakeFiles/ChargeMatrix_ext.dir/flags.make
+src/CMakeFiles/ChargeMatrix_ext.dir/ChargeEntry_ext.o: ../src/ChargeEntry_ext.cc
+	$(CMAKE_COMMAND) -E cmake_progress_report /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build/CMakeFiles $(CMAKE_PROGRESS_4)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/CMakeFiles/ChargeMatrix_ext.dir/ChargeEntry_ext.o"
+	cd /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/ChargeMatrix_ext.dir/ChargeEntry_ext.o -c /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/src/ChargeEntry_ext.cc
+
+src/CMakeFiles/ChargeMatrix_ext.dir/ChargeEntry_ext.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ChargeMatrix_ext.dir/ChargeEntry_ext.i"
+	cd /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/src/ChargeEntry_ext.cc > CMakeFiles/ChargeMatrix_ext.dir/ChargeEntry_ext.i
+
+src/CMakeFiles/ChargeMatrix_ext.dir/ChargeEntry_ext.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ChargeMatrix_ext.dir/ChargeEntry_ext.s"
+	cd /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/src/ChargeEntry_ext.cc -o CMakeFiles/ChargeMatrix_ext.dir/ChargeEntry_ext.s
+
+src/CMakeFiles/ChargeMatrix_ext.dir/ChargeEntry_ext.o.requires:
+.PHONY : src/CMakeFiles/ChargeMatrix_ext.dir/ChargeEntry_ext.o.requires
+
+src/CMakeFiles/ChargeMatrix_ext.dir/ChargeEntry_ext.o.provides: src/CMakeFiles/ChargeMatrix_ext.dir/ChargeEntry_ext.o.requires
+	$(MAKE) -f src/CMakeFiles/ChargeMatrix_ext.dir/build.make src/CMakeFiles/ChargeMatrix_ext.dir/ChargeEntry_ext.o.provides.build
+.PHONY : src/CMakeFiles/ChargeMatrix_ext.dir/ChargeEntry_ext.o.provides
+
+src/CMakeFiles/ChargeMatrix_ext.dir/ChargeEntry_ext.o.provides.build: src/CMakeFiles/ChargeMatrix_ext.dir/ChargeEntry_ext.o
+
 # Object files for target ChargeMatrix_ext
 ChargeMatrix_ext_OBJECTS = \
-"CMakeFiles/ChargeMatrix_ext.dir/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/devices/xcsit/src/XChargeMatrix.o" \
-"CMakeFiles/ChargeMatrix_ext.dir/ChargeMatrix_ext.o"
+"CMakeFiles/ChargeMatrix_ext.dir/ChargeMatrix.o" \
+"CMakeFiles/ChargeMatrix_ext.dir/ChargeMatrix_ext.o" \
+"CMakeFiles/ChargeMatrix_ext.dir/ChargeEntry.o" \
+"CMakeFiles/ChargeMatrix_ext.dir/ChargeEntry_ext.o"
 
 # External object files for target ChargeMatrix_ext
 ChargeMatrix_ext_EXTERNAL_OBJECTS =
 
-src/ChargeMatrix_ext.so: src/CMakeFiles/ChargeMatrix_ext.dir/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/devices/xcsit/src/XChargeMatrix.o
+src/ChargeMatrix_ext.so: src/CMakeFiles/ChargeMatrix_ext.dir/ChargeMatrix.o
 src/ChargeMatrix_ext.so: src/CMakeFiles/ChargeMatrix_ext.dir/ChargeMatrix_ext.o
+src/ChargeMatrix_ext.so: src/CMakeFiles/ChargeMatrix_ext.dir/ChargeEntry.o
+src/ChargeMatrix_ext.so: src/CMakeFiles/ChargeMatrix_ext.dir/ChargeEntry_ext.o
 src/ChargeMatrix_ext.so: src/CMakeFiles/ChargeMatrix_ext.dir/build.make
+src/ChargeMatrix_ext.so: /usr/lib64/libpython2.7.so
 src/ChargeMatrix_ext.so: /usr/lib64/libboost_python-mt.so
 src/ChargeMatrix_ext.so: src/CMakeFiles/ChargeMatrix_ext.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX shared library ChargeMatrix_ext.so"
@@ -118,8 +169,10 @@ src/ChargeMatrix_ext.so: src/CMakeFiles/ChargeMatrix_ext.dir/link.txt
 src/CMakeFiles/ChargeMatrix_ext.dir/build: src/ChargeMatrix_ext.so
 .PHONY : src/CMakeFiles/ChargeMatrix_ext.dir/build
 
-src/CMakeFiles/ChargeMatrix_ext.dir/requires: src/CMakeFiles/ChargeMatrix_ext.dir/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/devices/xcsit/src/XChargeMatrix.o.requires
+src/CMakeFiles/ChargeMatrix_ext.dir/requires: src/CMakeFiles/ChargeMatrix_ext.dir/ChargeMatrix.o.requires
 src/CMakeFiles/ChargeMatrix_ext.dir/requires: src/CMakeFiles/ChargeMatrix_ext.dir/ChargeMatrix_ext.o.requires
+src/CMakeFiles/ChargeMatrix_ext.dir/requires: src/CMakeFiles/ChargeMatrix_ext.dir/ChargeEntry.o.requires
+src/CMakeFiles/ChargeMatrix_ext.dir/requires: src/CMakeFiles/ChargeMatrix_ext.dir/ChargeEntry_ext.o.requires
 .PHONY : src/CMakeFiles/ChargeMatrix_ext.dir/requires
 
 src/CMakeFiles/ChargeMatrix_ext.dir/clean:

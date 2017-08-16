@@ -109,6 +109,7 @@ PhotonEntry_ext_EXTERNAL_OBJECTS =
 src/PhotonEntry_ext.so: src/CMakeFiles/PhotonEntry_ext.dir/PhotonEntry.o
 src/PhotonEntry_ext.so: src/CMakeFiles/PhotonEntry_ext.dir/PhotonEntry_ext.o
 src/PhotonEntry_ext.so: src/CMakeFiles/PhotonEntry_ext.dir/build.make
+src/PhotonEntry_ext.so: /usr/lib64/libpython2.7.so
 src/PhotonEntry_ext.so: /usr/lib64/libboost_python-mt.so
 src/PhotonEntry_ext.so: src/CMakeFiles/PhotonEntry_ext.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX shared library PhotonEntry_ext.so"

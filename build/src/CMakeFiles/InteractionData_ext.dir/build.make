@@ -134,6 +134,7 @@ src/InteractionData_ext.so: src/CMakeFiles/InteractionData_ext.dir/InteractionDa
 src/InteractionData_ext.so: src/CMakeFiles/InteractionData_ext.dir/InteractionEntry.o
 src/InteractionData_ext.so: src/CMakeFiles/InteractionData_ext.dir/InteractionData_ext.o
 src/InteractionData_ext.so: src/CMakeFiles/InteractionData_ext.dir/build.make
+src/InteractionData_ext.so: /usr/lib64/libpython2.7.so
 src/InteractionData_ext.so: /usr/lib64/libboost_python-mt.so
 src/InteractionData_ext.so: src/CMakeFiles/InteractionData_ext.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX shared library InteractionData_ext.so"

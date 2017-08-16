@@ -1,29 +1,24 @@
 /*
  * File:   	ChargeMatrix_ext.cc
  * Author: 	jburchert
- * Date:	11 August 2017
+ * Date:	16 August 2017
  */
 
 #include <boost/python.hpp>
 #include <boost/shared_ptr.hpp>
-#include "XChargeMatrix.hh"
-
-using namespace XCSIT;
-
-BOOST_PYTHON_MODULE(ChargeMatrixEntry_ext){
-    boost::python::class_<XChargeMatrixEntry>("ChargeMatrixEntry",boost::python::init<size_t,size_t,boost::shared_ptr<XChargeMatrix>>())
-		.def("getCharge",&XChargeMatrixEntry::getCharge)
-		.def("setCharge",&XChargeMatrixEntry::setCharge)
-		.def("addCharge",&XChargeMatrixEntry::addCharge)
-    ;
-}
+#include <boost/python/register_ptr_to_python.hpp>
+#include "ChargeMatrix.hh"
+#include "ChargeEntry.hh"
 
 BOOST_PYTHON_MODULE(ChargeMatrix_ext){
-    boost::python::class_<XChargeMatrix>("ChargeMatrix",boost::python::init<size_t,size_t>())
-		.def(boost::python::init<>())
-		.def("getEntry",&XChargeMatrix::getEntry)
-		.def("width",&XChargeMatrix::width)
-		.def("height",&XChargeMatrix::height)
-		.def("reset",&XChargeMatrix::reset)
+
+    boost::python::class_<DSIM::ChargeMatrix>("ChargeMatrix")
+		.def("setSize",&DSIM::ChargeMatrix::setSize)
+		.def("getEntry",&DSIM::ChargeMatrix::getPyEntry)
+		.def("width",&DSIM::ChargeMatrix::width)
+		.def("height",&DSIM::ChargeMatrix::height)
+		.def("clear",&DSIM::ChargeMatrix::clear)
     ;
+	
+	boost::python::register_ptr_to_python<boost::shared_ptr<DSIM::ChargeEntry> >();	
 }

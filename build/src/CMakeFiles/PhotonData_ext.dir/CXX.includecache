@@ -11,6 +11,8 @@ XPhotonData.hh
 ../include/XPhotonData.hh
 XPhotonEntry.hh
 ../include/XPhotonEntry.hh
+PhotonEntry.hh
+../include/PhotonEntry.hh
 vector
 -
 
@@ -33,20 +35,20 @@ boost/shared_ptr.hpp
 /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/src/PhotonData.cc
 PhotonData.hh
 /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/src/PhotonData.hh
-PhotonEntry.hh
-/gpfs/exfel/data/user/burcherj/Development/py_detector_interface/src/PhotonEntry.hh
 stdexcept
 -
 
 /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/src/PhotonData_ext.cc
-PhotonData.hh
-/gpfs/exfel/data/user/burcherj/Development/py_detector_interface/src/PhotonData.hh
-PhotonEntry.hh
-/gpfs/exfel/data/user/burcherj/Development/py_detector_interface/src/PhotonEntry.hh
 boost/python.hpp
 -
 boost/shared_ptr.hpp
 -
+boost/python/register_ptr_to_python.hpp
+-
+PhotonData.hh
+/gpfs/exfel/data/user/burcherj/Development/py_detector_interface/src/PhotonData.hh
+PhotonEntry.hh
+/gpfs/exfel/data/user/burcherj/Development/py_detector_interface/src/PhotonEntry.hh
 
 /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/src/PhotonEntry.cc
 PhotonEntry.hh
