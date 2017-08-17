@@ -48,7 +48,7 @@ namespace DSIM {
 	void ChargeSim::selectModule(boost::shared_ptr<XCSIT::XChargeData> output,std::string module){
 		// Instantiate the selected model
 		boost::shared_ptr<XCSIT::XModuleDefinition> moduledef;
-    	if(module == "PNCCD"){
+    	if(module == "pnCCD"){
         	moduledef = boost::shared_ptr<XCSIT::XModuleDefinition>(new XCSIT::PNCCDModuleDefinition);
     	}else if(module == "LPD"){
         	moduledef = boost::shared_ptr<XCSIT::XModuleDefinition>(new XCSIT::LPDModuleDefinition);
