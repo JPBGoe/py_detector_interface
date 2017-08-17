@@ -1,7 +1,8 @@
 FILE(REMOVE_RECURSE
   "CMakeFiles/InteractionData_ext.dir/InteractionData.o"
-  "CMakeFiles/InteractionData_ext.dir/InteractionEntry.o"
   "CMakeFiles/InteractionData_ext.dir/InteractionData_ext.o"
+  "CMakeFiles/InteractionData_ext.dir/InteractionEntry.o"
+  "CMakeFiles/InteractionData_ext.dir/InteractionEntry_ext.o"
   "InteractionData_ext.pdb"
   "InteractionData_ext.so"
 )

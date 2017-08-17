@@ -11,5 +11,5 @@ cmake \
   	-DXERCES=/gpfs/exfel/data/user/burcherj/Development/xerces-c-3.1.4/src \
   	-DCIMG=/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/extern \
 	..
-make
+make 
 make install

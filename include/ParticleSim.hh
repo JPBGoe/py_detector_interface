@@ -32,7 +32,7 @@
 #include <string>
 
 namespace DSIM{
-	class ParticleSim : XCSIT::XGeant4ParticleSim{
+	class ParticleSim {
 		public:
 			ParticleSim();
 			~ParticleSim(); // delete a lot of pointers
@@ -47,7 +47,7 @@ namespace DSIM{
 
 		private:
 			void setDetector(std::string detectorname);
-			XGeant4ParticleSim* simulate;
+			XCSIT::XGeant4ParticleSim* simulate;
     };
 }
 

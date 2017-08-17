@@ -20,7 +20,6 @@ SET(CMAKE_C_TARGET_INCLUDE_PATH
   "/usr/include/python2.7"
   "../include"
   "/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/devices/xcsit/include"
-  "/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/devices/xcsit/src"
   )
 SET(CMAKE_CXX_TARGET_INCLUDE_PATH ${CMAKE_C_TARGET_INCLUDE_PATH})
 SET(CMAKE_Fortran_TARGET_INCLUDE_PATH ${CMAKE_C_TARGET_INCLUDE_PATH})

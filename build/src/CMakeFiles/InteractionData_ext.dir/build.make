@@ -75,32 +75,9 @@ src/CMakeFiles/InteractionData_ext.dir/InteractionData.o.provides: src/CMakeFile
 
 src/CMakeFiles/InteractionData_ext.dir/InteractionData.o.provides.build: src/CMakeFiles/InteractionData_ext.dir/InteractionData.o
 
-src/CMakeFiles/InteractionData_ext.dir/InteractionEntry.o: src/CMakeFiles/InteractionData_ext.dir/flags.make
-src/CMakeFiles/InteractionData_ext.dir/InteractionEntry.o: ../src/InteractionEntry.cc
-	$(CMAKE_COMMAND) -E cmake_progress_report /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build/CMakeFiles $(CMAKE_PROGRESS_2)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/CMakeFiles/InteractionData_ext.dir/InteractionEntry.o"
-	cd /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/InteractionData_ext.dir/InteractionEntry.o -c /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/src/InteractionEntry.cc
-
-src/CMakeFiles/InteractionData_ext.dir/InteractionEntry.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/InteractionData_ext.dir/InteractionEntry.i"
-	cd /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/src/InteractionEntry.cc > CMakeFiles/InteractionData_ext.dir/InteractionEntry.i
-
-src/CMakeFiles/InteractionData_ext.dir/InteractionEntry.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/InteractionData_ext.dir/InteractionEntry.s"
-	cd /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/src/InteractionEntry.cc -o CMakeFiles/InteractionData_ext.dir/InteractionEntry.s
-
-src/CMakeFiles/InteractionData_ext.dir/InteractionEntry.o.requires:
-.PHONY : src/CMakeFiles/InteractionData_ext.dir/InteractionEntry.o.requires
-
-src/CMakeFiles/InteractionData_ext.dir/InteractionEntry.o.provides: src/CMakeFiles/InteractionData_ext.dir/InteractionEntry.o.requires
-	$(MAKE) -f src/CMakeFiles/InteractionData_ext.dir/build.make src/CMakeFiles/InteractionData_ext.dir/InteractionEntry.o.provides.build
-.PHONY : src/CMakeFiles/InteractionData_ext.dir/InteractionEntry.o.provides
-
-src/CMakeFiles/InteractionData_ext.dir/InteractionEntry.o.provides.build: src/CMakeFiles/InteractionData_ext.dir/InteractionEntry.o
-
 src/CMakeFiles/InteractionData_ext.dir/InteractionData_ext.o: src/CMakeFiles/InteractionData_ext.dir/flags.make
 src/CMakeFiles/InteractionData_ext.dir/InteractionData_ext.o: ../src/InteractionData_ext.cc
-	$(CMAKE_COMMAND) -E cmake_progress_report /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build/CMakeFiles $(CMAKE_PROGRESS_3)
+	$(CMAKE_COMMAND) -E cmake_progress_report /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build/CMakeFiles $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/CMakeFiles/InteractionData_ext.dir/InteractionData_ext.o"
 	cd /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/InteractionData_ext.dir/InteractionData_ext.o -c /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/src/InteractionData_ext.cc
 
@@ -121,18 +98,66 @@ src/CMakeFiles/InteractionData_ext.dir/InteractionData_ext.o.provides: src/CMake
 
 src/CMakeFiles/InteractionData_ext.dir/InteractionData_ext.o.provides.build: src/CMakeFiles/InteractionData_ext.dir/InteractionData_ext.o
 
+src/CMakeFiles/InteractionData_ext.dir/InteractionEntry.o: src/CMakeFiles/InteractionData_ext.dir/flags.make
+src/CMakeFiles/InteractionData_ext.dir/InteractionEntry.o: ../src/InteractionEntry.cc
+	$(CMAKE_COMMAND) -E cmake_progress_report /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build/CMakeFiles $(CMAKE_PROGRESS_3)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/CMakeFiles/InteractionData_ext.dir/InteractionEntry.o"
+	cd /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/InteractionData_ext.dir/InteractionEntry.o -c /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/src/InteractionEntry.cc
+
+src/CMakeFiles/InteractionData_ext.dir/InteractionEntry.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/InteractionData_ext.dir/InteractionEntry.i"
+	cd /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/src/InteractionEntry.cc > CMakeFiles/InteractionData_ext.dir/InteractionEntry.i
+
+src/CMakeFiles/InteractionData_ext.dir/InteractionEntry.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/InteractionData_ext.dir/InteractionEntry.s"
+	cd /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/src/InteractionEntry.cc -o CMakeFiles/InteractionData_ext.dir/InteractionEntry.s
+
+src/CMakeFiles/InteractionData_ext.dir/InteractionEntry.o.requires:
+.PHONY : src/CMakeFiles/InteractionData_ext.dir/InteractionEntry.o.requires
+
+src/CMakeFiles/InteractionData_ext.dir/InteractionEntry.o.provides: src/CMakeFiles/InteractionData_ext.dir/InteractionEntry.o.requires
+	$(MAKE) -f src/CMakeFiles/InteractionData_ext.dir/build.make src/CMakeFiles/InteractionData_ext.dir/InteractionEntry.o.provides.build
+.PHONY : src/CMakeFiles/InteractionData_ext.dir/InteractionEntry.o.provides
+
+src/CMakeFiles/InteractionData_ext.dir/InteractionEntry.o.provides.build: src/CMakeFiles/InteractionData_ext.dir/InteractionEntry.o
+
+src/CMakeFiles/InteractionData_ext.dir/InteractionEntry_ext.o: src/CMakeFiles/InteractionData_ext.dir/flags.make
+src/CMakeFiles/InteractionData_ext.dir/InteractionEntry_ext.o: ../src/InteractionEntry_ext.cc
+	$(CMAKE_COMMAND) -E cmake_progress_report /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build/CMakeFiles $(CMAKE_PROGRESS_4)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/CMakeFiles/InteractionData_ext.dir/InteractionEntry_ext.o"
+	cd /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/InteractionData_ext.dir/InteractionEntry_ext.o -c /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/src/InteractionEntry_ext.cc
+
+src/CMakeFiles/InteractionData_ext.dir/InteractionEntry_ext.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/InteractionData_ext.dir/InteractionEntry_ext.i"
+	cd /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/src/InteractionEntry_ext.cc > CMakeFiles/InteractionData_ext.dir/InteractionEntry_ext.i
+
+src/CMakeFiles/InteractionData_ext.dir/InteractionEntry_ext.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/InteractionData_ext.dir/InteractionEntry_ext.s"
+	cd /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/src/InteractionEntry_ext.cc -o CMakeFiles/InteractionData_ext.dir/InteractionEntry_ext.s
+
+src/CMakeFiles/InteractionData_ext.dir/InteractionEntry_ext.o.requires:
+.PHONY : src/CMakeFiles/InteractionData_ext.dir/InteractionEntry_ext.o.requires
+
+src/CMakeFiles/InteractionData_ext.dir/InteractionEntry_ext.o.provides: src/CMakeFiles/InteractionData_ext.dir/InteractionEntry_ext.o.requires
+	$(MAKE) -f src/CMakeFiles/InteractionData_ext.dir/build.make src/CMakeFiles/InteractionData_ext.dir/InteractionEntry_ext.o.provides.build
+.PHONY : src/CMakeFiles/InteractionData_ext.dir/InteractionEntry_ext.o.provides
+
+src/CMakeFiles/InteractionData_ext.dir/InteractionEntry_ext.o.provides.build: src/CMakeFiles/InteractionData_ext.dir/InteractionEntry_ext.o
+
 # Object files for target InteractionData_ext
 InteractionData_ext_OBJECTS = \
 "CMakeFiles/InteractionData_ext.dir/InteractionData.o" \
+"CMakeFiles/InteractionData_ext.dir/InteractionData_ext.o" \
 "CMakeFiles/InteractionData_ext.dir/InteractionEntry.o" \
-"CMakeFiles/InteractionData_ext.dir/InteractionData_ext.o"
+"CMakeFiles/InteractionData_ext.dir/InteractionEntry_ext.o"
 
 # External object files for target InteractionData_ext
 InteractionData_ext_EXTERNAL_OBJECTS =
 
 src/InteractionData_ext.so: src/CMakeFiles/InteractionData_ext.dir/InteractionData.o
-src/InteractionData_ext.so: src/CMakeFiles/InteractionData_ext.dir/InteractionEntry.o
 src/InteractionData_ext.so: src/CMakeFiles/InteractionData_ext.dir/InteractionData_ext.o
+src/InteractionData_ext.so: src/CMakeFiles/InteractionData_ext.dir/InteractionEntry.o
+src/InteractionData_ext.so: src/CMakeFiles/InteractionData_ext.dir/InteractionEntry_ext.o
 src/InteractionData_ext.so: src/CMakeFiles/InteractionData_ext.dir/build.make
 src/InteractionData_ext.so: /usr/lib64/libpython2.7.so
 src/InteractionData_ext.so: /usr/lib64/libboost_python-mt.so
@@ -145,8 +170,9 @@ src/CMakeFiles/InteractionData_ext.dir/build: src/InteractionData_ext.so
 .PHONY : src/CMakeFiles/InteractionData_ext.dir/build
 
 src/CMakeFiles/InteractionData_ext.dir/requires: src/CMakeFiles/InteractionData_ext.dir/InteractionData.o.requires
-src/CMakeFiles/InteractionData_ext.dir/requires: src/CMakeFiles/InteractionData_ext.dir/InteractionEntry.o.requires
 src/CMakeFiles/InteractionData_ext.dir/requires: src/CMakeFiles/InteractionData_ext.dir/InteractionData_ext.o.requires
+src/CMakeFiles/InteractionData_ext.dir/requires: src/CMakeFiles/InteractionData_ext.dir/InteractionEntry.o.requires
+src/CMakeFiles/InteractionData_ext.dir/requires: src/CMakeFiles/InteractionData_ext.dir/InteractionEntry_ext.o.requires
 .PHONY : src/CMakeFiles/InteractionData_ext.dir/requires
 
 src/CMakeFiles/InteractionData_ext.dir/clean:

@@ -231,7 +231,7 @@ PYTHON_LIBRARY:FILEPATH=/usr/lib64/libpython2.7.so
 PYTHON_LIBRARY_DEBUG:FILEPATH=PYTHON_LIBRARY_DEBUG-NOTFOUND
 
 //Dependencies for the target
-ParticleSim_ext_LIB_DEPENDS:STATIC=general;/usr/lib64/libboost_python-mt.so;
+ParticleSim_ext_LIB_DEPENDS:STATIC=general;xer;general;geometry;general;modeling;general;readout;general;visXXX;general;analysis;general;global;general;parmodels;general;run;general;VRML;general;clhep;general;Mocren;general;particles;general;tracking;general;zlib;general;digits_hits;general;graphics_reps;general;persistency;general;track;general;error_propagation;general;intercoms;general;physicslists;general;Tree;general;event;general;interfaces;general;processes;general;visHepRep;general;FR;general;materials;general;RayTracer;general;vis_management;general;/usr/lib64/libpython2.7.so;general;/usr/lib64/libboost_python-mt.so;
 
 //Dependencies for the target
 PhotonData_ext_LIB_DEPENDS:STATIC=general;/usr/lib64/libpython2.7.so;general;/usr/lib64/libboost_python-mt.so;

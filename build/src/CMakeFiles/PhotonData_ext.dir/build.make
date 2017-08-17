@@ -121,11 +121,35 @@ src/CMakeFiles/PhotonData_ext.dir/PhotonEntry.o.provides: src/CMakeFiles/PhotonD
 
 src/CMakeFiles/PhotonData_ext.dir/PhotonEntry.o.provides.build: src/CMakeFiles/PhotonData_ext.dir/PhotonEntry.o
 
+src/CMakeFiles/PhotonData_ext.dir/PhotonEntry_ext.o: src/CMakeFiles/PhotonData_ext.dir/flags.make
+src/CMakeFiles/PhotonData_ext.dir/PhotonEntry_ext.o: ../src/PhotonEntry_ext.cc
+	$(CMAKE_COMMAND) -E cmake_progress_report /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build/CMakeFiles $(CMAKE_PROGRESS_4)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/CMakeFiles/PhotonData_ext.dir/PhotonEntry_ext.o"
+	cd /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/PhotonData_ext.dir/PhotonEntry_ext.o -c /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/src/PhotonEntry_ext.cc
+
+src/CMakeFiles/PhotonData_ext.dir/PhotonEntry_ext.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PhotonData_ext.dir/PhotonEntry_ext.i"
+	cd /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/src/PhotonEntry_ext.cc > CMakeFiles/PhotonData_ext.dir/PhotonEntry_ext.i
+
+src/CMakeFiles/PhotonData_ext.dir/PhotonEntry_ext.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PhotonData_ext.dir/PhotonEntry_ext.s"
+	cd /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/src/PhotonEntry_ext.cc -o CMakeFiles/PhotonData_ext.dir/PhotonEntry_ext.s
+
+src/CMakeFiles/PhotonData_ext.dir/PhotonEntry_ext.o.requires:
+.PHONY : src/CMakeFiles/PhotonData_ext.dir/PhotonEntry_ext.o.requires
+
+src/CMakeFiles/PhotonData_ext.dir/PhotonEntry_ext.o.provides: src/CMakeFiles/PhotonData_ext.dir/PhotonEntry_ext.o.requires
+	$(MAKE) -f src/CMakeFiles/PhotonData_ext.dir/build.make src/CMakeFiles/PhotonData_ext.dir/PhotonEntry_ext.o.provides.build
+.PHONY : src/CMakeFiles/PhotonData_ext.dir/PhotonEntry_ext.o.provides
+
+src/CMakeFiles/PhotonData_ext.dir/PhotonEntry_ext.o.provides.build: src/CMakeFiles/PhotonData_ext.dir/PhotonEntry_ext.o
+
 # Object files for target PhotonData_ext
 PhotonData_ext_OBJECTS = \
 "CMakeFiles/PhotonData_ext.dir/PhotonData.o" \
 "CMakeFiles/PhotonData_ext.dir/PhotonData_ext.o" \
-"CMakeFiles/PhotonData_ext.dir/PhotonEntry.o"
+"CMakeFiles/PhotonData_ext.dir/PhotonEntry.o" \
+"CMakeFiles/PhotonData_ext.dir/PhotonEntry_ext.o"
 
 # External object files for target PhotonData_ext
 PhotonData_ext_EXTERNAL_OBJECTS =
@@ -133,6 +157,7 @@ PhotonData_ext_EXTERNAL_OBJECTS =
 src/PhotonData_ext.so: src/CMakeFiles/PhotonData_ext.dir/PhotonData.o
 src/PhotonData_ext.so: src/CMakeFiles/PhotonData_ext.dir/PhotonData_ext.o
 src/PhotonData_ext.so: src/CMakeFiles/PhotonData_ext.dir/PhotonEntry.o
+src/PhotonData_ext.so: src/CMakeFiles/PhotonData_ext.dir/PhotonEntry_ext.o
 src/PhotonData_ext.so: src/CMakeFiles/PhotonData_ext.dir/build.make
 src/PhotonData_ext.so: /usr/lib64/libpython2.7.so
 src/PhotonData_ext.so: /usr/lib64/libboost_python-mt.so
@@ -147,6 +172,7 @@ src/CMakeFiles/PhotonData_ext.dir/build: src/PhotonData_ext.so
 src/CMakeFiles/PhotonData_ext.dir/requires: src/CMakeFiles/PhotonData_ext.dir/PhotonData.o.requires
 src/CMakeFiles/PhotonData_ext.dir/requires: src/CMakeFiles/PhotonData_ext.dir/PhotonData_ext.o.requires
 src/CMakeFiles/PhotonData_ext.dir/requires: src/CMakeFiles/PhotonData_ext.dir/PhotonEntry.o.requires
+src/CMakeFiles/PhotonData_ext.dir/requires: src/CMakeFiles/PhotonData_ext.dir/PhotonEntry_ext.o.requires
 .PHONY : src/CMakeFiles/PhotonData_ext.dir/requires
 
 src/CMakeFiles/PhotonData_ext.dir/clean:

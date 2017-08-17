@@ -17,3 +17,7 @@ src/CMakeFiles/InteractionData_ext.dir/InteractionEntry.o: ../include/Interactio
 src/CMakeFiles/InteractionData_ext.dir/InteractionEntry.o: /gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/devices/xcsit/include/XInteractionEntry.hh
 src/CMakeFiles/InteractionData_ext.dir/InteractionEntry.o: ../src/InteractionEntry.cc
 
+src/CMakeFiles/InteractionData_ext.dir/InteractionEntry_ext.o: ../include/InteractionEntry.hh
+src/CMakeFiles/InteractionData_ext.dir/InteractionEntry_ext.o: /gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/devices/xcsit/include/XInteractionEntry.hh
+src/CMakeFiles/InteractionData_ext.dir/InteractionEntry_ext.o: ../src/InteractionEntry_ext.cc
+

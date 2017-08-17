@@ -17,3 +17,7 @@ src/CMakeFiles/PhotonData_ext.dir/PhotonEntry.o: ../include/PhotonEntry.hh
 src/CMakeFiles/PhotonData_ext.dir/PhotonEntry.o: /gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/devices/xcsit/include/XPhotonEntry.hh
 src/CMakeFiles/PhotonData_ext.dir/PhotonEntry.o: ../src/PhotonEntry.cc
 
+src/CMakeFiles/PhotonData_ext.dir/PhotonEntry_ext.o: ../include/PhotonEntry.hh
+src/CMakeFiles/PhotonData_ext.dir/PhotonEntry_ext.o: /gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/devices/xcsit/include/XPhotonEntry.hh
+src/CMakeFiles/PhotonData_ext.dir/PhotonEntry_ext.o: ../src/PhotonEntry_ext.cc
+

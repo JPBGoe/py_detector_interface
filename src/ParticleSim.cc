@@ -15,7 +15,7 @@
 namespace DSIM{
 
 	ParticleSim::ParticleSim(){
-		simulate = new XGeant4ParticleSim();
+		simulate = new XCSIT::XGeant4ParticleSim();
 	}
 
 	ParticleSim::~ParticleSim(){

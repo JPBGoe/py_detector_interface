@@ -48,6 +48,7 @@ endif()
 # Define path to include files and source files
 set(XCSIT_INCLUDE ${XCSIT_FOLDER}/include)
 set(XCSIT_SRC ${XCSIT_FOLDER}/src)
+set(XCSIT_OBJ ${XCSIT_FOLDER}/build/Debug/GNU-Linux-x86/src)
 
 # Specify the source elements needed from xcsit
 list(APPEND IN_LIST "XPhotonEntry.hh" "XPhotonData.hh" "XInteractionEntry.hh" 

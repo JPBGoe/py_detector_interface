@@ -6,7 +6,7 @@
 
 #include "ChargeSim.hh"
 #include <stdexcept>
-#include "XChargeMatrix.hh"
+#include "ChargeMatrix.hh"
 
 // Modules available in this implementation
 #include "PNCCDModuleDefinition.hh" 
@@ -65,7 +65,10 @@ namespace DSIM {
 	   	// Resize the output according to the module
   	  	unsigned int n = (unsigned int) (2. * moduledef->getSizeX() / moduledef->getSpacingX());
     	unsigned int m = (unsigned int) (2. * moduledef->getSizeY() / moduledef->getSpacingY());
-  		output = boost::shared_ptr<XCSIT::XChargeData>(new XCSIT::XChargeMatrix(n, m));
+  		boost::shared_ptr<ChargeMatrix> out(new ChargeMatrix());
+		ChargeMatrix* raw = out.get();
+		raw->setSize(n,m);
+		output = out;
 		setOutput(output);
 
     

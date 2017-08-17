@@ -17,3 +17,7 @@ src/CMakeFiles/InteractionData_ext.dir/InteractionEntry.o
  ../include/InteractionEntry.hh
  /gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/devices/xcsit/include/XInteractionEntry.hh
  /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/src/InteractionEntry.cc
+src/CMakeFiles/InteractionData_ext.dir/InteractionEntry_ext.o
+ ../include/InteractionEntry.hh
+ /gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/devices/xcsit/include/XInteractionEntry.hh
+ /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/src/InteractionEntry_ext.cc
