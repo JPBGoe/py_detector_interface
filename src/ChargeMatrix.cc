@@ -13,7 +13,7 @@ namespace DSIM {
 		xSize = 0;
 		ySize = 0;
 
-		// init with 1 x 1
+		// init with 1 x 1 content
 		setSize(1,1);
 	}
 

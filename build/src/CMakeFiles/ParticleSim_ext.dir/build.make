@@ -397,32 +397,9 @@ src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/gea
 
 src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLParser.o.provides.build: src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLParser.o
 
-src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLReadStructure.o: src/CMakeFiles/ParticleSim_ext.dir/flags.make
-src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLReadStructure.o: /gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLReadStructure.cc
-	$(CMAKE_COMMAND) -E cmake_progress_report /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build/CMakeFiles $(CMAKE_PROGRESS_16)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLReadStructure.o"
-	cd /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLReadStructure.o -c /gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLReadStructure.cc
-
-src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLReadStructure.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLReadStructure.i"
-	cd /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLReadStructure.cc > CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLReadStructure.i
-
-src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLReadStructure.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLReadStructure.s"
-	cd /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLReadStructure.cc -o CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLReadStructure.s
-
-src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLReadStructure.o.requires:
-.PHONY : src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLReadStructure.o.requires
-
-src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLReadStructure.o.provides: src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLReadStructure.o.requires
-	$(MAKE) -f src/CMakeFiles/ParticleSim_ext.dir/build.make src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLReadStructure.o.provides.build
-.PHONY : src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLReadStructure.o.provides
-
-src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLReadStructure.o.provides.build: src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLReadStructure.o
-
 src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLRead.o: src/CMakeFiles/ParticleSim_ext.dir/flags.make
 src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLRead.o: /gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLRead.cc
-	$(CMAKE_COMMAND) -E cmake_progress_report /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build/CMakeFiles $(CMAKE_PROGRESS_17)
+	$(CMAKE_COMMAND) -E cmake_progress_report /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build/CMakeFiles $(CMAKE_PROGRESS_16)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLRead.o"
 	cd /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLRead.o -c /gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLRead.cc
 
@@ -443,101 +420,32 @@ src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/gea
 
 src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLRead.o.provides.build: src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLRead.o
 
-src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLEvaluator.o: src/CMakeFiles/ParticleSim_ext.dir/flags.make
-src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLEvaluator.o: /gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLEvaluator.cc
-	$(CMAKE_COMMAND) -E cmake_progress_report /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build/CMakeFiles $(CMAKE_PROGRESS_18)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLEvaluator.o"
-	cd /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLEvaluator.o -c /gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLEvaluator.cc
+src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLReadStructure.o: src/CMakeFiles/ParticleSim_ext.dir/flags.make
+src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLReadStructure.o: /gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLReadStructure.cc
+	$(CMAKE_COMMAND) -E cmake_progress_report /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build/CMakeFiles $(CMAKE_PROGRESS_17)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLReadStructure.o"
+	cd /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLReadStructure.o -c /gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLReadStructure.cc
 
-src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLEvaluator.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLEvaluator.i"
-	cd /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLEvaluator.cc > CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLEvaluator.i
+src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLReadStructure.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLReadStructure.i"
+	cd /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLReadStructure.cc > CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLReadStructure.i
 
-src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLEvaluator.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLEvaluator.s"
-	cd /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLEvaluator.cc -o CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLEvaluator.s
+src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLReadStructure.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLReadStructure.s"
+	cd /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLReadStructure.cc -o CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLReadStructure.s
 
-src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLEvaluator.o.requires:
-.PHONY : src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLEvaluator.o.requires
+src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLReadStructure.o.requires:
+.PHONY : src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLReadStructure.o.requires
 
-src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLEvaluator.o.provides: src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLEvaluator.o.requires
-	$(MAKE) -f src/CMakeFiles/ParticleSim_ext.dir/build.make src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLEvaluator.o.provides.build
-.PHONY : src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLEvaluator.o.provides
+src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLReadStructure.o.provides: src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLReadStructure.o.requires
+	$(MAKE) -f src/CMakeFiles/ParticleSim_ext.dir/build.make src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLReadStructure.o.provides.build
+.PHONY : src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLReadStructure.o.provides
 
-src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLEvaluator.o.provides.build: src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLEvaluator.o
-
-src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWriteStructure.o: src/CMakeFiles/ParticleSim_ext.dir/flags.make
-src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWriteStructure.o: /gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWriteStructure.cc
-	$(CMAKE_COMMAND) -E cmake_progress_report /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build/CMakeFiles $(CMAKE_PROGRESS_19)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWriteStructure.o"
-	cd /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWriteStructure.o -c /gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWriteStructure.cc
-
-src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWriteStructure.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWriteStructure.i"
-	cd /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWriteStructure.cc > CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWriteStructure.i
-
-src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWriteStructure.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWriteStructure.s"
-	cd /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWriteStructure.cc -o CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWriteStructure.s
-
-src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWriteStructure.o.requires:
-.PHONY : src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWriteStructure.o.requires
-
-src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWriteStructure.o.provides: src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWriteStructure.o.requires
-	$(MAKE) -f src/CMakeFiles/ParticleSim_ext.dir/build.make src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWriteStructure.o.provides.build
-.PHONY : src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWriteStructure.o.provides
-
-src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWriteStructure.o.provides.build: src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWriteStructure.o
-
-src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLMessenger.o: src/CMakeFiles/ParticleSim_ext.dir/flags.make
-src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLMessenger.o: /gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLMessenger.cc
-	$(CMAKE_COMMAND) -E cmake_progress_report /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build/CMakeFiles $(CMAKE_PROGRESS_20)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLMessenger.o"
-	cd /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLMessenger.o -c /gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLMessenger.cc
-
-src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLMessenger.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLMessenger.i"
-	cd /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLMessenger.cc > CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLMessenger.i
-
-src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLMessenger.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLMessenger.s"
-	cd /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLMessenger.cc -o CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLMessenger.s
-
-src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLMessenger.o.requires:
-.PHONY : src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLMessenger.o.requires
-
-src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLMessenger.o.provides: src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLMessenger.o.requires
-	$(MAKE) -f src/CMakeFiles/ParticleSim_ext.dir/build.make src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLMessenger.o.provides.build
-.PHONY : src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLMessenger.o.provides
-
-src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLMessenger.o.provides.build: src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLMessenger.o
-
-src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWrite.o: src/CMakeFiles/ParticleSim_ext.dir/flags.make
-src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWrite.o: /gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWrite.cc
-	$(CMAKE_COMMAND) -E cmake_progress_report /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build/CMakeFiles $(CMAKE_PROGRESS_21)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWrite.o"
-	cd /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWrite.o -c /gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWrite.cc
-
-src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWrite.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWrite.i"
-	cd /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWrite.cc > CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWrite.i
-
-src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWrite.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWrite.s"
-	cd /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWrite.cc -o CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWrite.s
-
-src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWrite.o.requires:
-.PHONY : src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWrite.o.requires
-
-src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWrite.o.provides: src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWrite.o.requires
-	$(MAKE) -f src/CMakeFiles/ParticleSim_ext.dir/build.make src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWrite.o.provides.build
-.PHONY : src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWrite.o.provides
-
-src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWrite.o.provides.build: src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWrite.o
+src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLReadStructure.o.provides.build: src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLReadStructure.o
 
 src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLReadDefine.o: src/CMakeFiles/ParticleSim_ext.dir/flags.make
 src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLReadDefine.o: /gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLReadDefine.cc
-	$(CMAKE_COMMAND) -E cmake_progress_report /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build/CMakeFiles $(CMAKE_PROGRESS_22)
+	$(CMAKE_COMMAND) -E cmake_progress_report /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build/CMakeFiles $(CMAKE_PROGRESS_18)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLReadDefine.o"
 	cd /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLReadDefine.o -c /gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLReadDefine.cc
 
@@ -560,7 +468,7 @@ src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/gea
 
 src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLReadSetup.o: src/CMakeFiles/ParticleSim_ext.dir/flags.make
 src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLReadSetup.o: /gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLReadSetup.cc
-	$(CMAKE_COMMAND) -E cmake_progress_report /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build/CMakeFiles $(CMAKE_PROGRESS_23)
+	$(CMAKE_COMMAND) -E cmake_progress_report /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build/CMakeFiles $(CMAKE_PROGRESS_19)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLReadSetup.o"
 	cd /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLReadSetup.o -c /gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLReadSetup.cc
 
@@ -583,7 +491,7 @@ src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/gea
 
 src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLReadParamvol.o: src/CMakeFiles/ParticleSim_ext.dir/flags.make
 src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLReadParamvol.o: /gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLReadParamvol.cc
-	$(CMAKE_COMMAND) -E cmake_progress_report /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build/CMakeFiles $(CMAKE_PROGRESS_24)
+	$(CMAKE_COMMAND) -E cmake_progress_report /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build/CMakeFiles $(CMAKE_PROGRESS_20)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLReadParamvol.o"
 	cd /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLReadParamvol.o -c /gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLReadParamvol.cc
 
@@ -606,7 +514,7 @@ src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/gea
 
 src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLReadSolids.o: src/CMakeFiles/ParticleSim_ext.dir/flags.make
 src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLReadSolids.o: /gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLReadSolids.cc
-	$(CMAKE_COMMAND) -E cmake_progress_report /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build/CMakeFiles $(CMAKE_PROGRESS_25)
+	$(CMAKE_COMMAND) -E cmake_progress_report /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build/CMakeFiles $(CMAKE_PROGRESS_21)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLReadSolids.o"
 	cd /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLReadSolids.o -c /gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLReadSolids.cc
 
@@ -629,7 +537,7 @@ src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/gea
 
 src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLReadMaterials.o: src/CMakeFiles/ParticleSim_ext.dir/flags.make
 src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLReadMaterials.o: /gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLReadMaterials.cc
-	$(CMAKE_COMMAND) -E cmake_progress_report /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build/CMakeFiles $(CMAKE_PROGRESS_26)
+	$(CMAKE_COMMAND) -E cmake_progress_report /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build/CMakeFiles $(CMAKE_PROGRESS_22)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLReadMaterials.o"
 	cd /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLReadMaterials.o -c /gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLReadMaterials.cc
 
@@ -649,6 +557,98 @@ src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/gea
 .PHONY : src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLReadMaterials.o.provides
 
 src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLReadMaterials.o.provides.build: src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLReadMaterials.o
+
+src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLEvaluator.o: src/CMakeFiles/ParticleSim_ext.dir/flags.make
+src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLEvaluator.o: /gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLEvaluator.cc
+	$(CMAKE_COMMAND) -E cmake_progress_report /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build/CMakeFiles $(CMAKE_PROGRESS_23)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLEvaluator.o"
+	cd /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLEvaluator.o -c /gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLEvaluator.cc
+
+src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLEvaluator.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLEvaluator.i"
+	cd /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLEvaluator.cc > CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLEvaluator.i
+
+src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLEvaluator.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLEvaluator.s"
+	cd /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLEvaluator.cc -o CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLEvaluator.s
+
+src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLEvaluator.o.requires:
+.PHONY : src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLEvaluator.o.requires
+
+src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLEvaluator.o.provides: src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLEvaluator.o.requires
+	$(MAKE) -f src/CMakeFiles/ParticleSim_ext.dir/build.make src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLEvaluator.o.provides.build
+.PHONY : src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLEvaluator.o.provides
+
+src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLEvaluator.o.provides.build: src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLEvaluator.o
+
+src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLMessenger.o: src/CMakeFiles/ParticleSim_ext.dir/flags.make
+src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLMessenger.o: /gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLMessenger.cc
+	$(CMAKE_COMMAND) -E cmake_progress_report /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build/CMakeFiles $(CMAKE_PROGRESS_24)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLMessenger.o"
+	cd /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLMessenger.o -c /gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLMessenger.cc
+
+src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLMessenger.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLMessenger.i"
+	cd /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLMessenger.cc > CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLMessenger.i
+
+src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLMessenger.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLMessenger.s"
+	cd /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLMessenger.cc -o CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLMessenger.s
+
+src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLMessenger.o.requires:
+.PHONY : src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLMessenger.o.requires
+
+src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLMessenger.o.provides: src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLMessenger.o.requires
+	$(MAKE) -f src/CMakeFiles/ParticleSim_ext.dir/build.make src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLMessenger.o.provides.build
+.PHONY : src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLMessenger.o.provides
+
+src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLMessenger.o.provides.build: src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLMessenger.o
+
+src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWrite.o: src/CMakeFiles/ParticleSim_ext.dir/flags.make
+src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWrite.o: /gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWrite.cc
+	$(CMAKE_COMMAND) -E cmake_progress_report /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build/CMakeFiles $(CMAKE_PROGRESS_25)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWrite.o"
+	cd /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWrite.o -c /gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWrite.cc
+
+src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWrite.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWrite.i"
+	cd /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWrite.cc > CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWrite.i
+
+src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWrite.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWrite.s"
+	cd /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWrite.cc -o CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWrite.s
+
+src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWrite.o.requires:
+.PHONY : src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWrite.o.requires
+
+src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWrite.o.provides: src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWrite.o.requires
+	$(MAKE) -f src/CMakeFiles/ParticleSim_ext.dir/build.make src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWrite.o.provides.build
+.PHONY : src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWrite.o.provides
+
+src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWrite.o.provides.build: src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWrite.o
+
+src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWriteStructure.o: src/CMakeFiles/ParticleSim_ext.dir/flags.make
+src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWriteStructure.o: /gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWriteStructure.cc
+	$(CMAKE_COMMAND) -E cmake_progress_report /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build/CMakeFiles $(CMAKE_PROGRESS_26)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWriteStructure.o"
+	cd /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWriteStructure.o -c /gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWriteStructure.cc
+
+src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWriteStructure.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWriteStructure.i"
+	cd /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWriteStructure.cc > CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWriteStructure.i
+
+src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWriteStructure.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWriteStructure.s"
+	cd /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWriteStructure.cc -o CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWriteStructure.s
+
+src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWriteStructure.o.requires:
+.PHONY : src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWriteStructure.o.requires
+
+src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWriteStructure.o.provides: src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWriteStructure.o.requires
+	$(MAKE) -f src/CMakeFiles/ParticleSim_ext.dir/build.make src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWriteStructure.o.provides.build
+.PHONY : src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWriteStructure.o.provides
+
+src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWriteStructure.o.provides.build: src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWriteStructure.o
 
 src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWriteParamvol.o: src/CMakeFiles/ParticleSim_ext.dir/flags.make
 src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWriteParamvol.o: /gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWriteParamvol.cc
@@ -742,9 +742,32 @@ src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/gea
 
 src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWriteSolids.o.provides.build: src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWriteSolids.o
 
+src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWriteSetup.o: src/CMakeFiles/ParticleSim_ext.dir/flags.make
+src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWriteSetup.o: /gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWriteSetup.cc
+	$(CMAKE_COMMAND) -E cmake_progress_report /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build/CMakeFiles $(CMAKE_PROGRESS_31)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWriteSetup.o"
+	cd /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWriteSetup.o -c /gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWriteSetup.cc
+
+src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWriteSetup.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWriteSetup.i"
+	cd /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWriteSetup.cc > CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWriteSetup.i
+
+src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWriteSetup.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWriteSetup.s"
+	cd /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWriteSetup.cc -o CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWriteSetup.s
+
+src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWriteSetup.o.requires:
+.PHONY : src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWriteSetup.o.requires
+
+src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWriteSetup.o.provides: src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWriteSetup.o.requires
+	$(MAKE) -f src/CMakeFiles/ParticleSim_ext.dir/build.make src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWriteSetup.o.provides.build
+.PHONY : src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWriteSetup.o.provides
+
+src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWriteSetup.o.provides.build: src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWriteSetup.o
+
 src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLParameterisation.o: src/CMakeFiles/ParticleSim_ext.dir/flags.make
 src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLParameterisation.o: /gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLParameterisation.cc
-	$(CMAKE_COMMAND) -E cmake_progress_report /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build/CMakeFiles $(CMAKE_PROGRESS_31)
+	$(CMAKE_COMMAND) -E cmake_progress_report /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build/CMakeFiles $(CMAKE_PROGRESS_32)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLParameterisation.o"
 	cd /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLParameterisation.o -c /gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLParameterisation.cc
 
@@ -767,7 +790,7 @@ src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/gea
 
 src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4STRead.o: src/CMakeFiles/ParticleSim_ext.dir/flags.make
 src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4STRead.o: /gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4STRead.cc
-	$(CMAKE_COMMAND) -E cmake_progress_report /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build/CMakeFiles $(CMAKE_PROGRESS_32)
+	$(CMAKE_COMMAND) -E cmake_progress_report /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build/CMakeFiles $(CMAKE_PROGRESS_33)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4STRead.o"
 	cd /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4STRead.o -c /gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4STRead.cc
 
@@ -788,29 +811,6 @@ src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/gea
 
 src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4STRead.o.provides.build: src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4STRead.o
 
-src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWriteSetup.o: src/CMakeFiles/ParticleSim_ext.dir/flags.make
-src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWriteSetup.o: /gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWriteSetup.cc
-	$(CMAKE_COMMAND) -E cmake_progress_report /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build/CMakeFiles $(CMAKE_PROGRESS_33)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWriteSetup.o"
-	cd /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWriteSetup.o -c /gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWriteSetup.cc
-
-src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWriteSetup.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWriteSetup.i"
-	cd /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWriteSetup.cc > CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWriteSetup.i
-
-src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWriteSetup.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWriteSetup.s"
-	cd /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWriteSetup.cc -o CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWriteSetup.s
-
-src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWriteSetup.o.requires:
-.PHONY : src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWriteSetup.o.requires
-
-src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWriteSetup.o.provides: src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWriteSetup.o.requires
-	$(MAKE) -f src/CMakeFiles/ParticleSim_ext.dir/build.make src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWriteSetup.o.provides.build
-.PHONY : src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWriteSetup.o.provides
-
-src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWriteSetup.o.provides.build: src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWriteSetup.o
-
 # Object files for target ParticleSim_ext
 ParticleSim_ext_OBJECTS = \
 "CMakeFiles/ParticleSim_ext.dir/ParticleSim.o" \
@@ -828,24 +828,24 @@ ParticleSim_ext_OBJECTS = \
 "CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/devices/xcsit/src/XSensitiveDetector.o" \
 "CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/devices/xcsit/src/XDetectorHits.o" \
 "CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLParser.o" \
-"CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLReadStructure.o" \
 "CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLRead.o" \
-"CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLEvaluator.o" \
-"CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWriteStructure.o" \
-"CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLMessenger.o" \
-"CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWrite.o" \
+"CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLReadStructure.o" \
 "CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLReadDefine.o" \
 "CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLReadSetup.o" \
 "CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLReadParamvol.o" \
 "CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLReadSolids.o" \
 "CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLReadMaterials.o" \
+"CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLEvaluator.o" \
+"CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLMessenger.o" \
+"CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWrite.o" \
+"CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWriteStructure.o" \
 "CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWriteParamvol.o" \
 "CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWriteDefine.o" \
 "CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWriteMaterials.o" \
 "CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWriteSolids.o" \
+"CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWriteSetup.o" \
 "CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLParameterisation.o" \
-"CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4STRead.o" \
-"CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWriteSetup.o"
+"CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4STRead.o"
 
 # External object files for target ParticleSim_ext
 ParticleSim_ext_EXTERNAL_OBJECTS =
@@ -865,24 +865,24 @@ src/ParticleSim_ext.so: src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/
 src/ParticleSim_ext.so: src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/devices/xcsit/src/XSensitiveDetector.o
 src/ParticleSim_ext.so: src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/devices/xcsit/src/XDetectorHits.o
 src/ParticleSim_ext.so: src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLParser.o
-src/ParticleSim_ext.so: src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLReadStructure.o
 src/ParticleSim_ext.so: src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLRead.o
-src/ParticleSim_ext.so: src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLEvaluator.o
-src/ParticleSim_ext.so: src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWriteStructure.o
-src/ParticleSim_ext.so: src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLMessenger.o
-src/ParticleSim_ext.so: src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWrite.o
+src/ParticleSim_ext.so: src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLReadStructure.o
 src/ParticleSim_ext.so: src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLReadDefine.o
 src/ParticleSim_ext.so: src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLReadSetup.o
 src/ParticleSim_ext.so: src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLReadParamvol.o
 src/ParticleSim_ext.so: src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLReadSolids.o
 src/ParticleSim_ext.so: src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLReadMaterials.o
+src/ParticleSim_ext.so: src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLEvaluator.o
+src/ParticleSim_ext.so: src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLMessenger.o
+src/ParticleSim_ext.so: src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWrite.o
+src/ParticleSim_ext.so: src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWriteStructure.o
 src/ParticleSim_ext.so: src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWriteParamvol.o
 src/ParticleSim_ext.so: src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWriteDefine.o
 src/ParticleSim_ext.so: src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWriteMaterials.o
 src/ParticleSim_ext.so: src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWriteSolids.o
+src/ParticleSim_ext.so: src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWriteSetup.o
 src/ParticleSim_ext.so: src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLParameterisation.o
 src/ParticleSim_ext.so: src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4STRead.o
-src/ParticleSim_ext.so: src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWriteSetup.o
 src/ParticleSim_ext.so: src/CMakeFiles/ParticleSim_ext.dir/build.make
 src/ParticleSim_ext.so: /gpfs/exfel/data/user/burcherj/Development/xerces-c-3.1.4/src/.libs/libxerces-c-3.1.so
 src/ParticleSim_ext.so: /gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01-install/lib64/libG4geometry.so
@@ -940,24 +940,24 @@ src/CMakeFiles/ParticleSim_ext.dir/requires: src/CMakeFiles/ParticleSim_ext.dir/
 src/CMakeFiles/ParticleSim_ext.dir/requires: src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/devices/xcsit/src/XSensitiveDetector.o.requires
 src/CMakeFiles/ParticleSim_ext.dir/requires: src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/devices/xcsit/src/XDetectorHits.o.requires
 src/CMakeFiles/ParticleSim_ext.dir/requires: src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLParser.o.requires
-src/CMakeFiles/ParticleSim_ext.dir/requires: src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLReadStructure.o.requires
 src/CMakeFiles/ParticleSim_ext.dir/requires: src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLRead.o.requires
-src/CMakeFiles/ParticleSim_ext.dir/requires: src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLEvaluator.o.requires
-src/CMakeFiles/ParticleSim_ext.dir/requires: src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWriteStructure.o.requires
-src/CMakeFiles/ParticleSim_ext.dir/requires: src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLMessenger.o.requires
-src/CMakeFiles/ParticleSim_ext.dir/requires: src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWrite.o.requires
+src/CMakeFiles/ParticleSim_ext.dir/requires: src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLReadStructure.o.requires
 src/CMakeFiles/ParticleSim_ext.dir/requires: src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLReadDefine.o.requires
 src/CMakeFiles/ParticleSim_ext.dir/requires: src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLReadSetup.o.requires
 src/CMakeFiles/ParticleSim_ext.dir/requires: src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLReadParamvol.o.requires
 src/CMakeFiles/ParticleSim_ext.dir/requires: src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLReadSolids.o.requires
 src/CMakeFiles/ParticleSim_ext.dir/requires: src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLReadMaterials.o.requires
+src/CMakeFiles/ParticleSim_ext.dir/requires: src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLEvaluator.o.requires
+src/CMakeFiles/ParticleSim_ext.dir/requires: src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLMessenger.o.requires
+src/CMakeFiles/ParticleSim_ext.dir/requires: src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWrite.o.requires
+src/CMakeFiles/ParticleSim_ext.dir/requires: src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWriteStructure.o.requires
 src/CMakeFiles/ParticleSim_ext.dir/requires: src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWriteParamvol.o.requires
 src/CMakeFiles/ParticleSim_ext.dir/requires: src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWriteDefine.o.requires
 src/CMakeFiles/ParticleSim_ext.dir/requires: src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWriteMaterials.o.requires
 src/CMakeFiles/ParticleSim_ext.dir/requires: src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWriteSolids.o.requires
+src/CMakeFiles/ParticleSim_ext.dir/requires: src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWriteSetup.o.requires
 src/CMakeFiles/ParticleSim_ext.dir/requires: src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLParameterisation.o.requires
 src/CMakeFiles/ParticleSim_ext.dir/requires: src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4STRead.o.requires
-src/CMakeFiles/ParticleSim_ext.dir/requires: src/CMakeFiles/ParticleSim_ext.dir/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/src/G4GDMLWriteSetup.o.requires
 .PHONY : src/CMakeFiles/ParticleSim_ext.dir/requires
 
 src/CMakeFiles/ParticleSim_ext.dir/clean:

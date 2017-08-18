@@ -4,6 +4,7 @@
  * Date:	10 August 2017
  */
 
+#include <boost/make_shared.hpp>
 #include "InteractionData.hh"
 #include <stdexcept>
 

@@ -59,7 +59,7 @@ namespace DSIM {
     	}else if(module == "CadDummy"){
         	moduledef = boost::shared_ptr<XCSIT::XModuleDefinition>(new XCSIT::CadDummyModuleDefinition);
     	}else{
-			throw std::invalid_argument("module model is unknown");
+			throw std::invalid_argument("detector model is unknown: " + module );
     	}
 
 	   	// Resize the output according to the module
@@ -67,6 +67,7 @@ namespace DSIM {
     	unsigned int m = (unsigned int) (2. * moduledef->getSizeY() / moduledef->getSpacingY());
   		boost::shared_ptr<ChargeMatrix> out(new ChargeMatrix());
 		ChargeMatrix* raw = out.get();
+		raw->clear();
 		raw->setSize(n,m);
 		output = out;
 		setOutput(output);
@@ -82,7 +83,7 @@ namespace DSIM {
 		if(plasmasearch == "BLANK"){
 			plasmaCellSearch = boost::shared_ptr<XCSIT::XBlankPlasmaCellSearch>(new XCSIT::XBlankPlasmaCellSearch);
 		}else{
-			throw std::invalid_argument("plasma search model is unknown");
+			throw std::invalid_argument("plasma search model is unknown: "+ plasmasearch);
 		}
 
 		// Set the component
@@ -95,7 +96,7 @@ namespace DSIM {
     	if(plasmasim == "BLANKPLASMA"){
         	plasmaSimulation = boost::shared_ptr<XCSIT::XBlankPlasmaSim>(new XCSIT::XBlankPlasmaSim);
     	}else{
-			throw std::invalid_argument("plasma sim model is unknown");
+			throw std::invalid_argument("plasma sim model is unknown: "+ plasmasim);
     	}
     
     	// Set the component
@@ -112,13 +113,14 @@ namespace DSIM {
 			boost::shared_ptr<XCSIT::XPointFanoSingleCharge> pss(new XCSIT::XPointFanoSingleCharge);
 			XCSIT::XPlasmaPointChargeSim::setPointSim(pss);
 		}else if(pointsim == "LUT"){
-			throw std::invalid_argument("LUT base implementation has errors though not supported here");
-			//pss = boost::shared_ptr<XCSIT::XPointSpreadSingleChargeLUT>(new XCSIT::XPointSpreadSingleChargeLUT);
+			throw std::invalid_argument("Not supported due to error in XCSIT::XPointSpreadSingleChargeLUT");
+			//boost::shared_ptr<XCSIT::XPointSpreadSingleChargeLUT> pss(new XCSIT::XPointSpreadSingleChargeLUT);
+			//XCSIT::XPlasmaPointChargeSim::setPointSim(pss);
 		}else if(pointsim == "BINNING"){
 			boost::shared_ptr<XCSIT::XPerfectSingleCharge> pss(new XCSIT::XPerfectSingleCharge);
 			XCSIT::XPlasmaPointChargeSim::setPointSim(pss);
 		}else{
-			throw std::invalid_argument("point sim model is unknown");
+			throw std::invalid_argument("point sim model is unknown: " + pointsim);
 		}
 	}
 

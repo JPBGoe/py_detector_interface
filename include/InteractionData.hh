@@ -21,7 +21,7 @@ namespace DSIM {
     public:
     	InteractionData();
     	~InteractionData();
-	
+
 		boost::shared_ptr<InteractionEntry> getPyEntry(size_t entry);
 		boost::shared_ptr<InteractionEntry> addPyEntry();
     	

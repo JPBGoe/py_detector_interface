@@ -7,12 +7,16 @@
 #include <boost/python.hpp>
 #include <boost/shared_ptr.hpp>
 #include <boost/python/register_ptr_to_python.hpp>
+#include <boost/python/init.hpp>
 #include "ChargeMatrix.hh"
 #include "ChargeEntry.hh"
 
-BOOST_PYTHON_MODULE(ChargeMatrix_ext){
+using namespace boost::python;
 
-    boost::python::class_<DSIM::ChargeMatrix>("ChargeMatrix")
+BOOST_PYTHON_MODULE(ChargeMatrix_ext){
+	class_<XCSIT::XChargeData, boost::shared_ptr<XCSIT::XChargeData>, boost::noncopyable>("XChargeData", no_init);	
+
+    class_<DSIM::ChargeMatrix, boost::shared_ptr<DSIM::ChargeMatrix>, bases<XCSIT::XChargeData> >("ChargeMatrix", init<>())
 		.def("setSize",&DSIM::ChargeMatrix::setSize)
 		.def("getEntry",&DSIM::ChargeMatrix::getPyEntry)
 		.def("width",&DSIM::ChargeMatrix::width)
@@ -20,5 +24,6 @@ BOOST_PYTHON_MODULE(ChargeMatrix_ext){
 		.def("clear",&DSIM::ChargeMatrix::clear)
     ;
 	
-	boost::python::register_ptr_to_python<boost::shared_ptr<DSIM::ChargeEntry> >();	
+	register_ptr_to_python<boost::shared_ptr<DSIM::ChargeEntry> >();	
+	register_ptr_to_python<boost::shared_ptr<XCSIT::XChargeData> >();	
 }

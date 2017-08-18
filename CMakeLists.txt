@@ -1,8 +1,14 @@
+#
+#	File:	CMakeLists.txt
+#	Author:	jburchert
+#	Date:	18 August 2017
+#
+
+# project name
 project(py_detector_interface)
 
+# required version
 cmake_minimum_required(VERSION 2.4)
-
-
 
 # Disallow in-source build
 if ("${CMAKE_SOURCE_DIR}"  STREQUAL "${CMAKE_BINARY_DIR}")
@@ -10,76 +16,60 @@ if ("${CMAKE_SOURCE_DIR}"  STREQUAL "${CMAKE_BINARY_DIR}")
     "Please create a separate binary directory and run CMake there using 'cmake ..'")
 endif()
 
-
 # check if this OS is a linux system
 if(NOT UNIX)
     message(FATAL_ERROR "This cmake file supports only Unix operation systems")
 endif()
 
 # Specify diverse option
+option(XCSIT_FOLDER "-DXCSIT_FOLDER=<path>/xcsit  Path to xcsit installation")
+option(GEANT4_SOURCE "-DXCSIT_SOURCE=<path>/geant4.10.03.p01/source   Path to
+	geant4 source files")
+option(GEANT4_SO "-DXCSIT_SOURCE=<path>/geant4.10.03.p01i-install/lib64
+	Path to geant4 shared objects")
+option(XERCES "-DXERCES=<path>/xerces-c-3.1.4/src    Path to xercesc source
+	files")
+#option(CIMG "-DCIMG=<path>")
 
-option(XCSIT_FOLDER "Path xcsit parent folder: -DXCSIT_FOLDER=<path> if <path>/xcsit
-     <path> is either absolut or relative from your build folder")
-option(GEANT4_FOLDER "Path geant4 source parent folder: -DGEANT4_FOLDER=<path> if
- <path>/source <path> is either absolut or relative from your build folder to 
- the parentfolder of source. In source there should be subfolders such as 
- run/src and include/src containing the source code of geant4")
-option(XERCES "XERCES path")
-option(CIMG "CImg path")
-
-# Determine the folder where the source code of xcsit is located
+# Check options to be set
 if(NOT XCSIT_FOLDER)
-   message(FATAL_ERROR "Path to xcsit source folders could not be found. "
-      "Please use -DXCSIT_FOLDER=<path> if <path>/xcsit"
-    " <path> is either absolut or relative from your build folder")
+   message(FATAL_ERROR "Please specify: -DXCSIT_Folder-DXCSIT_FOLDER=<path>/xcsit  Path to xcsit installation")
 endif()
-
-# Determine the folder where the source code of geant4 is located
-#if(NOT GEANT4_FOLDER)
-#   find_path(GEANT4_FOLDER geant4/include)
-#endif()
-if(NOT GEANT4_FOLDER)
-   message(FATAL_ERROR "Path to geant4 source folders could not be found. "
-      "Please use -DGEANT_FOLDER=<path> if <path>/geant4"
-    " <path> is either absolut or relative from your build folder")
+if(NOT GEANT4_SOURCE)
+   message(FATAL_ERROR "Please specify: -DXCSIT_SOURCE=<path>/geant4.10.03.p01/source   Path to
+	geant4 source files")
 endif()
-
+if(NOT GEANT4_SO)
+   message(FATAL_ERROR "Please specify: -DXCSIT_SOURCE=<path>/geant4.10.03.p01i-install/lib64
+	Path to geant4 shared objects")
+endif()
+if(NOT XERCES)
+   message(FATAL_ERROR "Please specify: -DXERCES=<path>/xerces-c-3.1.4/src    Path to xercesc source
+	files ")
+endif()
 
 # Define path to include files and source files
 set(XCSIT_INCLUDE ${XCSIT_FOLDER}/include)
 set(XCSIT_SRC ${XCSIT_FOLDER}/src)
-set(XCSIT_OBJ ${XCSIT_FOLDER}/build/Debug/GNU-Linux-x86/src)
-
-# Specify the source elements needed from xcsit
-list(APPEND IN_LIST "XPhotonEntry.hh" "XPhotonData.hh" "XInteractionEntry.hh" 
-    "XInteractionData.hh" "XGeant4ParticleSim.hh" "XChargeMatrix.hh" "XChargeSim.hh")
-list(APPEND SRC_LIST "XGeant4ParticleSim.cc" "XChargeMatrix.cc")
-
-# Check if the required source files are present
-foreach(i IN LISTS IN_LIST)
-   if(NOT EXISTS ${XCSIT_INCLUDE}/${i}) 
-      message(FATAL_ERROR "Could not file ${i} at ${XCSIT_INCLUDE}")
-   endif()
-endforeach()
-foreach(i IN LISTS SRC_LIST)
-   if(NOT EXISTS ${XCSIT_SRC}/${i}) 
-      message(FATAL_ERROR "Could not file ${i} at ${XCSIT_SRC}")
-   endif()
-endforeach()
-
-# Include SimEx path files
-
-
-# Find status return
-message(STATUS "All required files and libraries found")
-
-# Set entvironmental variables
-configure_file(env.sh.in env.sh)
 
 # Branch
 add_subdirectory(src)
 
+# Set entvironmental variables
+configure_file(env.sh.in env.sh)
 
-
+# Copy created shared objects and test to the build folder
+install(DIRECTORY DESTINATION "${CMAKE_BINARY_DIR}/lib/")
+install(DIRECTORY DESTINATION "${CMAKE_BINARY_DIR}/test/")
+install(DIRECTORY DESTINATION "${CMAKE_BINARY_DIR}/python/")
+install(DIRECTORY "${CMAKE_BINARY_DIR}/src/" DESTINATION
+"${CMAKE_BINARY_DIR}/lib" FILES_MATCHING PATTERN "*.so"
+PATTERN "*.a" PATTERN "CMakeFiles*" EXCLUDE)
+install(DIRECTORY "${CMAKE_SOURCE_DIR}/test/" DESTINATION
+"${CMAKE_BINARY_DIR}/test" FILES_MATCHING PATTERN "*.py"
+PATTERN "CMakeFiles*" EXCLUDE)
+install(DIRECTORY "${CMAKE_SOURCE_DIR}/src/" DESTINATION
+"${CMAKE_BINARY_DIR}/python" FILES_MATCHING PATTERN "*.py"
+PATTERN "CMakeFiles*" EXCLUDE)
 
 

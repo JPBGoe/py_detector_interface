@@ -76,7 +76,6 @@ SET(CMAKE_C_TARGET_INCLUDE_PATH
   "/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/graphics_reps/include"
   "/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01/source/persistency/gdml/include"
   "/gpfs/exfel/data/user/burcherj/Development/xerces-c-3.1.4/src"
-  "/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/extern/include"
   )
 SET(CMAKE_CXX_TARGET_INCLUDE_PATH ${CMAKE_C_TARGET_INCLUDE_PATH})
 SET(CMAKE_Fortran_TARGET_INCLUDE_PATH ${CMAKE_C_TARGET_INCLUDE_PATH})
