@@ -201,6 +201,10 @@ ChargeSim_ext_LIB_DEPENDS:STATIC=general;/usr/lib64/libpython2.7.so;general;/usr
 //Single output directory for building all executables.
 EXECUTABLE_OUTPUT_PATH:PATH=
 
+//-DXCSIT_SOURCE=<path>/geant4.10.03.p01-build   Path to
+//\n	geant4 build directory
+GEANT4_BUILD:BOOL=/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01-build
+
 //-DXCSIT_SOURCE=<path>/geant4.10.03.p01i-install/lib64
 //\n	Path to geant4 shared objects
 GEANT4_SO:BOOL=/gpfs/exfel/data/user/burcherj/Development/geant4.10.03.p01-install/lib64

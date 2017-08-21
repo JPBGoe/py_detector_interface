@@ -25,11 +25,12 @@ endif()
 option(XCSIT_FOLDER "-DXCSIT_FOLDER=<path>/xcsit  Path to xcsit installation")
 option(GEANT4_SOURCE "-DXCSIT_SOURCE=<path>/geant4.10.03.p01/source   Path to
 	geant4 source files")
+option(GEANT4_BUILD "-DXCSIT_SOURCE=<path>/geant4.10.03.p01-build   Path to
+	geant4 build directory")
 option(GEANT4_SO "-DXCSIT_SOURCE=<path>/geant4.10.03.p01i-install/lib64
 	Path to geant4 shared objects")
 option(XERCES "-DXERCES=<path>/xerces-c-3.1.4/src    Path to xercesc source
 	files")
-#option(CIMG "-DCIMG=<path>")
 
 # Check options to be set
 if(NOT XCSIT_FOLDER)
@@ -39,6 +40,11 @@ if(NOT GEANT4_SOURCE)
    message(FATAL_ERROR "Please specify: -DXCSIT_SOURCE=<path>/geant4.10.03.p01/source   Path to
 	geant4 source files")
 endif()
+if(NOT GEANT4_BUILD)
+   message(FATAL_ERROR "Please specify: -DXCSIT_BUILD=<path>/geant4.10.03.p01-build  Path to
+	geant4 build directory")
+endif()
+
 if(NOT GEANT4_SO)
    message(FATAL_ERROR "Please specify: -DXCSIT_SOURCE=<path>/geant4.10.03.p01i-install/lib64
 	Path to geant4 shared objects")

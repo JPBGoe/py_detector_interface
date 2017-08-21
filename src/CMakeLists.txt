@@ -487,7 +487,6 @@ target_include_directories(ChargeSim_ext PUBLIC
 	${GEANT4_SOURCE}/graphics_reps/include					
 	${GEANT4_SOURCE}/persistency/gdml/include
 	${XERCES}
-	#${CIMG}/include					
 )
 target_link_libraries(ChargeSim_ext
 	${PYTHON_LIBRARIES} 

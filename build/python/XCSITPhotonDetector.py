@@ -299,48 +299,9 @@ yet")
 		"""
 		Save the results in a file
 		"""
-#        path_to_files = self.__output_path
+		# Write the new data into python arrays
+		# -------------------------------------
 
-        # Setup new file.
- #       h5_outfile = h5py.File( self.__output_path, "w")
-
-        # Files to read from
-  ##      individual_files = [os.path.join( path_to_files, f ) for f in os.listdir( path_to_files ) ]
-    #    individual_files.sort()
-
-        # Keep track of global parameters being linked.
-     #   global_parameters = False
-        # Loop over all individual files and link in the top level groups.
-      #  for ind_file in individual_files:
-       #     # Open file.
-        #    h5_infile = h5py.File( ind_file, 'r')
-
-            # Links must be relative.
-         #   relative_link_target = os.path.relpath(path=ind_file, start=os.path.dirname(os.path.dirname(ind_file)))
-            # Link global parameters.
-          #  if not global_parameters:
-                global_parameters = True
-
-           #     h5_outfile["params"] = h5py.ExternalLink(relative_link_target,
-		# "params")
-            #    h5_outfile["info"] = h5py.ExternalLink(relative_link_target,
-		# "info")
-             #   h5_outfile["misc"] = h5py.ExternalLink(relative_link_target,
-		# "misc")
-              #  h5_outfile["version"] = h5py.ExternalLink(relative_link_target,
-		#"version")
-
-#            for key in h5_infile['data']:
-#
- #               # Link in the data.
-  #              ds_path = "data/%s" % (key)
-   #             h5_outfile[ds_path] = h5py.ExternalLink(relative_link_target,ds_path)
-#
- #           # Close input file.
-  #          h5_infile.close()
-
-
-	# Write the new data to the h5py output file
 		# Convert the photon data to a 2D numpy array   (size x 7)
 		num_photon = np.zeros((self.__photon_data.size(),7),dtype=np.float_)
 		for i in list(range(self.__photon_data.size())):
@@ -374,28 +335,54 @@ yet")
 				entry = self.__charge_data.getEntry(x,y)
 				charge_array[x,y] = entry.getCharge()
 				
-
-		# Create the output file
-		h5_outfile = h5py.File( self.__output_path, "w")
-
-		# Create the groups of the output file
-		datagr = h5_outfile.create_group("data")
-		histgr = h5_outfile.create_group("history")
-		infogr = h5_outfile.create_group("info")
-		miscgr = h5_outfile.create_group("misc")
-		paramsgr = h5_outfile.create_group("params")
-		versiongr = h5_outfile.create_group("version")
+		# Link the old data into the output file
+		# ------------------------------------------------------------
 		
-		# Link the elements of the input file
-		h5_outfile["history"] = h5py.ExternalLink(self.__input_file, "history")
-		h5_outfile["info"] = h5py.ExternalLink(self.__input_file, "info")
-		h5_outfile["params"] = h5py.ExternalLink(self.__input_file, "params")
-		h5_outfile["version"] = h5py.ExternalLink(self.__input_file, "version")	
+		# Open required output Files
+		h5_outfile 	= h5py.File(self.__output_path, "w")
 
-		# for every key in data group create an External link
+ 		# Gather from all the subfolders that might have been created during
+ 		# previous simulation steps all the files
+		# Semantic: Creation of an array by applying an for loop in the current
+		# directory
+        individual_files = [os.path.join( os.path.getcwd(), f ) for f in os.listdir( os.path.getcwd() ) ]
+        individual_files.sort()
 
-		# Add the own data as datasets to the file
-		photonset = datagr.create_dataset("photons",data=num_photon)
+	    # Keep track of global parameters being linked.
+        global_parameters = False
+      
+	  	# Loop over all individual files and link in the top level groups.
+        for ind_file in individual_files:
+	    	# Open file.
+        	h5_infile = h5py.File( ind_file, 'r')
+
+            # Links must be relative.
+            relative_link_target = os.path.relpath(path=ind_file, start=os.path.dirname(os.path.dirname(ind_file)))
+            # Link global parameters.
+            if not global_parameters:
+                global_parameters = True
+
+                h5_outfile["params"] = h5py.ExternalLink(relative_link_target, "params")
+                h5_outfile["info"] = h5py.ExternalLink(relative_link_target, "info")
+                h5_outfile["misc"] = h5py.ExternalLink(relative_link_target, "misc")
+                h5_outfile["version"] = h5py.ExternalLink(relative_link_target,"version")
+                h5_outfile["history"] = h5py.ExternalLink(relative_link_target,"history")
+
+			# Data has more subfolders
+            for key in h5_infile['data']:
+
+                # Link in the data.
+                ds_path = "data/%s" % (key)
+                h5_outfile[ds_path] = h5py.ExternalLink(relative_link_target,ds_path)
+
+            # Close input file.
+            h5_infile.close()	
+		
+
+		# Add the data calculated in this class as new datasets to the output file
+		# ------------------------------------------------------------------------
+		photonset = h5_outfile.create_dataset("/data/photons",data=num_photon) 
+		# Will automatically create the necessary path in the output file tree
 		photonset.attrs["0"] = "x position";
 		photonset.attrs["1"] = "y position";
 		photonset.attrs["2"] = "z position";
@@ -404,23 +391,19 @@ yet")
 		photonset.attrs["5"] = "x direction";
 		photonset.attrs["6"] = "energy";
 
-		iaset = datagr.create_dataset("interactions",data=num_ia)
+		iaset = h5_outfile.create_dataset("/data/interactions",data=num_ia)
 		iaset.attrs["0"] = "x position";
 		iaset.attrs["1"] = "y position";
 		iaset.attrs["2"] = "z position";
 		iaset.attrs["3"] = "energy";
 		iaset.attrs["4"] = "time";
 
-		chargeset = datagr.create_dataset("chargematrix",data=charge_array)
+		chargeset = h5_outfile.create_dataset("/data/chargematrix",data=charge_array)
 		chargeset.attrs["elems"] = "charge at that position";
-
-
 
         # Close file.
         h5_outfile.close()
 
-        # Reset output path.
-        self.output_path = self.output_path+".h5"
 
 
 

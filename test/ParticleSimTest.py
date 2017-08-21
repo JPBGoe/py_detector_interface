@@ -12,8 +12,9 @@ print(type(o))
 print(" ")
 
 print("calling the initialization method")
-detectors =["pnCCD","LPD","AGIPD","AGIPDSPB","CAD"]
+detectors =["pnCCD","LPD","AGIPD","AGIPDSPB"] # CAD
 for i in detectors:
+	print("Init with " + str(i))
 	o.initialization(i)
 print("all detector names can be set")
 print(" ")
