@@ -32,7 +32,7 @@
 #include <string>
 
 namespace DSIM{
-	class ParticleSim {
+	class ParticleSim{
 		public:
 			ParticleSim();
 			~ParticleSim(); // delete a lot of pointers

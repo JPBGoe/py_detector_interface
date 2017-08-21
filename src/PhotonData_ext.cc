@@ -24,5 +24,4 @@ BOOST_PYTHON_MODULE(PhotonData_ext){
     ;
 	
 	register_ptr_to_python<boost::shared_ptr<DSIM::PhotonEntry> >();	
-	register_ptr_to_python<boost::shared_ptr<XCSIT::XPhotonData> >();	
 }

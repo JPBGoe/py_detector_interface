@@ -10,6 +10,9 @@ import ChargeMatrix_ext
 import ParticleSim_ext
 import ChargeSim_ext
 
+import os
+import numpy as np
+
 class XCSITPhotonDetector(AbstractPhotonDetector):
 	"""
 	Class representing an free electorn laser photon detector
@@ -31,7 +34,7 @@ class XCSITPhotonDetector(AbstractPhotonDetector):
 		:param input_path: Path to the hdf5 file holding the input data.
 		:type input_path: str
 
-		:param output_path: Path to hdf5 file for output
+		:param output_path: Path pointing to the path for output
 		:type output_path: str
 		"""
 
@@ -45,16 +48,84 @@ class XCSITPhotonDetector(AbstractPhotonDetector):
 	
 		# Checking of in and output path are given and assign them for storage
 		# to internals
-		if input_path == None:
-			raise ValueError("input_path of the hdm5 file has to be specified")
+		if input_path == None)
+			raise ValueError("input_path including the .h5 file has to be specified")
 		
-		if output_path == None:
-			raise ValueError("output_path of the resulting hdm5 file has to be specified")
+		if output_path == None)
+			raise ValueError("output_path including the resulting .h5 file has to be specified")
+
+		# input and output path can either be dirctionaries or files but must be
+		# relative pathes
+		# Cases:
+		# 1) ends with .h5     -> it is a file: no action
+		# 2) ends without .h5
+		# 		a) Such a dictionary exists  -> invent a new file to put in or
+		# 		look up existing
+		#		b) Such a dictionary does not exist -> filename without .h5
+		#		specified, but parent folder has to exist
+	
+		# Join the current working directory with the relative path given	
+		abs_inpath = os.path.normpath(os.path.join(os.getcwd(), input_path))
+		if abs_inpath.endswith(".h5"):
+			# a specified file
+			if not os.path.exists(abs_inpath):
+				raise ValueError("File " + str(abs_inpath) + " does not exists")
+		else:
+			# Check for existing input file
+			if os.path.isdir(abs_inpath):
+				count = 1
+				found = ""
+				for file in os.listdir(abs_inpath)
+					# the candidates file
+					if file.endswith(".h5"):
+						found = file
+						count -= 1
+
+					# there should be only one candidate file
+					if count < 0:
+						raise RuntimeError("Multiple files ending with .h5 in "+
+							str(abs_inpath))
+
+				if count == 1:
+					raise RuntimeError("There is no such input file")
+				abs_inpath = os.path.join(abs_inpath, found)
+
+			# last argument is file name	
+			else:
+				# Check if parent is not an existing directory
+				path, test = os.path.split(abs_inpath)
+				if not os.path.isdir(path):
+					raise RuntimeError("Please specify the input file and path
+						directly")
+				else:
+					abs_inpath += ".h5"
+
+		# Join the current working directory with the relative path given	
+		abs_outpath = os.path.normpath(os.path.join(os.getcwd(), output_path))
+		if abs_outpath.endswith(".h5"):
+			# a specified file
+			if not os.path.exists(abs_outpath):
+				raise ValueError("File " + str(abs_outpath) + " does not exists")
+		else:
+			# Check for existing directory
+			if os.path.isdir(abs_outpath):
+				abs_outpath = os.path.join(abs_out_path,"XCSITDetectorOutput.h5")
+
+			# last argument is file name	
+			else:
+				# Check if parent is not an existing directory
+				path, test = os.path.split(abs_outpath)
+				if not os.path.isdir(path):
+					raise RuntimeError("Please specify the input file and path
+						directly")
+				else:
+					abs_outpath += ".h5"
+
 
 		# Save the input in attributes
 		self.__parameters = parameters
-		self.__input_path = input_path
-		self.__output_path= output_path
+		self.__input_path = abs_inpath
+		self.__output_path= abs_outpath
 
 		# Init base class
 		super(XCSITPhotonDetector,self).__init__(parameters,input_path,output_path)
@@ -80,8 +151,9 @@ class XCSITPhotonDetector(AbstractPhotonDetector):
                                 ]
 
 		self.__provided_data = ['/data/data',
-								'/data/charge',
+								'/data/photons'
 								'/data/interactions',
+								'/data/charge',
                                 '/data/diffr',
                                 '/data/angle',
                                 '/history/parent/detail',
@@ -124,8 +196,7 @@ class XCSITPhotonDetector(AbstractPhotonDetector):
 
 	def __createXCSITChargeMatrix(self):
 		self.__charge_data = ChargeMatrix_ext.ChargeMatrix()
-		self.__charge_data.setSize(1,1)	# Will be addapted by ParticleSim.cc
-		# implementation
+		# Size will be addapted by ParticleSim.cc implementation
 
 
 	# Subengine to calulate the particle simulation: The interaction of the
@@ -195,65 +266,109 @@ yet")
 		Reads the hdf5 file and create the storage container for the photons
 		according to that data
 		"""
-		# Create a new storage object and assign it to the instance variable
+		# The __input_path is a non relative path to an existing file
+		if not os.path.exists(self.__input_path):
+			raise RuntimeError("Input file " + str(self.__input_path) + " does
+				not exists")
+
+		# Open the input file
+		infile = self.__input_path
+		h5_infile 	= h5py.File(infile,"r")
+
+		# Get the necessary data from the directory to specify impuls, position
+		# and energy
+		# TODO which kind is saved in the input file
+		photons = h5_infile["data/data"]
+
+		# Create the photon instance
 		self.__photon_data = PhotonData_ext.PhotonData()
+		for ph in photons:
+			entry = self.__photon_data.addEntry()
+			entry.setPositionX(...)
+			entry.setPositionY(...)
+			entry.setPositionZ(...)
+			entry.setDirectionX(...)
+			entry.setDirectionY(...)
+			entry.setDirectionZ(...)
+			entry.setEnergy(...)
 
-		# Check if __input_path is dir or file
-		if os.path.isdir(self.__input_path):
-			input_dir = self.__input_path
-		else:
-			input_dir = os.path.dirname(self.__input_path)
-
-		
-        # Link the  python utility so the backengine can find it.
-        ### Yes, this is messy.
-        preph5_location = inspect.getsourcefile(prepHDF5)
-        if preph5_location is None:
-            raise RuntimeError("prepHDF5.py not found. Aborting the calculation.")
-
-
+		# Close the input file
+		h5_infile.close()
 		
 	def saveH5(self):
 		"""
 		Save the results in a file
 		"""
+		# Write the new data into python arrays
+		# -------------------------------------
+
+		# Convert the photon data to a 2D numpy array   (size x 7)
+		num_photon = np.zeros((self.__photon_data.size(),7),dtype=np.float_)
+		for i in list(range(self.__photon_data.size())):
+			entry = self.__photon_data.getEntry(i)
+			num_photon[i,0] = entry.getPositionX()
+			num_photon[i,1] = entry.getPositionY()
+			num_photon[i,2] = entry.getPositionZ()
+			num_photon[i,3] = entry.getDirectionX()
+			num_photon[i,4] = entry.getDirectionY()
+			num_photon[i,5] = entry.getDirectionZ()
+			num_photon[i,6] = entry.getEnergy()
+
+
+		# Convert the interaction data to a 2D numpy array  (size x 5)
+		num_ia = np.zeros((self.__ia_data.size(),5),dtype=np.float_)
+			entry = self.__ia_data.getEntry(i)
+			num_ia[i,0] = entry.getPositionX()
+			num_ia[i,1] = entry.getPositionY()
+			num_ia[i,2] = entry.getPositionZ()
+			num_ia[i,3] = entry.getEnergy()
+			num_ia[i,4] = entry.getTime()
+
+
+		# Convert the ChargeMatrix to a numpy array to be able to store its
+		# content
+		x_size = self.__charge_data.width()
+		y_size = self.__charge_data.height()
+		charge_array = np.zeros((x_size,y_size),dtype=np.float_)	# float64
+		for x in list(range(x_size)):
+			for y in list(range(y_size)):
+				entry = self.__charge_data.getEntry(x,y)
+				charge_array[x,y] = entry.getCharge()
+				
+		# Link the old data into the output file
+		# ------------------------------------------------------------
 		
-		# Path where individual h5 files are located.
-        path_to_files = self.__output_path
+		# Open required output Files
+		h5_outfile 	= h5py.File(self.__output_path, "w")
 
-        # Setup new file.
-        h5_outfile = h5py.File( self.__output_path + ".h5" , "w")
-
-        # Files to read from.
-        individual_files = [os.path.join( path_to_files, f ) for f in os.listdir( path_to_files ) ]
+ 		# Gather from all the subfolders that might have been created during
+ 		# previous simulation steps all the files
+		# Semantic: Creation of an array by applying an for loop in the current
+		# directory
+        individual_files = [os.path.join( os.path.getcwd(), f ) for f in os.listdir( os.path.getcwd() ) ]
         individual_files.sort()
 
-        # Keep track of global parameters being linked.
+	    # Keep track of global parameters being linked.
         global_parameters = False
-        # Loop over all individual files and link in the top level groups.
+      
+	  	# Loop over all individual files and link in the top level groups.
         for ind_file in individual_files:
-            # Open file.
-            h5_infile = h5py.File( ind_file, 'r')
-
-            # Get file ID.
-            file_ID = os.path.split(ind_file)[-1].split(".h5")[0].split("_")[-1]
+	    	# Open file.
+        	h5_infile = h5py.File( ind_file, 'r')
 
             # Links must be relative.
             relative_link_target = os.path.relpath(path=ind_file, start=os.path.dirname(os.path.dirname(ind_file)))
-
             # Link global parameters.
             if not global_parameters:
                 global_parameters = True
 
-                h5_outfile["params"] = h5py.ExternalLink(relative_link_target,
-"params")
-                h5_outfile["info"] = h5py.ExternalLink(relative_link_target,
-"info")
-                h5_outfile["misc"] = h5py.ExternalLink(relative_link_target,
-"misc")
-                h5_outfile["version"] = h5py.ExternalLink(relative_link_target,
-"version")
+                h5_outfile["params"] = h5py.ExternalLink(relative_link_target, "params")
+                h5_outfile["info"] = h5py.ExternalLink(relative_link_target, "info")
+                h5_outfile["misc"] = h5py.ExternalLink(relative_link_target, "misc")
+                h5_outfile["version"] = h5py.ExternalLink(relative_link_target,"version")
+                h5_outfile["history"] = h5py.ExternalLink(relative_link_target,"history")
 
+			# Data has more subfolders
             for key in h5_infile['data']:
 
                 # Link in the data.
@@ -261,13 +376,34 @@ yet")
                 h5_outfile[ds_path] = h5py.ExternalLink(relative_link_target,ds_path)
 
             # Close input file.
-            h5_infile.close()
+            h5_infile.close()	
+		
+
+		# Add the data calculated in this class as new datasets to the output file
+		# ------------------------------------------------------------------------
+		photonset = h5_outfile.create_dataset("/data/photons",data=num_photon) 
+		# Will automatically create the necessary path in the output file tree
+		photonset.attrs["0"] = "x position";
+		photonset.attrs["1"] = "y position";
+		photonset.attrs["2"] = "z position";
+		photonset.attrs["3"] = "x direction";
+		photonset.attrs["4"] = "y direction";
+		photonset.attrs["5"] = "x direction";
+		photonset.attrs["6"] = "energy";
+
+		iaset = h5_outfile.create_dataset("/data/interactions",data=num_ia)
+		iaset.attrs["0"] = "x position";
+		iaset.attrs["1"] = "y position";
+		iaset.attrs["2"] = "z position";
+		iaset.attrs["3"] = "energy";
+		iaset.attrs["4"] = "time";
+
+		chargeset = h5_outfile.create_dataset("/data/chargematrix",data=charge_array)
+		chargeset.attrs["elems"] = "charge at that position";
 
         # Close file.
         h5_outfile.close()
 
-        # Reset output path.
-        self.output_path = self.output_path+".h5"
 
 
 

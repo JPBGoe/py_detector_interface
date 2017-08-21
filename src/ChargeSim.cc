@@ -48,15 +48,15 @@ namespace DSIM {
 	void ChargeSim::selectModule(boost::shared_ptr<XCSIT::XChargeData> output,std::string module){
 		// Instantiate the selected model
 		boost::shared_ptr<XCSIT::XModuleDefinition> moduledef;
-    	if(module == "pnCCD"){
+    	if(module == detectorType[0]){
         	moduledef = boost::shared_ptr<XCSIT::XModuleDefinition>(new XCSIT::PNCCDModuleDefinition);
-    	}else if(module == "LPD"){
+    	}else if(module == detectorType[1]){
         	moduledef = boost::shared_ptr<XCSIT::XModuleDefinition>(new XCSIT::LPDModuleDefinition);
-    	}else if(module == "AGIPD"){
+    	}else if(module == detectorType[2]){
         	moduledef = boost::shared_ptr<XCSIT::XModuleDefinition>(new XCSIT::AGIPDModuleDefinition);
-    	}else if(module == "AGIPDSPB"){
+    	}else if(module == detectorType[3]){
         	moduledef = boost::shared_ptr<XCSIT::XModuleDefinition>(new XCSIT::AGIPDSPBModuleDefinition);
-    	}else if(module == "CadDummy"){
+    	}else if(module == detectorType[4]){
         	moduledef = boost::shared_ptr<XCSIT::XModuleDefinition>(new XCSIT::CadDummyModuleDefinition);
     	}else{
 			throw std::invalid_argument("detector model is unknown: " + module );
@@ -80,7 +80,7 @@ namespace DSIM {
 	void ChargeSim::selectPlasmaSearch(std::string plasmasearch){
 		// Instantiate the selected model
 		boost::shared_ptr<XCSIT::XBlankPlasmaCellSearch> plasmaCellSearch;
-		if(plasmasearch == "BLANK"){
+		if(plasmasearch == plasmaSearch[0]){
 			plasmaCellSearch = boost::shared_ptr<XCSIT::XBlankPlasmaCellSearch>(new XCSIT::XBlankPlasmaCellSearch);
 		}else{
 			throw std::invalid_argument("plasma search model is unknown: "+ plasmasearch);
@@ -93,7 +93,7 @@ namespace DSIM {
 	void ChargeSim::selectPlasmaSim(std::string plasmasim){
 		// Instantiate the selected model
 		boost::shared_ptr<XCSIT::XPlasmaChargeSim> plasmaSimulation;
-    	if(plasmasim == "BLANKPLASMA"){
+    	if(plasmasim == plasmaSim[0]){
         	plasmaSimulation = boost::shared_ptr<XCSIT::XBlankPlasmaSim>(new XCSIT::XBlankPlasmaSim);
     	}else{
 			throw std::invalid_argument("plasma sim model is unknown: "+ plasmasim);
@@ -106,17 +106,17 @@ namespace DSIM {
 
 	void ChargeSim::selectPointSim(std::string pointsim){
    		// Instantiate the selected model 
-    	if(pointsim == "FULL"){
+    	if(pointsim == chargeSim[0]){
 			boost::shared_ptr<XCSIT::XPointSpreadSingleCharge> pss(new XCSIT::XPointSpreadSingleCharge);
 			XCSIT::XPlasmaPointChargeSim::setPointSim(pss);
-		}else if(pointsim == "FANO"){
+		}else if(pointsim == chargeSim[1]){
 			boost::shared_ptr<XCSIT::XPointFanoSingleCharge> pss(new XCSIT::XPointFanoSingleCharge);
 			XCSIT::XPlasmaPointChargeSim::setPointSim(pss);
-		}else if(pointsim == "LUT"){
+		}else if(pointsim == chargeSim[2]){
 			throw std::invalid_argument("Not supported due to error in XCSIT::XPointSpreadSingleChargeLUT");
 			//boost::shared_ptr<XCSIT::XPointSpreadSingleChargeLUT> pss(new XCSIT::XPointSpreadSingleChargeLUT);
 			//XCSIT::XPlasmaPointChargeSim::setPointSim(pss);
-		}else if(pointsim == "BINNING"){
+		}else if(pointsim == chargeSim[3]){
 			boost::shared_ptr<XCSIT::XPerfectSingleCharge> pss(new XCSIT::XPerfectSingleCharge);
 			XCSIT::XPlasmaPointChargeSim::setPointSim(pss);
 		}else{

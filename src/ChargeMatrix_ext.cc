@@ -25,5 +25,4 @@ BOOST_PYTHON_MODULE(ChargeMatrix_ext){
     ;
 	
 	register_ptr_to_python<boost::shared_ptr<DSIM::ChargeEntry> >();	
-	register_ptr_to_python<boost::shared_ptr<XCSIT::XChargeData> >();	
 }

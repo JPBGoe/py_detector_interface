@@ -25,5 +25,4 @@ BOOST_PYTHON_MODULE(InteractionData_ext){
     ;
 
 	register_ptr_to_python<boost::shared_ptr<DSIM::InteractionEntry> >();
-	register_ptr_to_python<boost::shared_ptr<XCSIT::XInteractionData> >();
 }
