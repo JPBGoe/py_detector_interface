@@ -153,23 +153,12 @@ class XCSITPhotonDetector(AbstractPhotonDetector):
 		self.__provided_data = ['/data/data',
 								'/data/photons'
 								'/data/interactions',
-								'/data/charge',
-                                '/data/diffr',
-                                '/data/angle',
-                                '/history/parent/detail',
-                                '/history/parent/parent',
+                                '/history/parent/',
                                 '/info/package_version',
-                                '/info/contact',
-                                '/info/data_description',
-                                '/info/method_description',
                                 '/params/geom/detectorDist',
                                 '/params/geom/pixelWidth',
                                 '/params/geom/pixelHeight',
-                                '/params/geom/mask',
                                 '/params/beam/photonEnergy',
-                                '/params/beam/photons',
-                                '/params/beam/focusArea',
-                                '/params/info',
                                 ]
 
 
@@ -260,6 +249,20 @@ yet")
 		self.__backengineCP(self)		
 		print("Charge propagation simulation in the detector is finished")
 
+	def __normalize(vector):
+		su = 0
+		length = len(vector)
+		out = np.zero((length,1))
+		i = 0
+		for j in vector:
+			su += j
+			out[i] = j
+			i++
+		if su == 0:
+			return out
+		for i in list(range(length)):
+			out[i] = out[i]/su;
+		return out
 
 	def _readH5(self):
 		"""
@@ -275,25 +278,56 @@ yet")
 		infile = self.__input_path
 		h5_infile 	= h5py.File(infile,"r")
 
-		# Get the necessary data from the directory to specify impuls, position
-		# and energy
-		# TODO which kind is saved in the input file
+		# Get the array where each pixel contains a number of photons
 		photons = h5_infile["data/data"]
+		x_num = len(photons)		# Assuming an rectangle
+		y_num = len(photons[0])
+
+		# Parameters of the matrix
+		detector_dist = h5_infile["params/geom/detectorWidth"]
+		x_pixel = h5_infile["params/geom/pixelWidth"]
+		y_pixel = h5_infile["params/geom/pixelHeight"]
+		center_energy = h5_infile["params/beam/photonEnergy"] # missing profile
+
+		# Define base vectors
+		base_x = np.zeros((3,1))
+		base_x[0] = x_pixel
+		base_y = np.zeros((3,1))
+		base_y[1] = y_pixel
+		base_z = np.zeros((3,1))
+		base_z[2] = detector_dist
 
 		# Create the photon instance
 		self.__photon_data = PhotonData_ext.PhotonData()
-		for ph in photons:
-			entry = self.__photon_data.addEntry()
-			entry.setPositionX(...)
-			entry.setPositionY(...)
-			entry.setPositionZ(...)
-			entry.setDirectionX(...)
-			entry.setDirectionY(...)
-			entry.setDirectionZ(...)
-			entry.setEnergy(...)
+
+		# Assumptions
+		# - All the photon originate from the center
+		# - photon energy is everywhere the same in the beam
+		# 
+		for i in list(range(x_num)):
+			for j in list(range(y_num)):
+				# Calculate the photon flight vector with respect to the matrix
+				# center
+				direct = base_x *(i-x_num/2) + base_y *(j-y_num/2) + base_z
+
+				# Normalize since only the direction is necessary
+				direct = normalize(direct)			
+		
+				# For each photon detected at (i,j) create an instance
+				for ph in list(range(photons[i,j])):
+					entry = self.__photon_data.addEntry()
+					entry.setPositionX(x_pixel*(i-x_num/2))
+					entry.setPositionY(y_pixel*(j-y_num/2))
+					entry.setPositionZ(detector_dist)
+					entry.setDirectionX(detect[0])
+					entry.setDirectionY(detect[1])
+					entry.setDirectionZ(detect[2])
+					entry.setEnergy(center_energy)
 
 		# Close the input file
 		h5_infile.close()
+		print("Photons read from photon matrix and transfered in XCSIT input
+			form")
 		
 	def saveH5(self):
 		"""
@@ -335,73 +369,37 @@ yet")
 				entry = self.__charge_data.getEntry(x,y)
 				charge_array[x,y] = entry.getCharge()
 				
-		# Link the old data into the output file
+		# Create the new datasets
 		# ------------------------------------------------------------
 		
-		# Open required output Files
+		# Open required files
 		h5_outfile 	= h5py.File(self.__output_path, "w")
+		h5_infile 	= h5py.File(self.__input_path,"r")
 
- 		# Gather from all the subfolders that might have been created during
- 		# previous simulation steps all the files
-		# Semantic: Creation of an array by applying an for loop in the current
-		# directory
-        individual_files = [os.path.join( os.path.getcwd(), f ) for f in os.listdir( os.path.getcwd() ) ]
-        individual_files.sort()
+		# Create the necessary output groups
+		data_gr = h5_outfile.create_group("data")
+		info_gr = h5_outfile.create_group("info")
+		param_gr= h5_outfile.create_group("params/geom")
 
-	    # Keep track of global parameters being linked.
-        global_parameters = False
-      
-	  	# Loop over all individual files and link in the top level groups.
-        for ind_file in individual_files:
-	    	# Open file.
-        	h5_infile = h5py.File( ind_file, 'r')
-
-            # Links must be relative.
-            relative_link_target = os.path.relpath(path=ind_file, start=os.path.dirname(os.path.dirname(ind_file)))
-            # Link global parameters.
-            if not global_parameters:
-                global_parameters = True
-
-                h5_outfile["params"] = h5py.ExternalLink(relative_link_target, "params")
-                h5_outfile["info"] = h5py.ExternalLink(relative_link_target, "info")
-                h5_outfile["misc"] = h5py.ExternalLink(relative_link_target, "misc")
-                h5_outfile["version"] = h5py.ExternalLink(relative_link_target,"version")
-                h5_outfile["history"] = h5py.ExternalLink(relative_link_target,"history")
-
-			# Data has more subfolders
-            for key in h5_infile['data']:
-
-                # Link in the data.
-                ds_path = "data/%s" % (key)
-                h5_outfile[ds_path] = h5py.ExternalLink(relative_link_target,ds_path)
-
-            # Close input file.
-            h5_infile.close()	
+		# Create the direct data values independent of the input file
+		data_gr.create_dataset("data", data=charge_array)
+		data_gr.create_dataset("photons", data=num_photon)
+		data_gr.create_dataset("interactions", data=num_ia)
+		info_gr.create_dataset("package_version",data="1.0",dtype=numpy.string_)
 		
+		# Link the data from the input file
+		# -------------------------------------------------------------
+		params_group["detectorDist"] = h5_infile["/params/geom/detectorDist"]
+		params_group["pixelWidth"] = h5_infile["/params/geom/pixelWidth"]
+		params_group["pixelHeight"] = h5_infile["/params/geom/pixelHeight"]
+		params_group["photonEnergy"] = h5_infile["/params/geom/photonEnergy"]
 
-		# Add the data calculated in this class as new datasets to the output file
-		# ------------------------------------------------------------------------
-		photonset = h5_outfile.create_dataset("/data/photons",data=num_photon) 
-		# Will automatically create the necessary path in the output file tree
-		photonset.attrs["0"] = "x position";
-		photonset.attrs["1"] = "y position";
-		photonset.attrs["2"] = "z position";
-		photonset.attrs["3"] = "x direction";
-		photonset.attrs["4"] = "y direction";
-		photonset.attrs["5"] = "x direction";
-		photonset.attrs["6"] = "energy";
+		# Link in the input file root
+		h5_outfile["/history/parent/"] = 
+			h5py.ExternalLink(self.__input_file,"/")
 
-		iaset = h5_outfile.create_dataset("/data/interactions",data=num_ia)
-		iaset.attrs["0"] = "x position";
-		iaset.attrs["1"] = "y position";
-		iaset.attrs["2"] = "z position";
-		iaset.attrs["3"] = "energy";
-		iaset.attrs["4"] = "time";
-
-		chargeset = h5_outfile.create_dataset("/data/chargematrix",data=charge_array)
-		chargeset.attrs["elems"] = "charge at that position";
-
-        # Close file.
+        # Close files
+		h5_infile.close()
         h5_outfile.close()
 
 
