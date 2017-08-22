@@ -10,39 +10,36 @@ SimEx is simulation framework, which can be used to sumulate an experiment at an
 
 ## Requirements
 
-- Installations of geant4, xscit and xdsp
-- Installation of boost.python
+- Installation:	geant4
+- Installation: xscit
+- Installation: boost libraries
+- Installation: python libraries
+- Installation: xerces-c libraries
 - Unix OS
 
 ## Installation
 
-Please build this from sources:
- 1) change to the folder, where you want to store/ install this program
- 2) clone the master branch to this folder
+Please use the "install.sh" and "env.sh.in" to install this program to your
+system. Currently Unix is the only supported operation system. 
 
-     $> git clone <clone url>
-    
- 3) create a folder build 
+1) open install.sh and edit the variables. Therefore, you need to enter the
+    absolut pathes to your geant4 and xcsit folders
 
-     $> mkdir build
-    
-  and change to it
-  
-     $> cd build
-    
- 4) execute cmake to locate all the necessary libraries
+2) open additionally env.sh.in Check if the exported pathes are existant on your
+	computer utilizing the pathes used in 1) to replace the variables. If the
+	versions differ, please edit them in env.sh.in
 
-     $> cmake ..
-    
- 5) compile the files:
+3) close install.sh and env.sh.in 
 
-     $> make
-    
- 6) copy the created shared objects to their destination
-    
-     $> make install
+4) make install.sh executable
+	
+	$> chmod u+x install.sh
 
-## Preusage
+5) execute the installation. There should not be any warnings or errors
+	
+	$> ./install.sh
+
+## Previous to usage
 
 Previous to each usage of this software environmental variables need to be set. In order to do this either 'env.sh' needs to be sourced or its content needs to be added to the '.bashrc' file. Mind that in another shell than bash the filename might differ. In that case please consult the man pages of the shell.
 
@@ -67,3 +64,7 @@ Open './.bashrc' with an editor of your choice:
    $> <editor> ./.bashrc
   
 and add the lines from 'env.sh' to it. Save the file and close it. Also close the terminal.
+
+## Acknowledgements
+
+This project has received funding from the European Union’s Horizon 2020 research and innovation programme under grant agreement No 654220.

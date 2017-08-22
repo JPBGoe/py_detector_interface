@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/PhotonEntry.hh
+XPhotonEntry.hh
+../include/XPhotonEntry.hh
+vector
+-
+
+/gpfs/exfel/data/user/burcherj/Development/karaboFramework/karabo/devices/xcsit/include/XPhotonEntry.hh
+
+/gpfs/exfel/data/user/burcherj/Development/py_detector_interface/src/PhotonEntry.cc
+PhotonEntry.hh
+/gpfs/exfel/data/user/burcherj/Development/py_detector_interface/src/PhotonEntry.hh
+
+/gpfs/exfel/data/user/burcherj/Development/py_detector_interface/src/PhotonEntry_ext.cc
+PhotonEntry.hh
+/gpfs/exfel/data/user/burcherj/Development/py_detector_interface/src/PhotonEntry.hh
+boost/python.hpp
+-
+

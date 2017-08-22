@@ -1,0 +1,1 @@
+/usr/bin/c++  -fPIC  -std=c++11 -Wl,--unresolved-symbols=report-all -Wl,--warn-unresolved-symbols   -shared -Wl,-soname,InteractionEntry_ext.so -o InteractionEntry_ext.so CMakeFiles/InteractionEntry_ext.dir/InteractionEntry.o CMakeFiles/InteractionEntry_ext.dir/InteractionEntry_ext.o -lpython2.7 -lboost_python-mt 
