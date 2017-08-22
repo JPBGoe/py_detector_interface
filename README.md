@@ -64,3 +64,7 @@ Open './.bashrc' with an editor of your choice:
    $> <editor> ./.bashrc
   
 and add the lines from 'env.sh' to it. Save the file and close it. Also close the terminal.
+
+## Acknowledgements
+
+This project has received funding from the European Union’s Horizon 2020 research and innovation programme under grant agreement No 654220.
