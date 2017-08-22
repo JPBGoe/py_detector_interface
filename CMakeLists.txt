@@ -34,7 +34,7 @@ option(XERCES "-DXERCES=<path>/xerces-c-3.1.4/src    Path to xercesc source
 
 # Check options to be set
 if(NOT XCSIT_FOLDER)
-   message(FATAL_ERROR "Please specify: -DXCSIT_Folder-DXCSIT_FOLDER=<path>/xcsit  Path to xcsit installation")
+   message(FATAL_ERROR "Please specify: -DXCSIT_FOLDER=<path>/xcsit  Path to xcsit installation")
 endif()
 if(NOT GEANT4_SOURCE)
    message(FATAL_ERROR "Please specify: -DXCSIT_SOURCE=<path>/geant4.10.03.p01/source   Path to
@@ -44,7 +44,6 @@ if(NOT GEANT4_BUILD)
    message(FATAL_ERROR "Please specify: -DXCSIT_BUILD=<path>/geant4.10.03.p01-build  Path to
 	geant4 build directory")
 endif()
-
 if(NOT GEANT4_SO)
    message(FATAL_ERROR "Please specify: -DXCSIT_SOURCE=<path>/geant4.10.03.p01i-install/lib64
 	Path to geant4 shared objects")
