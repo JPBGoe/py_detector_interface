@@ -82,6 +82,7 @@ class XCSITPhotonDetector(AbstractPhotonDetector):
 						count -= 1
 
 					# there should be only one candidate file
+					# TODO: loop over all files
 					if count < 0:
 						raise RuntimeError("Multiple files ending with .h5 in "+
 							str(abs_inpath))

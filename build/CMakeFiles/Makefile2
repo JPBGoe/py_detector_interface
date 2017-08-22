@@ -158,8 +158,8 @@ clean: src/CMakeFiles/ChargeMatrix_ext.dir/clean
 # Target rules for target src/CMakeFiles/ChargeSim_ext.dir
 
 # All Build rule for target.
-src/CMakeFiles/ChargeSim_ext.dir/all: src/CMakeFiles/ChargeMatrix_ext.dir/all
 src/CMakeFiles/ChargeSim_ext.dir/all: src/CMakeFiles/InteractionData_ext.dir/all
+src/CMakeFiles/ChargeSim_ext.dir/all: src/CMakeFiles/ChargeMatrix_ext.dir/all
 	$(MAKE) -f src/CMakeFiles/ChargeSim_ext.dir/build.make src/CMakeFiles/ChargeSim_ext.dir/depend
 	$(MAKE) -f src/CMakeFiles/ChargeSim_ext.dir/build.make src/CMakeFiles/ChargeSim_ext.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /gpfs/exfel/data/user/burcherj/Development/py_detector_interface/build/CMakeFiles  7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26
