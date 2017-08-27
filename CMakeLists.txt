@@ -1,8 +1,16 @@
 #
-#	File:	CMakeLists.txt
+#   cmake file to compile the interface between the CERN simulation framework
+#   geant4, its wrapper class xcsit and the XCSITDetectorSimulation class of the
+#   SimEx framework.
+#
+#	File:	./CMakeLists.txt
 #	Author:	jburchert
 #	Date:	18 August 2017
 #
+
+# =============================================================================
+#                       Options, Version, Variables
+# =============================================================================
 
 # project name
 project(py_detector_interface)
@@ -21,60 +29,128 @@ if(NOT UNIX)
     message(FATAL_ERROR "This cmake file supports only Unix operation systems")
 endif()
 
-# Specify diverse option
-option(XCSIT_FOLDER "-DXCSIT_FOLDER=<path>/xcsit  Path to xcsit installation")
-option(GEANT4_SOURCE "-DXCSIT_SOURCE=<path>/geant4.10.03.p01/source   Path to
-	geant4 source files")
-option(GEANT4_BUILD "-DXCSIT_SOURCE=<path>/geant4.10.03.p01-build   Path to
-	geant4 build directory")
-option(GEANT4_SO "-DXCSIT_SOURCE=<path>/geant4.10.03.p01i-install/lib64
-	Path to geant4 shared objects")
-option(XERCES "-DXERCES=<path>/xerces-c-3.1.4/src    Path to xercesc source
-	files")
-
-# Check options to be set
-if(NOT XCSIT_FOLDER)
-   message(FATAL_ERROR "Please specify: -DXCSIT_FOLDER=<path>/xcsit  Path to xcsit installation")
-endif()
-if(NOT GEANT4_SOURCE)
-   message(FATAL_ERROR "Please specify: -DXCSIT_SOURCE=<path>/geant4.10.03.p01/source   Path to
-	geant4 source files")
-endif()
-if(NOT GEANT4_BUILD)
-   message(FATAL_ERROR "Please specify: -DXCSIT_BUILD=<path>/geant4.10.03.p01-build  Path to
-	geant4 build directory")
-endif()
-if(NOT GEANT4_SO)
-   message(FATAL_ERROR "Please specify: -DXCSIT_SOURCE=<path>/geant4.10.03.p01i-install/lib64
-	Path to geant4 shared objects")
-endif()
-if(NOT XERCES)
-   message(FATAL_ERROR "Please specify: -DXERCES=<path>/xerces-c-3.1.4/src    Path to xercesc source
-	files ")
+# Check the compiler version if gnu
+# Check the compiler version if gnu
+if("${CMAKE_CXX_COMPILER_ID}" STREQUAL "GNU") 
+    if(CMAKE_CXX_COMPILER_VERSION VERSION_LESS 4.8)
+        message(WARINING "During development GCC GNU comiler 4.8.5 used.
+            Your version might not work")
+    endif()
 endif()
 
-# Define path to include files and source files
-set(XCSIT_INCLUDE ${XCSIT_FOLDER}/include)
-set(XCSIT_SRC ${XCSIT_FOLDER}/src)
+# Specify options
+option(GEANT4_ROOT "-DGEANT4_ROOT=<abs path> absolute path to the geant4
+    installation directory that includes \n
+    ./bin/\n
+    ./include/Geant4/\n
+    ./lib64/Geant4-<ver>/\n
+    ./share/Geant4-<ver>/data/"
+)
+option(XERCESC_ROOT "-DXERCESC_ROOT=<abs path> absolute path to the xercesc
+    installation directory that includes\n
+    ./include/xercesc/\n
+    ./lib/"
+)
+option(XCSIT_ROOT "-DXCSIT_ROOT=<abs path> absolute path to the xcist 
+    installation directory that includes\n
+    ./include/xcsit/
+    ./lib/
+    ./lib/xcsit/
+    ./bin/"
+)
+option(BOOST_ROOT "-DBOOST_ROOT=<abs path> absolute path to the boost
+    installation directory that includes\n
+    ./include/boost/
+    ./lib/"
+)
+
+# Check if there is user input
+if(NOT GEANT4_ROOT)
+    message(FATAL_ERROR "Path to geant4 install root has to be specified")
+endif()
+if(NOT XERCESC_ROOT)
+    message(FATAL_ERROR "Path to xercesc install root has to be specified")
+endif()
+if(NOT XCSIT_ROOT)
+    message(FATAL_ERROR "Path to xcsit install root has to be specified")
+endif()
+if(NOT BOOST_ROOT)
+    message(FATAL_ERROR "Path to boost install root has to be specified")
+endif()
+
 
 # Branch
 add_subdirectory(src)
 
-# Set entvironmental variables
-configure_file(env.sh.in env.sh)
+# Create a file to set environmental variables for the geant4 installation
+configure_file(py_detector_interface_env.sh.in py_detector_interface_env.sh)
 
-# Copy created shared objects and test to the build folder
-install(DIRECTORY DESTINATION "${CMAKE_BINARY_DIR}/lib/")
-install(DIRECTORY DESTINATION "${CMAKE_BINARY_DIR}/test/")
-install(DIRECTORY DESTINATION "${CMAKE_BINARY_DIR}/python/")
-install(DIRECTORY "${CMAKE_BINARY_DIR}/src/" DESTINATION
-"${CMAKE_BINARY_DIR}/lib" FILES_MATCHING PATTERN "*.so"
-PATTERN "*.a" PATTERN "CMakeFiles*" EXCLUDE)
-install(DIRECTORY "${CMAKE_SOURCE_DIR}/test/" DESTINATION
-"${CMAKE_BINARY_DIR}/test" FILES_MATCHING PATTERN "*.py"
-PATTERN "CMakeFiles*" EXCLUDE)
-install(DIRECTORY "${CMAKE_SOURCE_DIR}/src/" DESTINATION
-"${CMAKE_BINARY_DIR}/python" FILES_MATCHING PATTERN "*.py"
-PATTERN "CMakeFiles*" EXCLUDE)
+# =============================================================================
+#                           Create a package
+# =============================================================================
+export(TARGETS py_detector_interface FILE
+    "${CMAKE_BINARY_DIR}/cmake/py_detector_interfaceTargets.cmake")
+export(PACKAGE py_detector_interface)
 
+configure_file(${CMAKE_SOURCE_DIR}/cmake/py_detector_interfaceConfig.cmake.in 
+    ${CMAKE_BINARY_DIR}/cmake/py_detector_interfaceConfig.cmake)
+configure_file(${CMAKE_SOURCE_DIR}/cmake/py_detector_interfaceConfigVersion.cmake.in 
+    ${CMAKE_BINARY_DIR}/cmake/py_detector_interfaceConfigVersion.cmake)
+
+# ============================================================================-
+#                               Install
+# ============================================================================-
+
+# Variables
+set(pdi_BINARY_DIR ${CMAKE_INSTALL_PREFIX}/bin)
+set(pdi_INCLUDE_DIR ${CMAKE_INSTALL_PREFIX}/include/py_detector_interface)
+set(pdi_LIBRARIES ${CMAKE_INSTALL_PREFIX}/lib/)
+set(pdi_CMAKE ${CMAKE_INSTALL_PREFIX}/lib/py_detector_interface)
+
+# install/ copy the files
+install(FILES ${CMAKE_BINARY_DIR}/py_detector_interface_env.sh DESTINATION ${pdi_BINARY_DIR} 
+    PERMISSIONS 
+    OWNER_READ
+    OWNER_WRITE
+    GROUP_READ
+    WORLD_READ
+)
+install(DIRECTORY "${CMAKE_SOURCE_DIR}/include/" DESTINATION ${pdi_INCLUDE_DIR}
+    FILES_MATCHING 
+    PATTERN "*.hh"
+    PATTERN "*.h"
+)
+install(FILES ${CMAKE_BINARY_DIR}/src/libpy_detector_interface.so DESTINATION ${pdi_LIBRARIES}
+    PERMISSIONS 
+    OWNER_READ
+    OWNER_EXECUTE
+    OWNER_WRITE
+    GROUP_READ
+    GROUP_EXECUTE
+    WORLD_READ
+    WORLD_EXECUTE
+)
+install(DIRECTORY ${CMAKE_BINARY_DIR}/cmake/ DESTINATION ${pdi_CMAKE}
+    FILES_MATCHING
+    PATTERN "*.cmake"
+)
+
+
+install(CODE "MESSAGE(\"The installation of py_detector_interface is finished. \n\n
+The folder structure is as follows:\n
++CMAKE_INSTALL_PREFIX
++-bin
++--py_detector_interface_env.sh
++-include
++--py_detector_interface
++---ChargeEntry.hh
++---...
++---PhotonEntry.hh
++-lib
++--py_detector_interface
++---py_detector_interfaceConfig.cmake
++---py_detector_interfaceTargets.cmake
++---py_detector_interfaceConfigVersion.cmake
++--libpy_detector_interface.so\n\n
+\")")
 

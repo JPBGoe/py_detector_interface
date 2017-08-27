@@ -6,11 +6,15 @@
  * Date:	9 August 2017
  */
 
-#include "InteractionEntry.hh"
 #include <boost/python.hpp>
+#include "InteractionEntry.hh"
+
+using namespace boost::python;
 
 BOOST_PYTHON_MODULE(InteractionEntry_ext){
-boost::python::class_<DSIM::InteractionEntry>("InteractionEntry")
+    class_<XCSIT::XInteractionEntry,boost::noncopyable>("XInteractionEntry", no_init);    
+
+    class_<DSIM::InteractionEntry, bases<XCSIT::XInteractionEntry> >("InteractionEntry")
 		.def("getPositionX",&DSIM::InteractionEntry::getPositionX)
 		.def("getPositionY",&DSIM::InteractionEntry::getPositionY)
 		.def("getPositionZ",&DSIM::InteractionEntry::getPositionZ)

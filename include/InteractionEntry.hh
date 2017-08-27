@@ -12,7 +12,7 @@
 #ifndef INTERACTIONENTRY_HH
 #define INTERACTIONENTRY_HH
 
-#include <XInteractionEntry.hh>
+#include "XInteractionEntry.hh"
 #include <vector>
 
 namespace DSIM {
@@ -24,19 +24,19 @@ namespace DSIM {
     	~InteractionEntry();
     
 		// Implementation of the functions declared in XInteractionEntry.hh	
-		double getPositionX();
-		double getPositionY();
-		double getPositionZ();
-		double getEnergy();
-		double getTime();
+		virtual double getPositionX();
+		virtual double getPositionY();
+		virtual double getPositionZ();
+		virtual double getEnergy();
+		virtual double getTime();
 
 		// Implementaiton of the methods declared in XInteractionEntry.hh
-		void setPositionX(double value);
-		void setPositionY(double value);
-		void setPositionZ(double value);
-		void setEnergy(double value);
-		void setTime(double value);
-		void set(double energy, double time, double posX, double posY, double posZ);
+		virtual void setPositionX(double value);
+		virtual void setPositionY(double value);
+		virtual void setPositionZ(double value);
+		virtual void setEnergy(double value);
+		virtual void setTime(double value);
+		virtual void set(double energy, double time, double posX, double posY, double posZ);
 
     private:
 		// Varaibles to store the state of a photon

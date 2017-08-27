@@ -4,11 +4,15 @@
  * Date:	9 August 2017
  */
 
-#include "PhotonEntry.hh"
 #include <boost/python.hpp>
+#include "PhotonEntry.hh"
+
+using namespace boost::python;
 
 BOOST_PYTHON_MODULE(PhotonEntry_ext){
-    boost::python::class_<DSIM::PhotonEntry>("PhotonEntry")
+    class_<XCSIT::XPhotonEntry,boost::noncopyable>("XPhotonEntry", no_init);
+
+    class_<DSIM::PhotonEntry,bases<XCSIT::XPhotonEntry> >("PhotonEntry")
 		.def("getPositionX",&DSIM::PhotonEntry::getPositionX)
 		.def("getPositionY",&DSIM::PhotonEntry::getPositionY)
 		.def("getPositionZ",&DSIM::PhotonEntry::getPositionZ)
