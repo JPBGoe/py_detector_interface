@@ -77,28 +77,22 @@ endif()
 add_library(py_detector_interface SHARED
 # Photon Entry
     PhotonEntry.cc 
-	PhotonEntry_ext.cc 
 # InteractionEntry
 	InteractionEntry.cc 
-	InteractionEntry_ext.cc 
 # ChargeEntry
 	ChargeEntry.cc 
-	ChargeEntry_ext.cc
 # PhotonData
 	PhotonData.cc 
-	PhotonData_ext.cc
 # Interaction Data
 	InteractionData.cc
-	InteractionData_ext.cc
 # ChargeMatrix
 	ChargeMatrix.cc
-	ChargeMatrix_ext.cc
 # ParticleSim
 	ParticleSim.cc 
-	ParticleSim_ext.cc
 # ChargeSIm
 	ChargeSim.cc 
-	ChargeSim_ext.cc
+# Export to python
+    pythonExtension.cc
 )
 target_link_libraries(py_detector_interface 
     ${PYTHON_LIBRARIES}

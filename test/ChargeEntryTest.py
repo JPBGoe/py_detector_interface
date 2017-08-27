@@ -1,4 +1,4 @@
-import ChargeEntry_ext as ce
+import libpy_detector_interface as ce
 import sys
 import random
 

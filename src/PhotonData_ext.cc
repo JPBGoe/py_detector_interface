@@ -1,4 +1,6 @@
 /*
+ * Export the functions from the interface to a python module
+ *
  * File:   	PhotonData_ext.cc
  * Author: 	jburchert
  * Date:	10 August 2017
@@ -13,6 +15,11 @@
 
 using namespace boost::python;
 
+
+/**
+ * Creation of a python module of class DSIM::PhotonData
+ * The functions getEntry(), setEntry(), size() and clear() are considered
+ */
 BOOST_PYTHON_MODULE(PhotonData_ext){
 	class_<XCSIT::XPhotonData, boost::shared_ptr<XCSIT::XPhotonData>, boost::noncopyable>("XPhotonData", no_init);
 

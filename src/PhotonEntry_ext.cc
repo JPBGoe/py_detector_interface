@@ -1,4 +1,6 @@
 /*
+ * Export the functions from the interface to a python module
+ *
  * File:   	PhotonEntry_ext.cc
  * Author: 	jburchert
  * Date:	9 August 2017
@@ -9,6 +11,10 @@
 
 using namespace boost::python;
 
+/**
+ * Creation of a python module of class DSIM::PhotonEntry
+ * All the functions form the interface are exported
+ */
 BOOST_PYTHON_MODULE(PhotonEntry_ext){
     class_<XCSIT::XPhotonEntry,boost::noncopyable>("XPhotonEntry", no_init);
 

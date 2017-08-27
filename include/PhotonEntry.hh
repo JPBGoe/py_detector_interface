@@ -3,6 +3,8 @@
  * simulation. They allowes access to the position in space (Cartesian
  * coordinates) and its impuls as well as the energy of the photon.
  *
+ * Functions are set to virtual to allow binding during runtime
+ *
  * TODO: Check if the impuls values are the real numbers or if Direction[X|Y|Z] is 
  * just an to one normalized vector pointing in the direction of flight.
  *
@@ -17,37 +19,100 @@
 #include <vector>
 
 namespace DSIM {
-
+    /**
+     * Class to implement the XCSIT::XPhotonEntry from the xcsit software
+     * Stored is the position in space, the directon and the energy of an photon
+     */
     class PhotonEntry : public XCSIT::XPhotonEntry{
 
     public:
+        /**
+         * Constructor: Initilaization of the private attributes of this class
+         */
     	PhotonEntry();
+        /**
+         * Destructor: No acton
+         */
     	~PhotonEntry();
     
-	// Implementation of the functions declared in XPhotonEntry.hh	
-	double getPositionX();
-	double getPositionY();
-	double getPositionZ();
-	double getDirectionX();
-	double getDirectionY();
-	double getDirectionZ();
-	double getEnergy();
+	    // Implementation of the functions declared in XPhotonEntry.hh	
+	    /**
+         * @return the positon of the photon in x
+         */
+        virtual double getPositionX();
+        /**
+         * @return the position of the photon in y
+         */
+	    virtual double getPositionY();
+        /**
+         * @return the position of photon in z
+         */
+	    virtual double getPositionZ();
+        /**
+         * @return the x component of the direction of movement of the photon
+         */
+	    virtual double getDirectionX();
+        /**
+         *  @return the y component of the direction of movement of the photon
+         */
+	    virtual double getDirectionY();
+        /**
+         *  @return the z component of the direction of movement of the photon
+         */
+	    virtual double getDirectionZ();
+        /**
+         * @return the total energy of the photon
+         */ 
+	    virtual double getEnergy();
 
-	// Implementaiton of the methods declared in XPhotonEntry.hh
-	void setPositionX(double value);
-	void setPositionY(double value);
-	void setPositionZ(double value);
-	void setDirectionX(double value);
-	void setDirectionY(double value);
-	void setDirectionZ(double value);
-	void setEnergy(double value);
-	void set(double energy, double dirX, double dirY, double dirZ, double posX, double posY, double posZ);
+	    // Implementaiton of the methods declared in XPhotonEntry.hh
+	    /**
+         * @param value Sets the photon x position in space
+         */
+	    virtual void setPositionX(double value);
+        /**
+         * @param value Sets the photon y position in space
+         */
+	    virtual void setPositionY(double value);
+        /**
+         * @param value Sets the photon y position in space
+         */
+	    virtual void setPositionZ(double value);
+        /**
+         * @param value Sets the x component of the direction of movement of the
+         * photon
+         */
+	    virtual void setDirectionX(double value);
+        /**
+         * @param value Sets the y component of the direction of movement of the
+         * photon
+         */
+	    virtual void setDirectionY(double value);
+        /**
+         * @param value Sets the z component of the direction of movement of the
+         * photon
+         */
+	    virtual void setDirectionZ(double value);
+        /**
+         * @param value Sets the total energy of the photon
+         */
+	    virtual void setEnergy(double value);
+        /** 
+         * @param energy the total energy of the photon: E = cp = c h/lambda
+         * @param dirX  the x component of the direction of movement
+         * @param dirY  the y component of the direction of movement
+         * @param dirZ  the z component of the direction of movement
+         * @param posX  the x component of the position in space
+         * @param posY  the y component of the position in space
+         * @param posZ  the z component of the position in space 
+         */
+	    virtual void set(double energy, double dirX, double dirY, double dirZ, double posX, double posY, double posZ);
 
     private:
-	// Variables to store the state of a photon
-   	std::vector<double> Pos;
-   	std::vector<double> Imp;
-   	double E;
+	    // Variables to store the state of a photon
+   	    std::vector<double> Pos;
+   	    std::vector<double> Imp;
+   	    double E;
     };
 }
 
