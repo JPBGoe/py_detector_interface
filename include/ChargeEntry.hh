@@ -1,4 +1,6 @@
 /*
+ *  Element storing a charge
+ *
  * File:	ChargeEntry.hh
  * Author:	jburchert
  * Date:	15 August 2017
@@ -10,10 +12,9 @@
 #include "XChargeEntry.hh"
 
 namespace DSIM {
-/**
- * Class to implement XCSIT::XChargeEntry of the xcsit software
- * An instance stores a value for a charge
- */ 
+    /**
+     * Instances of this class store a value representing a charge
+     */ 
 	class ChargeEntry : public XCSIT::XChargeEntry{
 	public:
         /**
@@ -23,7 +24,7 @@ namespace DSIM {
         /**
          * Destructor
          */ 
-		~ChargeEntry();
+		virtual ~ChargeEntry();
 
         /**
          * @return the charge currently saved in this instance

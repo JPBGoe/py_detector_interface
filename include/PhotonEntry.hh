@@ -20,8 +20,8 @@
 
 namespace DSIM {
     /**
-     * Class to implement the XCSIT::XPhotonEntry from the xcsit software
-     * Stored is the position in space, the directon and the energy of an photon
+     * Instances of this class store date of the position in space,
+     * the directon and the energy of an photon
      */
     class PhotonEntry : public XCSIT::XPhotonEntry{
 

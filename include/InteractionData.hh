@@ -15,22 +15,54 @@
 #include <vector>
 
 namespace DSIM {
-
+    /**
+     * Instances of this class implement the XCSIT::XInteractionData class from
+     * the xcsit software. They store instances of the InteractionEntry classes
+     */
     class InteractionData : public XCSIT::XInteractionData{
 
     public:
+        /**
+         * Constructor
+         */
     	InteractionData();
-    	~InteractionData();
+        /**
+         * Desturctor
+         */
+    	virtual ~InteractionData();
 
-		boost::shared_ptr<InteractionEntry> getPyEntry(size_t entry);
-		boost::shared_ptr<InteractionEntry> addPyEntry();
+        /**
+         * @param entry position of the returned instance in this container
+         * @return the DSIM::InteractionEntry saved at the position entry
+         */
+		virtual boost::shared_ptr<InteractionEntry> getPyEntry(size_t entry);
+        /**
+         * @return the DSIM::InteractionEntry instance which is added to 
+         * the container by calling this function
+         */
+		virtual boost::shared_ptr<InteractionEntry> addPyEntry();
     	
 
-		// Implementation of the functions declared in XInteractionData.hh	
-		boost::shared_ptr<XCSIT::XInteractionEntry> getEntry(size_t entry);
-        boost::shared_ptr<XCSIT::XInteractionEntry> addEntry();
-        size_t size() const;
-        void clear();
+		// Implementation of the functions declared in XInteractionData.hh
+        /**
+         * @param entry position of the returned instance in this container
+         * @return the XCSIT:XInteractionEntry saved at the position entry
+         */
+		virtual boost::shared_ptr<XCSIT::XInteractionEntry> getEntry(size_t entry);
+        /**
+         * Internally calls addPyEntry()
+         * @return the XCSIT::XInteractionEntry instance which is added to 
+         * the container by calling this function
+         */
+        virtual boost::shared_ptr<XCSIT::XInteractionEntry> addEntry();
+        /**
+         * @return the number of elements currently stored in this container
+         */
+        virtual size_t size() const;
+        /**
+         * clears this container by deleting all its content
+         */
+        virtual void clear();
         
 
     private:

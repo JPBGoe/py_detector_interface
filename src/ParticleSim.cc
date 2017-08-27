@@ -56,15 +56,15 @@ namespace DSIM{
 	}
 
 	void ParticleSim::setDetector(std::string detectorname){
-    	if(detectorname == "pnCCD"){
+    	if(detectorname == detectorType[0]){
 	        simulate->SetDetectorConstruction(new XCSIT::PNCCDDetectorConstruction);
-   		}else if(detectorname == "LPD"){
+   		}else if(detectorname == detectorType[1]){
         	simulate->SetDetectorConstruction(new XCSIT::LPDDetectorConstruction);
-    	}else if(detectorname == "AGIPD"){
+    	}else if(detectorname == detectorType[2]){
         	simulate->SetDetectorConstruction(new XCSIT::AGIPDDetectorConstruction);
-    	}else if(detectorname == "AGIPDSPB"){
+    	}else if(detectorname == detectorType[3]){
         	simulate->SetDetectorConstruction(new XCSIT::AGIPDSPBDetectorConstruction);
-    	}else if(detectorname == "CAD"){
+    	}else if(detectorname == detectorType[4]){
 			XCSIT::CadDetectorConstruction* detector = new XCSIT::CadDetectorConstruction();
         	detector->ConstructFromGdml("cadFile");
         	simulate->SetDetectorConstruction(detector);

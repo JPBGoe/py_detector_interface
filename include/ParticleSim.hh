@@ -32,20 +32,41 @@
 #include <string>
 
 namespace DSIM{
+    /**
+     * Instances of this class perfom simulation of the interaction of photons
+     * with the detector
+     */
 	class ParticleSim{
 		public:
+            /**
+             * Constructor
+             */
 			ParticleSim();
-			~ParticleSim(); // delete a lot of pointers
+            /**
+             * Destructor
+             */
+			virtual ~ParticleSim(); // delete a lot of pointers
 
 			// The following functions are from Tonn Rueter's class
 			// ParticleSimulation of the project xdsp. They have been modified
 			// only by removing all the karabo dependencies, methods and
 			// functions
-			void initialization(std::string detectorname);
+			/**
+             * Set up the simulation
+             * @param detectorname the type of the used detector 
+             */
+			virtual void initialization(std::string detectorname);
 
-			void runSimulation(boost::shared_ptr<XCSIT::XPhotonData> input, boost::shared_ptr<XCSIT::XInteractionData> output);
+            /**
+             * Run the simulation
+             * @param input container instance that contain the photons
+             * @param output container instance that will contain the
+             * interactions with the detector after calculation
+             */
+			virtual void runSimulation(boost::shared_ptr<XCSIT::XPhotonData> input, boost::shared_ptr<XCSIT::XInteractionData> output);
 
 		private:
+    		const std::string detectorType[5] = {"pnCCD","LPD","AGIPD","AGIPDSPB","CAD"};
 			void setDetector(std::string detectorname);
 			XCSIT::XGeant4ParticleSim* simulate;
     };
