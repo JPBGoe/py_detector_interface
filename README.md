@@ -25,16 +25,20 @@ To install this software, other software has to be installed first. If this soft
 
 Please install the latest version of XercesC, which can be downloaded from http://xerces.apache.org/xerces-c/download.cgi
 
-1) download and unzip the latest version of xerces-c-<ver>.tar.gz in the directory where you want to build the software:
+1) download and unzip the latest version of xerces-c-VER.tar.gz in the directory where you want to build the software:
+
 	$> tar -xvzf xerces-c-<ver>.tar.gz
 	
 2) configure with the path to your local directory
-	$> ./configure --prefix=/home/<username>/.local
+
+	$> ./configure --prefix=/home/USERNAME/.local
 	
 3) compile and link
+
 	$> make
 	
 4) copy compiled files to prefix location
+
 	$> make install
 
 ### Geant4
