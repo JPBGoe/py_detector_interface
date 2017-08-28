@@ -1,0 +1,61 @@
+#!/bin/sh
+#
+#	File to set the necessary environmental variables to be able to work with 
+#   geant4, xcsit and py_detector_interface
+#
+#	File:	py_detector_interface_env.sh.in
+#	Author: jburchert
+#	Date:	27 August 2017
+#
+
+# define a function to look up the versions present in the specified directory
+# to make this file independent of the current installed versions of this
+# packages
+function version_lookup(){
+    GEANT_VER=`find ${GEANT4_ROOT}/share/ -maxdepth 1 -type d -name "Geant4*"`
+    GEANT_VER=$GEANT_VER"/data/" 
+    find $GEANT_VER -maxdepth 1 -name $1
+}    
+
+# variable necessary for the particle simulation. Somewhere deep in geant4 this
+# variable is used
+# the number needs to be changed if necessary
+export G4ENSDFSTATEDATA=$(version_lookup "G4ENSDFSTATE*")
+echo "Setting G4ENSDFSTATEDATA="`printenv G4ENSDFSTATEDATA`
+
+# the following lines are copied and adjusted from setG5EnvironmentalVariables.sh
+export G4ABLADATA=$(version_lookup "G4ABLA*")
+echo "Setting G4ABLADATA="`printenv G4ABLADATA`
+
+export G4LEDATA=$(version_lookup "G4EMLOW*")
+echo "Setting G4LEDATA="`printenv G4LEDATA`
+
+export G4NEUTRONHPDATA=$(version_lookup "G4NDL*")
+echo "Setting G4NEUTRONHPDATA="`printenv G4NEUTRONHPDATA`
+
+export G4NEUTRONXSDATA=$(version_lookup "G4NEUTRONXS*")
+echo "Setting G4NEUTRONXSDATA="`printenv G4NEUTRONXSDATA`
+
+export G4PIIDATA=$(version_lookup "G4PII*")
+echo "Setting G4PIIDATA="`printenv G4PIIDATA`
+
+export G4SAIDXSDATA=$(version_lookup "G4SAIDDATA*")
+echo "Setting G4PIIDATA="`printenv G4SAIDXSDATA`
+
+export G4LEVELGAMMADATA=$(version_lookup "PhotonEvaporation*")
+echo "Setting G4PIIDATA="`printenv G4LEVELGAMMADATA`
+
+export G4RADIOACTIVEDATA=$(version_lookup "RadioactiveDecay*")
+echo "Setting G4PIIDATA="`printenv G4RADIOACTIVEDATA`
+
+export G4REALSURFACEDATA=$(version_lookup "RealSurface*")
+echo "Setting G4REALSURFACEDATA="`printenv G4REALSURFACEDATA`
+echo " "
+
+# Variable is required to make python find the shared objects containing the the
+# exported c++ classes
+export PYTHONPATH=${CMAKE_INSTALL_PREFIX}/lib:$PYTHONPATH
+echo "Setting PYTHONPATH="`printenv PYTHONPATH` 
+
+# Report finished
+echo "Done"

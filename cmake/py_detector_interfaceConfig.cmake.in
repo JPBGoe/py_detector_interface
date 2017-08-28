@@ -1,0 +1,18 @@
+# 
+#   File to export package variables of the py_detector_interface project
+#
+#   File:   py_detector_interfaceConfig.cmake
+#   Author: jburchert
+#   Date:   27 August 2017
+#
+#   Exported variables:
+#       py_detector_interface_INCLUDE_DIRS  -- include directories for
+#                                               py_detector_interface
+#       py_detector_interface_LIBRARIES     -- directory with libraries of
+#                                               py_detector_interface
+
+# Set the variables
+set(py_detector_interface_INCLUDE_DIRS
+    ${CMAKE_INSTALL_PREFIX}/include/py_detector_interface/)
+set(py_detector_interface_LIBRARIES 
+    ${CMAKE_INSTALL_PREFIX}/lib/libpy_detector_interface.so)
