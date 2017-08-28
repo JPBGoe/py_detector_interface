@@ -10,6 +10,7 @@ SimEx is simulation framework, which can be used to sumulate an experiment at an
 
 ## Requirements
 
+- cmake
 - Installation:	geant4
 - Installation: xscit
 - Installation: boost libraries
@@ -25,7 +26,7 @@ To install this software, other software has to be installed first. If this soft
 
 Please install the latest version of XercesC, which can be downloaded from http://xerces.apache.org/xerces-c/download.cgi
 
-1) download and unzip the latest version of xerces-c-VER.tar.gz in the directory where you want to build the software:
+1) download and extract the latest version of xerces-c-VER.tar.gz in the directory where you want to build the software:
 
 	$> tar -xvzf xerces-c-<ver>.tar.gz
 	
@@ -43,7 +44,60 @@ Please install the latest version of XercesC, which can be downloaded from http:
 
 ### Geant4
 
+Please use the installation guide from http://geant4.web.cern.ch/geant4/UserDocumentation/UsersGuides/InstallationGuide/html/
+It specifies how geant4 can be installed.
+
+1) Download and extract the latest version of geant4 e.g. from https://geant4.web.cern.ch/geant4/support/download.shtml
+
+	$> tar -xvzf geant4.VER.SION.tar.gz
+
+2) create a folder at the same level as your extracted folder
+
+	$> mkdir geant4-build
+	$> ls
+		geant4.VER.SION       geant4-build
+	$> cd geant4-build
+
+3) in your geant4 build folder execute cmake to create the Makefile>:
+
+	$> cmake -DGEANT4_INSTALL_DATA=ON -DCMAKE_INSTALL_PREFIX=/home/USERNAME/.local -DXERCES_ROOT_DIR=PATH TO THE XERCESC ROOT DIRECTORY ../geant4.VER.SION
+	
+Sometimes this command has to be executed twice to download the data. "PATH TO THE XERCESC ROOT DIRECTORY" should be the directory that contains the folders "include" and "lib" with the xercesc files.
+
+4) compile and link libraries
+
+	$> make -jN VERBOSE=1
+	
+5) copy created files to the CMAKE_INSTALL_PREFIX
+
+	$> make install
+
 ### xcsit
+
+1) get the xcsit package from gitlab by cloning it:
+
+	$> git clone URL
+	
+2) Create a build folder inside the cloned directory:
+
+	$> cd xcsit
+	$> mkdir ./build
+	$> cd ./build
+	
+3) Execute cmake to create a Makefile
+
+	$> cmake -DGEANT4_ROOT=/home/USERNAME/.local -DXERCESC_ROOT=/home/USERNAME/.local -DCMAKE_INSTALL_PREFIX=/home/USERNAME/.local ..
+
+Make sure that the path used for XERCESC_ROOT is the same which was used during configuration of geant4.
+
+4) Compile and link
+	
+	$> make VERBOSE=1
+
+5) Copy compiled files to the CMAKE_INSTALL_PREFIX
+
+	$> make install
+
 
 ### py_detector_interface
 
