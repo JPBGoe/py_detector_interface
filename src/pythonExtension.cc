@@ -78,38 +78,38 @@ BOOST_PYTHON_MODULE(libpy_detector_interface){
 	class_<XCSIT::XPhotonData, boost::shared_ptr<XCSIT::XPhotonData>, boost::noncopyable>("XPhotonData", no_init);
 
     class_<DSIM::PhotonData, boost::shared_ptr<DSIM::PhotonData>, bases<XCSIT::XPhotonData> >("PhotonData", init<>())
-		.def("getEntry",&DSIM::PhotonData::getPyEntry)
-		.def("addEntry",&DSIM::PhotonData::addPyEntry)
+		.def("getEntry",&DSIM::PhotonData::getEntry)
+		.def("addEntry",&DSIM::PhotonData::addEntry)
 		.def("size",&DSIM::PhotonData::size)
 		.def("clear",&DSIM::PhotonData::clear)
     ;
 	
-	register_ptr_to_python<boost::shared_ptr<DSIM::PhotonEntry> >();	
+	register_ptr_to_python<boost::shared_ptr<XCSIT::XPhotonEntry> >();	
 
 // InteractionData
 	class_<XCSIT::XInteractionData, boost::shared_ptr<XCSIT::XInteractionData>, boost::noncopyable >("XInteractionData", no_init);
 
     class_<DSIM::InteractionData, boost::shared_ptr<DSIM::InteractionData>, bases<XCSIT::XInteractionData> >("InteractionData", init<>())
-		.def("getEntry",&DSIM::InteractionData::getPyEntry)
-		.def("addEntry",&DSIM::InteractionData::addPyEntry)
+		.def("getEntry",&DSIM::InteractionData::getEntry)
+		.def("addEntry",&DSIM::InteractionData::addEntry)
 		.def("size",&DSIM::InteractionData::size)
 		.def("clear",&DSIM::InteractionData::clear)
     ;
 
-	register_ptr_to_python<boost::shared_ptr<DSIM::InteractionEntry> >();
+	register_ptr_to_python<boost::shared_ptr<XCSIT::XInteractionEntry> >();
 
 // ChargeMatrix
 	class_<XCSIT::XChargeData, boost::shared_ptr<XCSIT::XChargeData>, boost::noncopyable>("XChargeData", no_init);	
 
     class_<DSIM::ChargeMatrix, boost::shared_ptr<DSIM::ChargeMatrix>, bases<XCSIT::XChargeData> >("ChargeMatrix", init<>())
 		.def("setSize",&DSIM::ChargeMatrix::setSize)
-		.def("getEntry",&DSIM::ChargeMatrix::getPyEntry)
+		.def("getEntry",&DSIM::ChargeMatrix::getEntry)
 		.def("width",&DSIM::ChargeMatrix::width)
 		.def("height",&DSIM::ChargeMatrix::height)
 		.def("clear",&DSIM::ChargeMatrix::clear)
     ;
 	
-	register_ptr_to_python<boost::shared_ptr<DSIM::ChargeEntry> >();	
+	register_ptr_to_python<boost::shared_ptr<XCSIT::XChargeEntry> >();	
 
 
 // ParticleSim

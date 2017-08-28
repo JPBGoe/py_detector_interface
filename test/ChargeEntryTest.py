@@ -1,4 +1,4 @@
-import libpy_detector_interface as ce
+import libpy_detector_interface as lpdi
 import sys
 import random
 
@@ -8,7 +8,7 @@ print(" ")
 
 # Initiate
 print("instantiate")
-o = ce.ChargeEntry()
+o = lpdi.ChargeEntry()
 print(type(o))
 print(" ")
 

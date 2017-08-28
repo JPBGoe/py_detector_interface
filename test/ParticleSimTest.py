@@ -1,13 +1,11 @@
-import ParticleSim_ext as ps
-import PhotonData_ext as pde
-import InteractionData_ext as ide
+import libpy_detector_interface as lpdi
 
 print("-----------------------------------------------------------------------")
 print("testing function of ParticleSim exports")
 print(" ")
 
 print("instantiate a simulation")
-o = ps.ParticleSim()
+o = lpdi.ParticleSim()
 print(type(o))
 print(" ")
 
@@ -20,9 +18,9 @@ print("all detector names can be set")
 print(" ")
 
 print("calling the runSimulation method with parameters")
-p = pde.PhotonData()
+p = lpdi.PhotonData()
 print(type(p))
-i = ide.InteractionData()
+i = lpdi.InteractionData()
 print(type(i))
 o.runSimulation(p,i)
 print("simulation can be executed")

@@ -31,25 +31,17 @@ namespace DSIM {
          */
     	virtual ~PhotonData();
 	
-        /** 
-         * @param entry number of the DSIM::PhotonEntry
-         * @retrun a shared_pointer to the PhotonEntry stored at entry
-         */
-		virtual boost::shared_ptr<PhotonEntry> getPyEntry(size_t entry);
-        /**
-         * Creates a new DSIM::PhotonEntry
-         * @return the newly created instance of a DSIM:PhotonEntry
-         */
-        virtual boost::shared_ptr<PhotonEntry> addPyEntry();
-    	
 
 		// Implementation of the functions declared in XPhotonData.hh	
 	    /** 
-         * Internally boost::shared_ptr<PhotonEntry> getPyEntry is used
          * @param entry number of the XCSIT::XPhotonEntry
          * @retrun a shared_pointer to the XPhotonEntry stored at entry
          */	
         virtual boost::shared_ptr<XCSIT::XPhotonEntry> getEntry(size_t entry);
+        /**
+         * Create a new element in the container
+         * @return the created element
+         */
         virtual boost::shared_ptr<XCSIT::XPhotonEntry> addEntry();
         /**
          * @return the number of entries currently stored in this instance
@@ -65,7 +57,7 @@ namespace DSIM {
     private:
 
 		// Variables to store the PhotonEntry instances
-   		std::vector<boost::shared_ptr<PhotonEntry> > photonVec;
+   		std::vector<boost::shared_ptr<XCSIT::XPhotonEntry> > photonVec;
    		size_t photonNum;
     };
 }

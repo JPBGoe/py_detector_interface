@@ -1,12 +1,12 @@
 #!/usr/bin/python
-import InteractionEntry_ext as iae
+import libpy_detector_interface as lpdi
 import random
 
 
 print("Testing InteractionEntry")
 print("--------------------------------------------")
 print("Instantiate")
-o=iae.InteractionEntry()
+o=lpdi.InteractionEntry()
 print(type(o))
 
 

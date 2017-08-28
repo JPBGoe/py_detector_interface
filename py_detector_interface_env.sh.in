@@ -54,7 +54,7 @@ echo " "
 
 # Variable is required to make python find the shared objects containing the the
 # exported c++ classes
-export PYTHONPATH=${CMAKE_INSTALL_PREFIX}/lib/:$PYTHONPATH
+export PYTHONPATH=${CMAKE_INSTALL_PREFIX}/lib:$PYTHONPATH
 echo "Setting PYTHONPATH="`printenv PYTHONPATH` 
 
 # Report finished

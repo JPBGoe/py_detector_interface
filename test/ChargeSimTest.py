@@ -1,6 +1,4 @@
-import ChargeSim_ext as cs
-import InteractionData_ext as iae
-import ChargeMatrix_ext as cme
+import libpy_detector_interface as lpdi
 import sys
 import random
 
@@ -16,13 +14,13 @@ print(" Test ChargeSim ")
 print(" ")
 
 print("Instantiate")
-o = cs.ChargeSim()
+o = lpdi.ChargeSim()
 print(type(o))
 print(" ")
 
 print("create instances for input and output")
-i = iae.InteractionData()
-c = cme.ChargeMatrix()
+i = lpdi.InteractionData()
+c = lpdi.ChargeMatrix()
 c.clear()
 c.setSize(1,1)
 print(type(i))

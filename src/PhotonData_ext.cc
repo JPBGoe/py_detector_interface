@@ -24,8 +24,8 @@ BOOST_PYTHON_MODULE(PhotonData_ext){
 	class_<XCSIT::XPhotonData, boost::shared_ptr<XCSIT::XPhotonData>, boost::noncopyable>("XPhotonData", no_init);
 
     class_<DSIM::PhotonData, boost::shared_ptr<DSIM::PhotonData>, bases<XCSIT::XPhotonData> >("PhotonData", init<>())
-		.def("getEntry",&DSIM::PhotonData::getPyEntry)
-		.def("addEntry",&DSIM::PhotonData::addPyEntry)
+		.def("getEntry",&DSIM::PhotonData::getEntry)
+		.def("addEntry",&DSIM::PhotonData::addEntry)
 		.def("size",&DSIM::PhotonData::size)
 		.def("clear",&DSIM::PhotonData::clear)
     ;

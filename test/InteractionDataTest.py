@@ -1,5 +1,4 @@
-import InteractionData_ext as pd
-import InteractionEntry_ext as pe
+import libpy_detector_interface as lpdi
 import sys
 
 print("Testing InteractionData_ext module")
@@ -7,7 +6,7 @@ print("-----------------------------------------------------------------------")
 
 # Create a new instance
 print("Instantiating")
-o = pd.InteractionData()
+o = lpdi.InteractionData()
 print(type(o))
 print("instance created")
 print(" ")

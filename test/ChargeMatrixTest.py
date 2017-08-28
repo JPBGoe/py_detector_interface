@@ -1,5 +1,4 @@
-import ChargeMatrix_ext as cm
-import ChargeEntry_ext as ce
+import libpy_detector_interface as lpdi
 import sys
 import random
 
@@ -16,7 +15,7 @@ print(" ")
 
 # Test the ChargeMatrix constructor
 print("init of parameterless constructor")
-o = cm.ChargeMatrix()
+o = lpdi.ChargeMatrix()
 print(type(o))
 print(" ")
 

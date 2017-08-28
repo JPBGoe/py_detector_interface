@@ -40,10 +40,6 @@ namespace DSIM {
 	}
 
 	boost::shared_ptr<XCSIT::XChargeEntry> ChargeMatrix::getEntry(size_t x, size_t y){
-		return getPyEntry(x,y);
-	}
-
-	boost::shared_ptr<ChargeEntry> ChargeMatrix::getPyEntry(size_t x, size_t y){
 		// check if there is something to return
 		if(xSize <= 0 || ySize <= 0){
 			throw std::invalid_argument("No Data in the matrix to return");
@@ -81,7 +77,7 @@ namespace DSIM {
 
 		// Create the elements and save them in the 
 		for(int i = 0; i < num; i++){
-			boost::shared_ptr<ChargeEntry> nce(new ChargeEntry);
+			boost::shared_ptr<XCSIT::XChargeEntry> nce(new ChargeEntry);
 			Content.push_back(nce);
 		}
 	}

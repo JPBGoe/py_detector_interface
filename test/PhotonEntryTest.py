@@ -1,12 +1,12 @@
 #!/usr/bin/python
-import PhotonEntry_ext as pe
+import libpy_detector_interface as lpdi
 import random
 
 
 print("Testing PhotonEntry")
 print("--------------------------------------------")
 print("Instantiate")
-o=pe.PhotonEntry()
+o=lpdi.PhotonEntry()
 print(type(o))
 
 

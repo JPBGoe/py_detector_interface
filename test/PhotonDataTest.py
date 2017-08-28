@@ -1,5 +1,4 @@
-import PhotonData_ext as pd
-import PhotonEntry_ext as pe
+import libpy_detector_interface as lpdi
 import sys
 
 print("Testing PhotonData_ext module")
@@ -7,7 +6,7 @@ print("-----------------------------------------------------------------------")
 
 # Create a new instance
 print("Instantiating")
-o = pd.PhotonData()
+o = lpdi.PhotonData()
 print(type(o))
 print("instance created")
 print(" ")

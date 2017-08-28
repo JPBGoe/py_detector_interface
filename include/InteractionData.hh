@@ -31,18 +31,6 @@ namespace DSIM {
          */
     	virtual ~InteractionData();
 
-        /**
-         * @param entry position of the returned instance in this container
-         * @return the DSIM::InteractionEntry saved at the position entry
-         */
-		virtual boost::shared_ptr<InteractionEntry> getPyEntry(size_t entry);
-        /**
-         * @return the DSIM::InteractionEntry instance which is added to 
-         * the container by calling this function
-         */
-		virtual boost::shared_ptr<InteractionEntry> addPyEntry();
-    	
-
 		// Implementation of the functions declared in XInteractionData.hh
         /**
          * @param entry position of the returned instance in this container
@@ -50,7 +38,6 @@ namespace DSIM {
          */
 		virtual boost::shared_ptr<XCSIT::XInteractionEntry> getEntry(size_t entry);
         /**
-         * Internally calls addPyEntry()
          * @return the XCSIT::XInteractionEntry instance which is added to 
          * the container by calling this function
          */
@@ -68,7 +55,7 @@ namespace DSIM {
     private:
 
 		// Variables to store the InteractionEntry instances
-   		std::vector<boost::shared_ptr<InteractionEntry> > iaVec;
+   		std::vector<boost::shared_ptr<XCSIT::XInteractionEntry> > iaVec;
    		size_t iaNum;
     };
 }

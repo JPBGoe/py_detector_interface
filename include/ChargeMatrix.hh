@@ -47,12 +47,6 @@ namespace DSIM {
              */
 			virtual boost::shared_ptr<XCSIT::XChargeEntry> getEntry(size_t x, size_t y);
             /**
-             * @return the DSIM::ChargeEntry at the given position in the matrix
-             * @param x x position of the requested entry
-             * @param y y position of the requested entry
-             */
-			virtual boost::shared_ptr<ChargeEntry> getPyEntry(size_t x, size_t y);
-            /**
              * @return the size of the storage matrix in x direction
              */
 			virtual size_t width() const;
@@ -73,7 +67,7 @@ namespace DSIM {
 			void fillContent(size_t);
 			size_t xSize;	// width
 			size_t ySize;	// height
-			std::vector<boost::shared_ptr<ChargeEntry> > Content;
+			std::vector<boost::shared_ptr<XCSIT::XChargeEntry> > Content;
 
 	};
 }
