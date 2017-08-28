@@ -151,9 +151,9 @@ Previous to each usage of this software environmental variables need to be set. 
 
 To source only for the current terminal window, go to the directory where this software is installed. Please type
 
-   $> source CMAKE_INSTALL_PREFIX/bin/py_detector_interface_env.sh
+   $> source py_detector_interface_env.sh
 
-which will set local environmental variables. They are only valid in the scope of this terminal.
+which will set local environmental variables. This needs to be done in every terminal. It requires that "/home/USERNAME/.local/bin" is part of your PATH variable. Otherwise change to the "build" directory of py_detector_interface" and execute the command there.
 
 ### Permanently source
 
