@@ -19,6 +19,31 @@ SimEx is simulation framework, which can be used to sumulate an experiment at an
 
 ## Installation
 
+To install this software, other software has to be installed first. If this software is already installed on your computer, you can skip the part installing that software. The excamples below show how to build the software if you are not having root rights.
+
+### XercesC 
+
+Please install the latest version of XercesC, which can be downloaded from http://xerces.apache.org/xerces-c/download.cgi
+
+1) download and unzip the latest version of xerces-c-<ver>.tar.gz in the directory where you want to build the software:
+	$> tar -xvzf xerces-c-<ver>.tar.gz
+	
+2) configure with the path to your local directory
+	$> ./configure --prefix=/home/<username>/.local
+	
+3) compile and link
+	$> make
+	
+4) copy compiled files to prefix location
+	$> make install
+
+### Geant4
+
+### xcsit
+
+### py_detector_interface
+
+
 Please use the "install.sh" and "env.sh.in" to install this program to your
 system. Currently Unix is the only supported operation system. 
 
