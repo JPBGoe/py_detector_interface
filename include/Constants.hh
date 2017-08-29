@@ -1,0 +1,43 @@
+/*
+ * Store the options that can be used in simulations
+ * Inheritance to allow also the use in private functions
+ *
+ * File:   	Constants.hh
+ * Author: 	jburchert
+ * Date:	29 August 2017
+ *
+ */
+
+#ifndef CONSTANTS_HH
+#define	CONSTANTS_HH
+
+#include <string>
+
+namespace DSIM {
+    /**
+     * This class does only include shared constants
+     */
+    class Constants{
+    
+        public:
+            /**
+             * Constructor
+             */
+            Constants(){
+            }
+            /**
+             * Destructor
+             */
+            virtual ~Constants(){
+            }
+
+            // the options that need to be implemented at least as well as an
+            // exception if the input string is not in one of them
+            const std::string DetectorType[5] = {"pnCCD","LPD","AGIPD","AGIPDSPB","CAD"};
+            const std::string PlasmaSim[1] = {"BLANKPLASMA"};
+            const std::string PlasmaSearch[1] = {"BLANK"};
+            const std::string ChargeProp[4] = {"FULL","FANO","LUT","BINNING"};  // LUT has problems
+    };
+}
+
+#endif

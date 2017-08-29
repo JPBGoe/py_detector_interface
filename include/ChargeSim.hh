@@ -15,6 +15,8 @@
 #include <boost/shared_ptr.hpp>
 #include <string>
 
+#include "Constants.hh"
+
 namespace DSIM {
 
     /**
@@ -22,7 +24,7 @@ namespace DSIM {
      *  is created by the photon detector interaction on its way to the 
      *  readout electronics
      */
-    class ChargeSim : public XCSIT::XPlasmaPointChargeSim {
+    class ChargeSim : public XCSIT::XPlasmaPointChargeSim, public DSIM::Constants {
    
 	    public:
             /**
@@ -69,10 +71,10 @@ namespace DSIM {
     
     		// the options that need to be implemented at least as well as an
     		// exception if the input string is not in one of them
-    		const std::string detectorType[5] = {"pnCCD","LPD","AGIPD","AGIPDSPB","CadDummy"};
-    		const std::string plasmaSim[1] = {"BLANKPLASMA"};
-    		const std::string plasmaSearch[1] = {"BLANK"};
-    		const std::string chargeSim[4] = {"FULL","FANO","LUT","BINNING"};
+    		//const std::string detectorType[5] = {"pnCCD","LPD","AGIPD","AGIPDSPB","CAD"};
+    		//const std::string plasmaSim[1] = {"BLANKPLASMA"};
+    		//const std::string plasmaSearch[1] = {"BLANK"};
+    		//const std::string chargeSim[4] = {"FULL","FANO","LUT","BINNING"};
 	};
 
 }

@@ -31,12 +31,14 @@
 
 #include <string>
 
+#include "Constants.hh"
+
 namespace DSIM{
     /**
      * Instances of this class perfom simulation of the interaction of photons
      * with the detector
      */
-	class ParticleSim{
+	class ParticleSim : public Constants{
 		public:
             /**
              * Constructor
@@ -66,7 +68,7 @@ namespace DSIM{
 			virtual void runSimulation(boost::shared_ptr<XCSIT::XPhotonData> input, boost::shared_ptr<XCSIT::XInteractionData> output);
 
 		private:
-    		const std::string detectorType[5] = {"pnCCD","LPD","AGIPD","AGIPDSPB","CAD"};
+    	//	const std::string detectorType[5] = {"pnCCD","LPD","AGIPD","AGIPDSPB","CAD"};
 			void setDetector(std::string detectorname);
 			XCSIT::XGeant4ParticleSim* simulate;
     };
