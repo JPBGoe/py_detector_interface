@@ -15,11 +15,9 @@
 namespace DSIM{
 
 	ParticleSim::ParticleSim(){
-		simulate = new XCSIT::XGeant4ParticleSim();
 	}
 
 	ParticleSim::~ParticleSim(){
-		delete simulate;
 	} // delete a lot of pointers
 
 	// Already implemented in XGeant4ParticleSim.cc
@@ -45,29 +43,29 @@ namespace DSIM{
     	setDetector(detectorname);
     
     	// 2nd: Set the physics list
-    	simulate->SetPhysicsList(new XCSIT::XPhysicsList);
+    	XCSIT::XGeant4ParticleSim::SetPhysicsList(new XCSIT::XPhysicsList);
 
     	// 3rd: PrimaryGenerator, idx.e. fill the initial input container
-    	simulate->SetPrimaryGeneratorAction(new XCSIT::XPrimaryGeneratorAction);
+    	XCSIT::XGeant4ParticleSim::SetPrimaryGeneratorAction(new XCSIT::XPrimaryGeneratorAction);
 
     	// 4th: Event Action allows the user to modify G4 behavior before and after and event
     	// In case of X-CSIT, the interaction data is stored.
-    	simulate->SetEventAction(new XCSIT::XEventAction);
+    	XCSIT::XGeant4ParticleSim::SetEventAction(new XCSIT::XEventAction);
 	}
 
 	void ParticleSim::setDetector(std::string detectorname){
     	if(detectorname == DetectorType[0]){
-	        simulate->SetDetectorConstruction(new XCSIT::PNCCDDetectorConstruction);
+	        XCSIT::XGeant4ParticleSim::SetDetectorConstruction(new XCSIT::PNCCDDetectorConstruction);
    		}else if(detectorname == DetectorType[1]){
-        	simulate->SetDetectorConstruction(new XCSIT::LPDDetectorConstruction);
+        	XCSIT::XGeant4ParticleSim::SetDetectorConstruction(new XCSIT::LPDDetectorConstruction);
     	}else if(detectorname == DetectorType[2]){
-        	simulate->SetDetectorConstruction(new XCSIT::AGIPDDetectorConstruction);
+        	XCSIT::XGeant4ParticleSim::SetDetectorConstruction(new XCSIT::AGIPDDetectorConstruction);
     	}else if(detectorname == DetectorType[3]){
-        	simulate->SetDetectorConstruction(new XCSIT::AGIPDSPBDetectorConstruction);
+        	XCSIT::XGeant4ParticleSim::SetDetectorConstruction(new XCSIT::AGIPDSPBDetectorConstruction);
     	}else if(detectorname == DetectorType[4]){
 			XCSIT::CadDetectorConstruction* detector = new XCSIT::CadDetectorConstruction();
         	detector->ConstructFromGdml("cadFile");
-        	simulate->SetDetectorConstruction(detector);
+        	XCSIT::XGeant4ParticleSim::SetDetectorConstruction(detector);
 			delete detector;
     	}else{
 			throw std::invalid_argument("The specified detector is of unknown type. Please check again");
@@ -76,8 +74,8 @@ namespace DSIM{
 
 
 	void ParticleSim::runSimulation(boost::shared_ptr<XCSIT::XPhotonData> input, boost::shared_ptr<XCSIT::XInteractionData> output){
-		simulate->SetInput(input);
-		simulate->SetOutput(output);
-		simulate->runSimulation();
+		XCSIT::XGeant4ParticleSim::SetInput(input);
+		XCSIT::XGeant4ParticleSim::SetOutput(output);
+		XCSIT::XGeant4ParticleSim::runSimulation();
 	}
 }

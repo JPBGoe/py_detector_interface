@@ -38,7 +38,7 @@ namespace DSIM{
      * Instances of this class perfom simulation of the interaction of photons
      * with the detector
      */
-	class ParticleSim : public Constants{
+	class ParticleSim : public XCSIT::XGeant4ParticleSim, public DSIM::Constants{
 		public:
             /**
              * Constructor
@@ -70,7 +70,6 @@ namespace DSIM{
 		private:
     	//	const std::string detectorType[5] = {"pnCCD","LPD","AGIPD","AGIPDSPB","CAD"};
 			void setDetector(std::string detectorname);
-			XCSIT::XGeant4ParticleSim* simulate;
     };
 }
 
