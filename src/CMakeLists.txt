@@ -42,15 +42,15 @@ set_target_properties(xercesc PROPERTIES
 )
 include_directories(
     ${XERCESC_ROOT}/include
-    ${XERCESC_ROOT}/include/xercesc/dom 
-    ${XERCESC_ROOT}/include/xercesc/framework
-    ${XERCESC_ROOT}/include/xercesc/internal
-    ${XERCESC_ROOT}/include/xercesc/parsers
-    ${XERCESC_ROOT}/include/xercesc/sax
-    ${XERCESC_ROOT}/include/xercesc/sax2
-    ${XERCESC_ROOT}/include/xercesc/util
-    ${XERCESC_ROOT}/include/xercesc/validators
-    ${XERCESC_ROOT}/include/xercesc/xinclude
+ #   ${XERCESC_ROOT}/include/xercesc/dom 
+ #   ${XERCESC_ROOT}/include/xercesc/framework
+ #   ${XERCESC_ROOT}/include/xercesc/internal
+ #   ${XERCESC_ROOT}/include/xercesc/parsers
+ #   ${XERCESC_ROOT}/include/xercesc/sax
+ #   ${XERCESC_ROOT}/include/xercesc/sax2
+ #   ${XERCESC_ROOT}/include/xercesc/util
+ #   ${XERCESC_ROOT}/include/xercesc/validators
+  #  ${XERCESC_ROOT}/include/xercesc/xinclude
 )
 
 # include of this project
