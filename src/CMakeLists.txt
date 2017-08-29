@@ -41,6 +41,7 @@ set_target_properties(xercesc PROPERTIES
     IMPORTED_LOCATION ${XERCESC_ROOT}/lib/libxerces-c.so
 )
 include_directories(
+    ${XERCESC_ROOT}/include
     ${XERCESC_ROOT}/include/xercesc/dom 
     ${XERCESC_ROOT}/include/xercesc/framework
     ${XERCESC_ROOT}/include/xercesc/internal
