@@ -88,6 +88,8 @@ add_library(py_detector_interface SHARED
 	InteractionData.cc
 # ChargeMatrix
 	ChargeMatrix.cc
+# Constants
+    Constants.cc
 # ParticleSim
 	ParticleSim.cc 
 # ChargeSIm

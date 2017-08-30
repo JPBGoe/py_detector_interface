@@ -111,6 +111,12 @@ BOOST_PYTHON_MODULE(libpy_detector_interface){
 	
 	register_ptr_to_python<boost::shared_ptr<XCSIT::XChargeEntry> >();	
 
+// Constants
+    class_<DSIM::Constants>("Constants")
+        .def("size",&DSIM::Constants::size)
+        .def("varValue",&DSIM::Constants::varValue)
+    ;
+
 
 // ParticleSim
     class_<DSIM::ParticleSim>("ParticleSim")

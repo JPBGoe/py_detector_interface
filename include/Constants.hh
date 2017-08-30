@@ -12,6 +12,7 @@
 #define	CONSTANTS_HH
 
 #include <string>
+#include <stdexcept>
 
 namespace DSIM {
     /**
@@ -23,13 +24,30 @@ namespace DSIM {
             /**
              * Constructor
              */
-            Constants(){
-            }
+            Constants();
+            
             /**
              * Destructor
              */
-            virtual ~Constants(){
-            }
+            virtual ~Constants();
+
+
+            /**
+             * @param name name of the variable
+             * @return the number of element stored in the variable name
+             * @throws std::invalid_argument exception if the name is unknown
+             */
+            virtual int size(std::string name);
+
+            /**
+             * @param name name of the variable
+             * @param element element of the field of the variable to be
+             * returned
+             * @return the string stored at (name,element)
+             * @throws std::out_of_range exception
+             * @throws std::invalid_argument exception if the name is unknown
+             */
+            virtual std::string varValue(std::string name, int element);
 
             // the options that need to be implemented at least as well as an
             // exception if the input string is not in one of them
