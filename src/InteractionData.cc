@@ -12,15 +12,19 @@
 namespace DSIM {
 
     InteractionData::InteractionData(){
+        std::cout << "InteractionData::InteractionData" << std::endl;
 		// clear init
 		clear();
     }
 
     InteractionData::~InteractionData(){
+        std::cout << "InteractionData::~InteractionData" << std::endl;
     }
 
 
 	boost::shared_ptr<XCSIT::XInteractionEntry> InteractionData::getEntry(size_t entry){
+        std::cout << "InteractionData::getEntry" << std::endl;
+
 		if(entry < 0 || entry >= iaNum){
 			throw std::invalid_argument("value does not fit to number of elements in this instance");
 		}
@@ -30,7 +34,7 @@ namespace DSIM {
 
 
     boost::shared_ptr<XCSIT::XInteractionEntry> InteractionData::addEntry(){
-        std::cout << "Interaction entry added" << std::endl;
+        std::cout << "InteractionData::addEntry" << std::endl;
 		// Create the new instance
 		// smart pointer will deal with the Destructor call if necessary
 		boost::shared_ptr<XCSIT::XInteractionEntry> ne(new InteractionEntry());
@@ -45,12 +49,14 @@ namespace DSIM {
 	}
 
     size_t InteractionData::size() const {
+        std::cout << "InteractionData::size >> " << iaNum << std::endl;
 		return iaNum;
 	}
 
 	// Clears the structure and sets its size to 0, the shared_ptr will deal
 	// with calling the Destructor of the contained instances
     void InteractionData::clear(){
+        std::cout << "InteractionData::clear" << std::endl;
 		iaVec.clear();
 		iaVec.resize(0);
 		iaNum = 0;
