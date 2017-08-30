@@ -76,6 +76,6 @@ namespace DSIM{
 	void ParticleSim::runSimulation(boost::shared_ptr<XCSIT::XPhotonData> input, boost::shared_ptr<XCSIT::XInteractionData> output){
 		XCSIT::XGeant4ParticleSim::SetInput(input);
 		XCSIT::XGeant4ParticleSim::SetOutput(output);
-		XCSIT::XGeant4ParticleSim::runSimulation();
+		XCSIT::XGeant4ParticleSim::runSimulation(input,output);
 	}
 }

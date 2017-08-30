@@ -7,6 +7,7 @@
 #include <boost/make_shared.hpp>
 #include "InteractionData.hh"
 #include <stdexcept>
+#include <iostream>
 
 namespace DSIM {
 
@@ -29,6 +30,7 @@ namespace DSIM {
 
 
     boost::shared_ptr<XCSIT::XInteractionEntry> InteractionData::addEntry(){
+        std::cout << "Interaction entry added" << std::endl;
 		// Create the new instance
 		// smart pointer will deal with the Destructor call if necessary
 		boost::shared_ptr<XCSIT::XInteractionEntry> ne(new InteractionEntry());
