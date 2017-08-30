@@ -74,7 +74,7 @@ namespace DSIM {
 
     std::string InteractionEntry::toString(){
         std::stringstream ss;
-        ss << "InteractionEntry: Imp=(" << Imp[0] << "," << Imp[1] << "," << Imp[2] << "),E=" << E << ",t=" << T << std::endl;
+        ss << "InteractionEntry: Pos=(" << Pos[0] << "," << Pos[1] << "," << Pos[2] << "),E=" << E << ",t=" << T << std::endl;
         return ss.str();
     } 
 
