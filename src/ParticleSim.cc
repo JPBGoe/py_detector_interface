@@ -38,7 +38,7 @@ namespace DSIM{
 		// XCSIT::XEventAction* ParticleSim::GetEventAction(){return simEventAction;}
     
 	void ParticleSim::initialization(std::string detectorname){
-    
+        std::cout << "ParticleSim::initialization << " << detectorname << std::endl;
     	// 1st: Set the Geometry
     	setDetector(detectorname);
     
@@ -54,7 +54,9 @@ namespace DSIM{
 	}
 
 	void ParticleSim::setDetector(std::string detectorname){
-    	if(detectorname == DetectorType[0]){
+        std::cout << "ParticleSim::setDetector << " << detectorname << std::endl;
+    	
+        if(detectorname == DetectorType[0]){
 	        XCSIT::XGeant4ParticleSim::SetDetectorConstruction(new XCSIT::PNCCDDetectorConstruction);
    		}else if(detectorname == DetectorType[1]){
         	XCSIT::XGeant4ParticleSim::SetDetectorConstruction(new XCSIT::LPDDetectorConstruction);
@@ -70,12 +72,13 @@ namespace DSIM{
     	}else{
 			throw std::invalid_argument("The specified detector is of unknown type. Please check again");
     	}
+        
 	}
 
 
 	void ParticleSim::runSimulation(boost::shared_ptr<XCSIT::XPhotonData> input, boost::shared_ptr<XCSIT::XInteractionData> output){
-		XCSIT::XGeant4ParticleSim::SetInput(input);
-		XCSIT::XGeant4ParticleSim::SetOutput(output);
+        std::cout<< "ParticleSim::runSimulation start" << (input.get())->size() << "," << (output.get())->size() << std::endl;
 		XCSIT::XGeant4ParticleSim::runSimulation(input,output);
+        std::cout<< "ParticleSim::runSimulation finished" << (input.get())->size() << "," << (output.get())->size() << std::endl;
 	}
 }
