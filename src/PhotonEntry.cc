@@ -8,6 +8,7 @@
  */
 
 #include "PhotonEntry.hh"
+#include <sstream>
 
 namespace DSIM {
 
@@ -89,4 +90,10 @@ namespace DSIM {
 		setPositionY(posY);
 		setPositionZ(posZ);
      }
+
+    std::string PhotonEntry::toString(){
+        std::stringstream ss;
+        ss << "PhotonEntry: Pos=(" << Pos[0] << "," << Pos[1] << "," << Pos[2] << "),Imp=(" << Imp[0] << "," << Imp[1] << "," << Imp[2] << "),E=" << E;
+        return ss.str();
+    }   
 }

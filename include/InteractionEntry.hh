@@ -14,6 +14,7 @@
 
 #include "XInteractionEntry.hh"
 #include <vector>
+#include <string>
 
 namespace DSIM {
 
@@ -93,6 +94,11 @@ namespace DSIM {
          * @param posZ z component of the position
          */
 		virtual void set(double energy, double time, double posX, double posY, double posZ);
+  
+        /**
+         * @return a string representation of the current state of this instance
+         */
+        virtual std::string toString();
 
     private:
 		// Varaibles to store the state of a photon

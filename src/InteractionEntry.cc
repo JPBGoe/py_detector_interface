@@ -8,6 +8,7 @@
  */
 
 #include "InteractionEntry.hh"
+#include <sstream>
 
 namespace DSIM {
 
@@ -70,4 +71,12 @@ namespace DSIM {
 		setPositionY(posY);
 		setPositionZ(posZ);
 	}
+
+    std::string InteractionEntry::toString(){
+        std::stringstream ss;
+        ss << "InteractionEntry: Imp=(" << Imp[0] << "," << Imp[1] << "," << Imp[2] << "),E=" << E << ",t=" << T << std::endl;
+        return ss.str();
+    } 
+
+
 }

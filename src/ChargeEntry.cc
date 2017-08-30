@@ -5,6 +5,7 @@
  */
 
 #include "ChargeEntry.hh"
+#include <sstream>
 
 namespace DSIM {
 
@@ -26,4 +27,11 @@ namespace DSIM {
 	void ChargeEntry::addCharge(double value){
 		charge += value;
 	}
+
+    std::string ChargeEntry::toString(){
+        std::stringstream ss;
+        ss << "ChargeEntry: q=" << charge; 
+        return ss.str();
+    } 
+
 }

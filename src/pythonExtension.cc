@@ -46,6 +46,7 @@ BOOST_PYTHON_MODULE(libpy_detector_interface){
 		.def("setDirectionZ",&DSIM::PhotonEntry::setDirectionZ)
 		.def("setEnergy",&DSIM::PhotonEntry::setEnergy)
 		.def("set",&DSIM::PhotonEntry::set)
+		.def("toString",&DSIM::PhotonEntry::toString)
     ;
 
 // InteractionEntry
@@ -63,6 +64,7 @@ BOOST_PYTHON_MODULE(libpy_detector_interface){
 		.def("setTime",&DSIM::InteractionEntry::setTime)
 		.def("setEnergy",&DSIM::InteractionEntry::setEnergy)
 		.def("set",&DSIM::InteractionEntry::set)
+		.def("toString",&DSIM::InteractionEntry::toString)
 	;
 
 // ChargeEntry
@@ -72,6 +74,7 @@ BOOST_PYTHON_MODULE(libpy_detector_interface){
 		.def("getCharge",&DSIM::ChargeEntry::getCharge)
 		.def("setCharge",&DSIM::ChargeEntry::setCharge)
 		.def("addCharge",&DSIM::ChargeEntry::addCharge)
+		.def("toString",&DSIM::ChargeEntry::toString)
     ;
 
 // PhotonData
