@@ -17,12 +17,21 @@
 namespace DSIM {
 
     Constants::Constants(){
+        if(DEBUG){
+            std::cout << "Constants::Constants" << std::endl;
+        }
     }
 
     Constants::~Constants(){
+        if(DEBUG){
+            std::cout << "Constants::~Constants" << std::endl;
+        }
     }
 
     int Constants::size(std::string name){
+        if(DEBUG){
+            std::cout << "Constants::size << " << name <<  std::endl;
+        }
         if(name == "DetectorType"){
             return 5;
         }else if(name == "PlasmaSim"){
@@ -38,6 +47,9 @@ namespace DSIM {
 
     
     std::string Constants::varValue(std::string name,int element){
+        if(DEBUG){
+            std::cout << "Constants::varValue << " << name << " << " << element << std::endl;
+        }
         if(element < 0 || element >= size(name)){
             std::stringstream stst;
             stst << name << " has only elements between 0 and " << size(name);

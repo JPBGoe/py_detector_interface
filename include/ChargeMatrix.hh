@@ -13,6 +13,9 @@
 #include "XChargeEntry.hh"
 #include "ChargeEntry.hh"
 #include <vector>
+#include <iostream>
+
+#define DEBUG 1
 
 namespace DSIM {
     /**

@@ -15,6 +15,9 @@
 #include "XInteractionEntry.hh"
 #include <vector>
 #include <string>
+#include <iostream>
+#define DEBUG 1
+
 
 namespace DSIM {
 
@@ -103,8 +106,8 @@ namespace DSIM {
     private:
 		// Varaibles to store the state of a photon
    		std::vector<double> Pos;
-   		double E;
-		double T;
+   		double Energy;
+		double Time;
     };
 }
 

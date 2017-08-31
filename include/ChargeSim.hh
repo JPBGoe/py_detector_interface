@@ -16,6 +16,7 @@
 #include <string>
 
 #include "Constants.hh"
+#include <iostream>
 
 namespace DSIM {
 
@@ -53,9 +54,9 @@ namespace DSIM {
              * @param plasmasearch the plasma search method
              * @param pointsim the charge propagation model
              * @param plasmasim
-             * @param module the detector type
+             * @param detector the detector type
              */
-    		virtual void setComponents(boost::shared_ptr<XCSIT::XChargeData> output,std::string plasmasearch,std::string pointsim, std::string plasmasim, std::string module);
+    		virtual void setComponents(boost::shared_ptr<XCSIT::XChargeData> output,std::string plasmasearch,std::string pointsim, std::string plasmasim, std::string detector);
             /**
              * Run the simulation
              */
@@ -64,7 +65,7 @@ namespace DSIM {
     	private:
             // Set the elements of the simulation and check if they are
             // specified in the fields below
-    		virtual void selectModule(boost::shared_ptr<XCSIT::XChargeData> output,std::string module);
+    		virtual void selectDetector(boost::shared_ptr<XCSIT::XChargeData> output,std::string detector);
     		virtual void selectPlasmaSearch(std::string plasmasearch);
     		virtual void selectPlasmaSim(std::string plasmasim);
     		virtual void selectPointSim(std::string pointsim);

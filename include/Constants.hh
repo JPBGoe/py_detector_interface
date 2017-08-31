@@ -13,6 +13,10 @@
 
 #include <string>
 #include <stdexcept>
+#include <iostream>
+
+#define DEBUG 1
+
 
 namespace DSIM {
     /**

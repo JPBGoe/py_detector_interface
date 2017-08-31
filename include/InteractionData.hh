@@ -13,6 +13,9 @@
 #include "XInteractionEntry.hh"
 #include "InteractionEntry.hh"
 #include <vector>
+#include <iostream>
+#define DEBUG 1
+
 
 namespace DSIM {
     /**

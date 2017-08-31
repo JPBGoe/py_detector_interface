@@ -15,30 +15,21 @@
 namespace DSIM{
 
 	ParticleSim::ParticleSim(){
+       if(DEBUG){
+            std::cout << "ParticleSim::ParticleSim" << std::endl;
+        } 
 	}
 
 	ParticleSim::~ParticleSim(){
-	} // delete a lot of pointers
+       if(DEBUG){
+            std::cout << "ParticleSim::ParticleSim" << std::endl;
+        }
+	} 
 
-	// Already implemented in XGeant4ParticleSim.cc
-		// void InitializeSimulation();
-		// void runSimulation();
-		// void runSimulationv(boost::shared_ptr<XCSIT::XPhotonData> input, boost::shared_ptr<XCSIT::XInteractionData> output);
-		// virtual void ResetRunManager();
-		// void SetDetectorConstruction(XCSIT::G4VUserDetectorConstruction* inputDetectorConstruction);
-		// void SetPhysicsList(XCSIT::G4VUserPhysicsList* inputPhysicsList);
-		// void SetPrimaryGeneratorAction(XCSIT::XPrimaryGeneratorAction* inputPrimaryGeneratorAction);
-		// void SetEventAction(XCSIT::XEventAction* inputEventAction);
-		// void SetInput(boost::shared_ptr<XCSIT::XPhotonData> input);
-		// void SetOutput(boost::shared_ptr<XCSIT::XInteractionData> output);
-		// XCSIT::G4RunManager* ParticleSim::GetRunManager(){return runManager;}
-		// XCSIT::G4VUserDetectorConstruction* ParticleSim::GetSimDetectorConstruction(){return simDetectorConstruction;}
-		// XCSIT::G4VUserPhysicsList* ParticleSim::GetSimPhysicsList(){return simPhysicsList;}
-		// XCSIT::XPrimaryGeneratorAction* ParticleSim::GetSimPrimaryGeneratorAction(){return simPrimaryGeneratorAction;}
-		// XCSIT::XEventAction* ParticleSim::GetEventAction(){return simEventAction;}
-    
 	void ParticleSim::initialization(std::string detectorname){
-        std::cout << "ParticleSim::initialization << " << detectorname << std::endl;
+        if(DEBUG){
+            std::cout << "ParticleSim::initialization << " << detectorname << std::endl;
+        }
     	// 1st: Set the Geometry
     	setDetector(detectorname);
     
@@ -54,8 +45,10 @@ namespace DSIM{
 	}
 
 	void ParticleSim::setDetector(std::string detectorname){
-        std::cout << "ParticleSim::setDetector << " << detectorname << std::endl;
-    	
+        if(DEBUG){
+            std::cout << "ParticleSim::setDetector << " << detectorname << std::endl;
+    	}
+
         if(detectorname == DetectorType[0]){
 	        XCSIT::XGeant4ParticleSim::SetDetectorConstruction(new XCSIT::PNCCDDetectorConstruction);
    		}else if(detectorname == DetectorType[1]){
@@ -77,8 +70,12 @@ namespace DSIM{
 
 
 	void ParticleSim::runSimulation(boost::shared_ptr<XCSIT::XPhotonData> input, boost::shared_ptr<XCSIT::XInteractionData> output){
-        std::cout<< "ParticleSim::runSimulation start" << (input.get())->size() << "," << (output.get())->size() << std::endl;
+        if(DEBUG){
+            std::cout<< "ParticleSim::runSimulation start" << std::endl;
+        }
 		XCSIT::XGeant4ParticleSim::runSimulation(input,output);
-        std::cout<< "ParticleSim::runSimulation finished" << (input.get())->size() << "," << (output.get())->size() << std::endl;
+        if(DEBUG){
+            std::cout<< "ParticleSim::runSimulation end" << std::endl;
+        }
 	}
 }

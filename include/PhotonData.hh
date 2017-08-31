@@ -13,6 +13,9 @@
 #include "XPhotonEntry.hh"
 #include "PhotonEntry.hh"
 #include <vector>
+#include <iostream>
+#define DEBUG 1
+
 
 namespace DSIM {
     /**
