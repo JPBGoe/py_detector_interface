@@ -59,8 +59,12 @@ namespace DSIM {
         }
 	}
 
+    boost::shared_ptr<XCSIT::XChargeData> ChargeSim::getOutput(){
+        return output;
+    }
+
 	
-	void ChargeSim::selectDetector(boost::shared_ptr<XCSIT::XChargeData> output,std::string detector){
+	void ChargeSim::selectDetector(std::string detector){
 		if(DEBUG){
             std::cout << "ChargeSim::selectDetector << " << detector << std::endl;
         }
@@ -85,16 +89,10 @@ namespace DSIM {
   	  	unsigned int n = (unsigned int) (2. * detectordef->getSizeX() / detectordef->getSpacingX());
     	unsigned int m = (unsigned int) (2. * detectordef->getSizeY() / detectordef->getSpacingY());
        
-         
-        if(DEBUG){ std::cout << "    Input ChargeMatrix: " << output << std::endl;}
-        boost::shared_ptr<ChargeMatrix> out(new ChargeMatrix()); 
-        if(DEBUG){ std::cout << "    Created ChargeMatrix: " << out << std::endl;}
-		ChargeMatrix* raw = out.get();
-		raw->clear();
-		raw->setSize(n,m);
+        // Create a new instance 
+        boost::shared_ptr<ChargeMatrix> out(new ChargeMatrix(n,m)); 
         output=out;		
     
-        if(DEBUG){ std::cout << "    Set ChargeMatrix: " << out << std::endl;}
         // Set the output
         XCSIT::XPlasmaPointChargeSim::setOutput(output);
 
@@ -165,7 +163,7 @@ namespace DSIM {
 
 	// Sets all the necessary components of the simulation except for input and
 	// output data
-	void ChargeSim::setComponents(boost::shared_ptr<XCSIT::XChargeData> output,std::string plasmasearch,std::string pointsim, std::string plasmasim, std::string detector){
+	void ChargeSim::setComponents(std::string plasmasearch,std::string pointsim, std::string plasmasim, std::string detector){
         if(DEBUG){
             std::cout << "ChargeSim::setComponents" << std::endl;
         }
@@ -180,6 +178,6 @@ namespace DSIM {
 		selectPlasmaSim(plasmasim);
 
 		// the detector
-		selectDetector(output,detector);
+		selectDetector(detector);
 	}
 }

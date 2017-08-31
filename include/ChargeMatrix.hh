@@ -29,6 +29,7 @@ namespace DSIM {
              * Constructor
              */
 			ChargeMatrix();	// init with 1 x 1
+            ChargeMatrix(size_t x, size_t y);
             /**
              * Destructor
              */

@@ -56,16 +56,26 @@ namespace DSIM {
              * @param plasmasim
              * @param detector the detector type
              */
-    		virtual void setComponents(boost::shared_ptr<XCSIT::XChargeData> output,std::string plasmasearch,std::string pointsim, std::string plasmasim, std::string detector);
+    		virtual void setComponents(std::string plasmasearch,std::string pointsim, std::string plasmasim, std::string detector);
             /**
              * Run the simulation
              */
     		virtual void runSimulation();
 
+            /**
+             * Due to the missing setSize option in XChargeData it is necessary
+             * to create the ChargeMatrix instance in setComponents (also due to
+             * the detector size
+             * @return the created charge matrix
+             */
+            virtual boost::shared_ptr<XCSIT::XChargeData> getOutput();
+
     	private:
+            boost::shared_ptr<XCSIT::XChargeData> output;
+
             // Set the elements of the simulation and check if they are
             // specified in the fields below
-    		virtual void selectDetector(boost::shared_ptr<XCSIT::XChargeData> output,std::string detector);
+    		virtual void selectDetector(std::string detector);
     		virtual void selectPlasmaSearch(std::string plasmasearch);
     		virtual void selectPlasmaSim(std::string plasmasim);
     		virtual void selectPointSim(std::string pointsim);
