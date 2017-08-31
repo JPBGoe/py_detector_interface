@@ -109,7 +109,6 @@ BOOST_PYTHON_MODULE(libpy_detector_interface){
 		.def("getEntry",&DSIM::ChargeMatrix::getEntry)
 		.def("width",&DSIM::ChargeMatrix::width)
 		.def("height",&DSIM::ChargeMatrix::height)
-		.def("getOutput",&DSIM::ChargeMatrix::getOutput)
 		.def("clear",&DSIM::ChargeMatrix::clear)
     ;
 	
@@ -134,8 +133,10 @@ BOOST_PYTHON_MODULE(libpy_detector_interface){
 		.def("setInput",&DSIM::ChargeSim::setInput)
 		.def("setComponents",&DSIM::ChargeSim::setComponents)
 		.def("runSimulation",&DSIM::ChargeSim::runSimulation)
+		.def("getOutput",&DSIM::ChargeSim::getOutput)
     ;
 
+	register_ptr_to_python<boost::shared_ptr<DSIM::ChargeMatrix> >();	
 
 }
 

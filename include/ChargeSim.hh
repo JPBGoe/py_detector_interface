@@ -15,6 +15,7 @@
 #include <boost/shared_ptr.hpp>
 #include <string>
 
+#include "ChargeMatrix.hh"
 #include "Constants.hh"
 #include <iostream>
 
@@ -68,7 +69,7 @@ namespace DSIM {
              * the detector size
              * @return the created charge matrix
              */
-            virtual boost::shared_ptr<XCSIT::XChargeData> getOutput();
+            virtual boost::shared_ptr<ChargeMatrix> getOutput();
 
     	private:
             boost::shared_ptr<ChargeMatrix> output;

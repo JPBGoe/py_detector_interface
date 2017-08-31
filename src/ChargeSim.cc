@@ -59,7 +59,7 @@ namespace DSIM {
         }
 	}
 
-    boost::shared_ptr<XCSIT::XChargeData> ChargeSim::getOutput(){
+    boost::shared_ptr<ChargeMatrix> ChargeSim::getOutput(){
         return output;
     }
 
