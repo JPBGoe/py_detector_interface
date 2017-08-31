@@ -49,7 +49,7 @@ namespace DSIM {
 
 	boost::shared_ptr<XCSIT::XChargeEntry> ChargeMatrix::getEntry(size_t x, size_t y){
         if(DEBUG){
-            std::cout << "ChargeMatrix::getSize <<" << x << " <<" << y << std::endl;
+            std::cout << "ChargeMatrix::getEntry <<" << x << " <<" << y << std::endl;
 		}
         // check if there is something to return
 		if(xSize <= 0 || ySize <= 0){

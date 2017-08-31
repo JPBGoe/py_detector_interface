@@ -25,6 +25,8 @@
 #include "XBlankPlasmaSim.hh"
 #include "XBlankPlasmaCellSearch.hh"
 
+#include "XChargeData.hh"
+
 namespace DSIM {
     
 	ChargeSim::ChargeSim(){
@@ -82,12 +84,19 @@ namespace DSIM {
 	   	// Resize the output according to the detector
   	  	unsigned int n = (unsigned int) (2. * detectordef->getSizeX() / detectordef->getSpacingX());
     	unsigned int m = (unsigned int) (2. * detectordef->getSizeY() / detectordef->getSpacingY());
-  		boost::shared_ptr<ChargeMatrix> out(new ChargeMatrix());
+       
+         
+        if(DEBUG){ std::cout << "    Input ChargeMatrix: " << output << std::endl;}
+        boost::shared_ptr<ChargeMatrix> out(new ChargeMatrix()); 
+        if(DEBUG){ std::cout << "    Created ChargeMatrix: " << out << std::endl;}
 		ChargeMatrix* raw = out.get();
 		raw->clear();
 		raw->setSize(n,m);
-		output = out;
-		setOutput(output);
+        output=out;		
+    
+        if(DEBUG){ std::cout << "    Set ChargeMatrix: " << out << std::endl;}
+        // Set the output
+        XCSIT::XPlasmaPointChargeSim::setOutput(output);
 
     
 		// Set the component

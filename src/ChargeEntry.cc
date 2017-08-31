@@ -18,7 +18,7 @@ namespace DSIM {
 
 	ChargeEntry::~ChargeEntry(){
         if(DEBUG){
-            std::cout << "ChargeEntry::ChargeEntry" << std::endl;
+            std::cout << "ChargeEntry::~ChargeEntry" << std::endl;
         }
 	}
 
