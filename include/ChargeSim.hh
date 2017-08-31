@@ -71,7 +71,7 @@ namespace DSIM {
             virtual boost::shared_ptr<XCSIT::XChargeData> getOutput();
 
     	private:
-            boost::shared_ptr<XCSIT::XChargeData> output;
+            boost::shared_ptr<ChargeMatrix> output;
 
             // Set the elements of the simulation and check if they are
             // specified in the fields below

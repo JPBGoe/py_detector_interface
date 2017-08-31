@@ -109,6 +109,7 @@ BOOST_PYTHON_MODULE(libpy_detector_interface){
 		.def("getEntry",&DSIM::ChargeMatrix::getEntry)
 		.def("width",&DSIM::ChargeMatrix::width)
 		.def("height",&DSIM::ChargeMatrix::height)
+		.def("getOutput",&DSIM::ChargeMatrix::getOutput)
 		.def("clear",&DSIM::ChargeMatrix::clear)
     ;
 	
