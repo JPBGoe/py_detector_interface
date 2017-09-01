@@ -17,7 +17,6 @@
 
 #include "ChargeMatrix.hh"
 #include "Constants.hh"
-#include <iostream>
 
 namespace DSIM {
 

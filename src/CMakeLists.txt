@@ -67,7 +67,12 @@ include_directories(${CMAKE_SOURCE_DIR}/include/)
 
 # Compiler flags
 if(UNIX)
-    SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -g -Wl,--unresolved-symbols=report-all -Wl,--warn-unresolved-symbols")
+    SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -Wl,--unresolved-symbols=report-all -Wl,--warn-unresolved-symbols")
+
+    # Set additional flages for debugging if required
+    if(${DEBUG})
+        SET(CMAKE_CXX_FLAGS "-g -DDEBUGMODE=1 ${CMAKE_CXX_FLAGS}")
+    endif()    
 endif()
 
 # =============================================================================

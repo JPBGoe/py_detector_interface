@@ -16,8 +16,12 @@
 #include <vector>
 #include <string>
 #include <iostream>
-#define DEBUG 1
 
+#ifdef DEBUGMODE
+    #define DEBUG 1
+#else
+    #define DEBUG 0
+#endif
 
 namespace DSIM {
 

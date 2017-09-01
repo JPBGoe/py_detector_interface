@@ -18,6 +18,12 @@ project(py_detector_interface)
 # required version
 cmake_minimum_required(VERSION 2.4)
 
+# Policy
+if(POLICY CMP0012)
+  cmake_policy(SET CMP0012 NEW)
+endif()
+
+
 # Disallow in-source build
 if ("${CMAKE_SOURCE_DIR}"  STREQUAL "${CMAKE_BINARY_DIR}")
   message(FATAL_ERROR "SIMEX requires an out of source Build. "
@@ -63,6 +69,10 @@ option(BOOST_ROOT "-DBOOST_ROOT=<abs path> absolute path to the boost
     ./include/boost/
     ./lib/"
 )
+option(DEBUG "-DDEBUG sets all the necessary flages to compile with 
+    additional output"
+)
+
 
 # Check if there is user input
 if(NOT GEANT4_ROOT)
@@ -76,6 +86,12 @@ if(NOT XCSIT_ROOT)
 endif()
 if(NOT BOOST_ROOT)
     message(FATAL_ERROR "Path to boost install root has to be specified")
+endif()
+if(NOT DEBUG)
+    set(DEBUG OFF)
+    message(STATUS "Compilation type: release mode")
+else()
+    message(STATUS "Compilation type: debug mode")
 endif()
 
 
