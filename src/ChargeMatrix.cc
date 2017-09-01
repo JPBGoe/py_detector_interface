@@ -70,7 +70,7 @@ namespace DSIM {
 
 		// calculate back to the coodinates of the array
 		// define the following 
-        size_t index = xSize*y + x
+        size_t index = xSize*y + x;
 
 		return Content[index];
 	}
