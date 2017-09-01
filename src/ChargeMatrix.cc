@@ -69,8 +69,10 @@ namespace DSIM {
 		}
 
 		// calculate back to the coodinates of the array
-		// Structure: x1y1 x1y2 x1y3 ... x1yy x2y1 x2y2 x2y3 x2y4 ... xxyy
-		size_t index = x*ySize + y;
+		// store the image python linke: indicies from left to right and from
+		// top to bottom ->
+		// x parallel to index direction, y is opposed to it
+        size_t index = xSize*(y-ySize) + x;
 
 		return Content[index];
 	}
