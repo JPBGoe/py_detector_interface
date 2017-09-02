@@ -15,6 +15,7 @@
 #include <boost/shared_ptr.hpp>
 #include <string>
 
+#include <stdexcept>
 #include "ChargeMatrix.hh"
 #include "Constants.hh"
 
@@ -44,6 +45,11 @@ namespace DSIM {
              */
 		    virtual void setInput(boost::shared_ptr<XCSIT::XInteractionData> input);
 
+            /**
+             * @param output charge matrix as output container
+             */
+            virtual void setOutput(boost::shared_ptr<ChargeMatrix> output);
+
     		// Charge simulation requires certain models. With this function those
     		// models in form of interface implementations are bound to the
     		// interface
@@ -55,6 +61,7 @@ namespace DSIM {
              * @param pointsim the charge propagation model
              * @param plasmasim
              * @param detector the detector type
+             * @throw RuntimeException of the output is not set
              */
     		virtual void setComponents(std::string plasmasearch,std::string pointsim, std::string plasmasim, std::string detector);
             /**
@@ -68,7 +75,7 @@ namespace DSIM {
              * the detector size
              * @return the created charge matrix
              */
-            virtual boost::shared_ptr<ChargeMatrix> getOutput();
+             //virtual boost::shared_ptr<ChargeMatrix> getOutput();
 
     	private:
             boost::shared_ptr<ChargeMatrix> output;

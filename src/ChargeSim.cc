@@ -48,25 +48,38 @@ namespace DSIM {
         XCSIT::XPlasmaPointChargeSim::setInput(input);
 	}
 
+    void ChargeSim::setOutput(boost::shared_ptr<ChargeMatrix> output){
+        if(DEBUG){
+            std::cout << "ChargeSim::setOutput" << std::endl;
+        }
+        this->output = output;
+    }
+
 
 	void ChargeSim::runSimulation(){
  	    if(DEBUG){
             std::cout << "ChargeSim::runSimulation start" << std::endl;
         }
+        // XPlasmaPointChargeSim needs to throw if there is something missing
 		XCSIT::XPlasmaPointChargeSim::runSimulation();
 	    if(DEBUG){
             std::cout << "ChargeSim::runSimulation end" << std::endl;
         }
 	}
 
-    boost::shared_ptr<ChargeMatrix> ChargeSim::getOutput(){
+   /* boost::shared_ptr<ChargeMatrix> ChargeSim::getOutput(){
         return output;
-    }
+    }*/
 
 	
 	void ChargeSim::selectDetector(std::string detector){
 		if(DEBUG){
             std::cout << "ChargeSim::selectDetector << " << detector << std::endl;
+        }
+
+        // boost shared_ptr returns false if not instantiated
+        if(not output){
+            throw std::runtime_error("output has to be initialized first");
         }
 
         // Instantiate the selected model
@@ -90,9 +103,12 @@ namespace DSIM {
     	unsigned int m = (unsigned int) (2. * detectordef->getSizeY() / detectordef->getSpacingY());
        
         // Create a new instance 
-        boost::shared_ptr<ChargeMatrix> out(new ChargeMatrix(n,m)); 
-        output=out;		
-    
+        //boost::shared_ptr<ChargeMatrix> out(new ChargeMatrix(n,m)); 
+        //output=out;		
+        ((this->output).get())->clear();   
+        ((this->output).get())->setSize(n,m);   
+
+
         // Set the output
         XCSIT::XPlasmaPointChargeSim::setOutput(output);
 

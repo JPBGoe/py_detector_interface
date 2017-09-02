@@ -66,14 +66,27 @@ namespace DSIM{
 			throw std::invalid_argument("The specified detector is of unknown type. Please check again");
     	}
         
-	}
+	}   
 
+    void ParticleSim::setInput(boost::shared_ptr<XCSIT::XPhotonData> input){
+        if(DEBUG){
+            std::cout << "ParticleSim::setInput" << std::endl;
+        }
+        XCSIT::XGeant4ParticleSim::SetInput(input);
+    }
+    
+    void ParticleSim::setOutput(boost::shared_ptr<XCSIT::XInteractionData> output){
+        if(DEBUG){
+            std::cout << "ParticleSim::setOutput" << std::endl;
+        }
+        XCSIT::XGeant4ParticleSim::SetOutput(output);
+    }
 
-	void ParticleSim::runSimulation(boost::shared_ptr<XCSIT::XPhotonData> input, boost::shared_ptr<XCSIT::XInteractionData> output){
+	void ParticleSim::runSimulation(){
         if(DEBUG){
             std::cout<< "ParticleSim::runSimulation start" << std::endl;
         }
-		XCSIT::XGeant4ParticleSim::runSimulation(input,output);
+		XCSIT::XGeant4ParticleSim::runSimulation();
         if(DEBUG){
             std::cout<< "ParticleSim::runSimulation end" << std::endl;
         }

@@ -29,7 +29,8 @@ print(" ")
 
 print("set the input")
 try:
-	o.setInput(i)
+    o.setInput(i)
+    o.setOutput(c)
 except Exception as ex:
 	print("Exceptions with found:")
 	print(ex)
@@ -47,32 +48,32 @@ for ps in plasmasearch:
 		for psi in plasmasim:
 			for det in detect:
 				print("(" + str(ps) + "," + str(psim) + "," + str(psi) + "," + str(det) + ")")
-				o.setComponents(c,ps,psim,psi,det)
+				o.setComponents(ps,psim,psi,det)
 print(" ")
 
 
 print("Testing failures")
 print("plasmasearch")
 try:
-	o.setComponents(c,"hello",psim,psi,det)
+	o.setComponents("hello",psim,psi,det)
 	error("hello as plasmasearch should produce an exception")
 except Exception:
 	print("successful")
 print("pointsim")
 try:
-	o.setComponents(c,ps,"hello",psi,det)
+	o.setComponents(ps,"hello",psi,det)
 	error("hello as pointsim should produce an exception")
 except Exception:
 	print("successful")
 print("plasmasim")
 try:
-	o.setComponents(c,ps,psim,"hello",det)
+	o.setComponents(ps,psim,"hello",det)
 	error("hello as plasmasim should produce an exception")
 except Exception:
 	print("successful")
 print("detector")
 try:
-	o.setComponents(c,ps,psim,psi,"hello")
+	o.setComponents(ps,psim,psi,"hello")
 	error("hello as detector should produce an exception")
 except Exception:
 	print("successful")

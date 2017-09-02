@@ -25,7 +25,7 @@ namespace DSIM {
 		}
 	}
 
-    ChargeMatrix::ChargeMatrix(size_t x, size_t y){
+/*    ChargeMatrix::ChargeMatrix(size_t x, size_t y){
         if(DEBUG){
             std::cout << "ChargeMatrix::ChargeMatrix << " << x << " << " << y  << std::endl;
 		}
@@ -33,7 +33,7 @@ namespace DSIM {
         ySize=0;
 
         setSize(x,y);
-    }			
+    }*/
 
 	// this functions include an clear() on the instance calling
 	void ChargeMatrix::setSize(size_t x, size_t y){

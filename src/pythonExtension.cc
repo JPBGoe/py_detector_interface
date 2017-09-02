@@ -123,17 +123,19 @@ BOOST_PYTHON_MODULE(libpy_detector_interface){
 
 // ParticleSim
     class_<DSIM::ParticleSim>("ParticleSim")
-		.def("runSimulation",&DSIM::ParticleSim::runSimulation)
+		.def("setInput",&DSIM::ParticleSim::setInput)
+		.def("setOutput",&DSIM::ParticleSim::setOutput)
 		.def("initialization",&DSIM::ParticleSim::initialization)
+		.def("runSimulation",&DSIM::ParticleSim::runSimulation)
     ;
 
 
 // ChargeSim
     class_<DSIM::ChargeSim>("ChargeSim")
 		.def("setInput",&DSIM::ChargeSim::setInput)
+		.def("setOutput",&DSIM::ChargeSim::setOutput)
 		.def("setComponents",&DSIM::ChargeSim::setComponents)
 		.def("runSimulation",&DSIM::ChargeSim::runSimulation)
-		.def("getOutput",&DSIM::ChargeSim::getOutput)
     ;
 
 	register_ptr_to_python<boost::shared_ptr<DSIM::ChargeMatrix> >();	
