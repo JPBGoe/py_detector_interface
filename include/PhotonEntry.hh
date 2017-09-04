@@ -5,9 +5,6 @@
  *
  * Functions are set to virtual to allow binding during runtime
  *
- * TODO: Check if the impuls values are the real numbers or if Direction[X|Y|Z] is 
- * just an to one normalized vector pointing in the direction of flight.
- *
  * File:	PhotonEntry.hh
  * Author:	jburchert
  * Date:	9 August 2017
