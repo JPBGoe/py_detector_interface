@@ -46,6 +46,7 @@ BOOST_PYTHON_MODULE(libpy_detector_interface){
 		.def("setDirectionZ",&DSIM::PhotonEntry::setDirectionZ)
 		.def("setEnergy",&DSIM::PhotonEntry::setEnergy)
 		.def("set",&DSIM::PhotonEntry::set)
+		.def("toString",&DSIM::PhotonEntry::toString)
     ;
 
 // InteractionEntry
@@ -63,6 +64,7 @@ BOOST_PYTHON_MODULE(libpy_detector_interface){
 		.def("setTime",&DSIM::InteractionEntry::setTime)
 		.def("setEnergy",&DSIM::InteractionEntry::setEnergy)
 		.def("set",&DSIM::InteractionEntry::set)
+		.def("toString",&DSIM::InteractionEntry::toString)
 	;
 
 // ChargeEntry
@@ -72,6 +74,7 @@ BOOST_PYTHON_MODULE(libpy_detector_interface){
 		.def("getCharge",&DSIM::ChargeEntry::getCharge)
 		.def("setCharge",&DSIM::ChargeEntry::setCharge)
 		.def("addCharge",&DSIM::ChargeEntry::addCharge)
+		.def("toString",&DSIM::ChargeEntry::toString)
     ;
 
 // PhotonData
@@ -111,21 +114,31 @@ BOOST_PYTHON_MODULE(libpy_detector_interface){
 	
 	register_ptr_to_python<boost::shared_ptr<XCSIT::XChargeEntry> >();	
 
+// Constants
+    class_<DSIM::Constants>("Constants")
+        .def("size",&DSIM::Constants::size)
+        .def("varValue",&DSIM::Constants::varValue)
+    ;
+
 
 // ParticleSim
     class_<DSIM::ParticleSim>("ParticleSim")
-		.def("runSimulation",&DSIM::ParticleSim::runSimulation)
+		.def("setInput",&DSIM::ParticleSim::setInput)
+		.def("setOutput",&DSIM::ParticleSim::setOutput)
 		.def("initialization",&DSIM::ParticleSim::initialization)
+		.def("runSimulation",&DSIM::ParticleSim::runSimulation)
     ;
 
 
 // ChargeSim
     class_<DSIM::ChargeSim>("ChargeSim")
 		.def("setInput",&DSIM::ChargeSim::setInput)
+		.def("setOutput",&DSIM::ChargeSim::setOutput)
 		.def("setComponents",&DSIM::ChargeSim::setComponents)
 		.def("runSimulation",&DSIM::ChargeSim::runSimulation)
     ;
 
+	register_ptr_to_python<boost::shared_ptr<DSIM::ChargeMatrix> >();	
 
 }
 

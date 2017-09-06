@@ -10,6 +10,14 @@
 #define CHARGEENTRY_HH
 
 #include "XChargeEntry.hh"
+#include <string>
+#include <iostream>
+
+#ifdef DEBUGMODE
+    #define DEBUG 1
+#else
+    #define DEBUG 0
+#endif
 
 namespace DSIM {
     /**
@@ -39,6 +47,12 @@ namespace DSIM {
          * instance:  newcharge = getCharge() + value
          */
 		virtual void addCharge(double value);
+
+
+        /**
+         * @return a string representation of the current state of this instance
+         */
+        virtual std::string toString();
 
 	private:
 		double charge;

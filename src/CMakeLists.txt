@@ -41,15 +41,16 @@ set_target_properties(xercesc PROPERTIES
     IMPORTED_LOCATION ${XERCESC_ROOT}/lib/libxerces-c.so
 )
 include_directories(
-    ${XERCESC_ROOT}/include/xercesc/dom 
-    ${XERCESC_ROOT}/include/xercesc/framework
-    ${XERCESC_ROOT}/include/xercesc/internal
-    ${XERCESC_ROOT}/include/xercesc/parsers
-    ${XERCESC_ROOT}/include/xercesc/sax
-    ${XERCESC_ROOT}/include/xercesc/sax2
-    ${XERCESC_ROOT}/include/xercesc/util
-    ${XERCESC_ROOT}/include/xercesc/validators
-    ${XERCESC_ROOT}/include/xercesc/xinclude
+    ${XERCESC_ROOT}/include
+ #   ${XERCESC_ROOT}/include/xercesc/dom 
+ #   ${XERCESC_ROOT}/include/xercesc/framework
+ #   ${XERCESC_ROOT}/include/xercesc/internal
+ #   ${XERCESC_ROOT}/include/xercesc/parsers
+ #   ${XERCESC_ROOT}/include/xercesc/sax
+ #   ${XERCESC_ROOT}/include/xercesc/sax2
+ #   ${XERCESC_ROOT}/include/xercesc/util
+ #   ${XERCESC_ROOT}/include/xercesc/validators
+  #  ${XERCESC_ROOT}/include/xercesc/xinclude
 )
 
 # include of this project
@@ -67,6 +68,11 @@ include_directories(${CMAKE_SOURCE_DIR}/include/)
 # Compiler flags
 if(UNIX)
     SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -Wl,--unresolved-symbols=report-all -Wl,--warn-unresolved-symbols")
+
+    # Set additional flages for debugging if required
+    if(${DEBUG})
+        SET(CMAKE_CXX_FLAGS "-g -DDEBUGMODE=1 ${CMAKE_CXX_FLAGS}")
+    endif()    
 endif()
 
 # =============================================================================
@@ -87,6 +93,8 @@ add_library(py_detector_interface SHARED
 	InteractionData.cc
 # ChargeMatrix
 	ChargeMatrix.cc
+# Constants
+    Constants.cc
 # ParticleSim
 	ParticleSim.cc 
 # ChargeSIm

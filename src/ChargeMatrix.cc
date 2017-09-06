@@ -6,11 +6,13 @@
 #include "ChargeMatrix.hh"
 #include <stdexcept>
 
-
 namespace DSIM {
 
-	ChargeMatrix::ChargeMatrix(){	
-		xSize = 0;
+	ChargeMatrix::ChargeMatrix(){
+        if(DEBUG){
+            std::cout << "ChargeMatrix::ChargeMatrix" << std::endl;
+		}
+        xSize = 0;
 		ySize = 0;
 
 		// init with 1 x 1 content
@@ -18,12 +20,27 @@ namespace DSIM {
 	}
 
 	ChargeMatrix::~ChargeMatrix(){ // has to delete the matrix
-		clear();
-	}			
+        if(DEBUG){
+            std::cout << "ChargeMatrix::~ChargeMatrix" << std::endl;
+		}
+	}
+
+/*    ChargeMatrix::ChargeMatrix(size_t x, size_t y){
+        if(DEBUG){
+            std::cout << "ChargeMatrix::ChargeMatrix << " << x << " << " << y  << std::endl;
+		}
+        xSize=0;
+        ySize=0;
+
+        setSize(x,y);
+    }*/
 
 	// this functions include an clear() on the instance calling
 	void ChargeMatrix::setSize(size_t x, size_t y){
-		// Check the input
+        if(DEBUG){
+            std::cout << "ChargeMatrix::setSize <<" << x << " <<" << y << std::endl;
+		}
+        // Check the input
 		if(x <= 0 || y <= 0){
 			throw std::invalid_argument("Matrix dimensions have to be greater that 0");
 		}
@@ -40,7 +57,10 @@ namespace DSIM {
 	}
 
 	boost::shared_ptr<XCSIT::XChargeEntry> ChargeMatrix::getEntry(size_t x, size_t y){
-		// check if there is something to return
+        if(DEBUG){
+            std::cout << "ChargeMatrix::getEntry <<" << x << " <<" << y << std::endl;
+		}
+        // check if there is something to return
 		if(xSize <= 0 || ySize <= 0){
 			throw std::invalid_argument("No Data in the matrix to return");
 		}
@@ -49,29 +69,41 @@ namespace DSIM {
 		}
 
 		// calculate back to the coodinates of the array
-		// Structure: x1y1 x1y2 x1y3 ... x1yy x2y1 x2y2 x2y3 x2y4 ... xxyy
-		size_t index = x*ySize + y;
+		// define the following 
+        size_t index = xSize*y + x;
 
 		return Content[index];
 	}
 
 	size_t ChargeMatrix::width() const{
-		return xSize;
+        if(DEBUG){
+            std::cout << "ChargeMatrix::width >>" << xSize << std::endl;
+    	}
+	    return xSize;
 	}
 
 	size_t ChargeMatrix::height() const{
-		return ySize;
+        if(DEBUG){
+            std::cout << "ChargeMatrix::height >>" << ySize << std::endl;
+		}
+        return ySize;
 	}
 
 	void ChargeMatrix::clear(){
-		Content.clear();
+        if(DEBUG){
+            std::cout << "ChargeMatrix::clear" << std::endl;
+		}
+        Content.clear();
 		Content.resize(0);
 		xSize = 0;
 		ySize = 0;
 	}
 
 	void ChargeMatrix::fillContent(size_t num){
-		if(xSize != 0 || ySize != 0){
+        if(DEBUG){
+            std::cout << "ChargeMatrix::fillContent <<" << num << std::endl;
+		}
+        if(xSize != 0 || ySize != 0){
 			throw std::invalid_argument("Please clear() the ChargeMatrix before setting it to a new size");
 		}
 

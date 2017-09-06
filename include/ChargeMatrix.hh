@@ -14,6 +14,9 @@
 #include "ChargeEntry.hh"
 #include <vector>
 
+// Debug mode via *Entry.hh import
+
+
 namespace DSIM {
     /**
      * Instances of this class store DSIM::ChargeEntry instances in a matrix 
@@ -26,6 +29,7 @@ namespace DSIM {
              * Constructor
              */
 			ChargeMatrix();	// init with 1 x 1
+            //ChargeMatrix(size_t x, size_t y);
             /**
              * Destructor
              */

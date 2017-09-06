@@ -25,6 +25,7 @@ cmake \
 -DXCSIT_ROOT=/home/burcherj/.local \
 -DBOOST_ROOT=/home/burcherj/.local \
 -DCMAKE_INSTALL_PREFIX=/home/burcherj/.local \
+-DDEBUG=ON \
 ..
 
 # Compile and link the c++ classes

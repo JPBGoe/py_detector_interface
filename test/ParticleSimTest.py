@@ -20,9 +20,13 @@ print(" ")
 print("calling the runSimulation method with parameters")
 p = lpdi.PhotonData()
 print(type(p))
+o.setInput(p)
+
 i = lpdi.InteractionData()
 print(type(i))
-o.runSimulation(p,i)
+o.setOutput(i)
+
+o.runSimulation()
 print("simulation can be executed")
 print(" ")
 

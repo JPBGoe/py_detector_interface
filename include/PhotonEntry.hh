@@ -5,9 +5,6 @@
  *
  * Functions are set to virtual to allow binding during runtime
  *
- * TODO: Check if the impuls values are the real numbers or if Direction[X|Y|Z] is 
- * just an to one normalized vector pointing in the direction of flight.
- *
  * File:	PhotonEntry.hh
  * Author:	jburchert
  * Date:	9 August 2017
@@ -17,6 +14,14 @@
 
 #include "XPhotonEntry.hh"
 #include <vector>
+#include <string>
+#include <iostream>
+
+#ifdef DEBUGMODE
+    #define DEBUG 1
+#else
+    #define DEBUG 0
+#endif
 
 namespace DSIM {
     /**
@@ -107,6 +112,10 @@ namespace DSIM {
          * @param posZ  the z component of the position in space 
          */
 	    virtual void set(double energy, double dirX, double dirY, double dirZ, double posX, double posY, double posZ);
+        /**
+         * @return a string representation of the current state of this instance
+         */
+        virtual std::string toString();
 
     private:
 	    // Variables to store the state of a photon

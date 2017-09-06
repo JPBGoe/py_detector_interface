@@ -14,6 +14,9 @@
 #include "PhotonEntry.hh"
 #include <vector>
 
+// Debug mode via *Entry.hh import
+
+
 namespace DSIM {
     /**
      * Instance of this class acts like a container class that store

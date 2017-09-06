@@ -13,6 +13,8 @@
 #include "XInteractionEntry.hh"
 #include "InteractionEntry.hh"
 #include <vector>
+// Debug mode via *Entry.hh import
+
 
 namespace DSIM {
     /**
